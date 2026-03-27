@@ -1,0 +1,66 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const allUpdates = await getCollection('updates');
+// Sort by date descending
+const sortedUpdates = allUpdates.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<Base title="News & Updates | David Glass" description="Stay current on the latest road projects, county business, and community events in Precinct 4 under Commissioner David Glass.">
+  
+  <div class="pt-20 pb-16 bg-navy text-white text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl sm:text-5xl font-extrabold mb-6">News & Updates</h1>
+      <p class="text-xl font-light text-warm-gray leading-relaxed max-w-2xl mx-auto">
+        Ongoing communications regarding active road developments, county budget, and Precinct 4 community alerts.
+      </p>
+    </div>
+  </div>
+
+  <section class="py-16 sm:py-24 bg-warm-gray/10 relative min-h-[50vh]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      {sortedUpdates.length === 0 ? (
+        <div class="text-center py-12">
+          <p class="text-xl text-near-black">No updates available at this time. Check back soon.</p>
+        </div>
+      ) : (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {sortedUpdates.map((post) => (
+            <article class="bg-white border border-warm-gray rounded shadow-sm hover:shadow hover:border-gold transition flex flex-col h-full overflow-hidden">
+              <div class="p-8 flex-grow flex flex-col">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-xs font-bold uppercase tracking-wide text-gold bg-gold/10 px-2 py-1 rounded">
+                    {post.data.category}
+                  </span>
+                  <time class="text-sm font-semibold text-warm-gray/80" datetime={post.data.date.toISOString()}>
+                    {post.data.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                  </time>
+                </div>
+                
+                <h2 class="text-2xl font-bold text-navy mb-3">
+                  <a href={`/updates/${post.id}`} class="hover:text-gold transition">
+                    {post.data.title}
+                  </a>
+                </h2>
+                
+                <p class="text-near-black leading-relaxed flex-grow">
+                  {post.data.summary}
+                </p>
+              </div>
+              
+              <div class="px-8 py-5 border-t border-warm-gray/50 bg-warm-gray/5">
+                <a href={`/updates/${post.id}`} class="text-navy font-bold hover:text-gold transition flex items-center group">
+                  Read Update <span class="ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+
+    </div>
+  </section>
+
+</Base>

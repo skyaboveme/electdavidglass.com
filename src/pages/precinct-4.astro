@@ -1,0 +1,96 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Precinct 4 | David Glass" description="Discover what David Glass is working on in Precinct 4, including Elgin and eastern Bastrop County.">
+  
+  <div class="pt-20 pb-16 bg-navy text-white text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl sm:text-5xl font-extrabold mb-6">Precinct 4 Operations</h1>
+      <p class="text-xl font-light text-warm-gray leading-relaxed max-w-2xl mx-auto">
+        Serving Elgin, the surrounding rural communities, and the eastern stretches of Bastrop County.
+      </p>
+    </div>
+  </div>
+
+  <section class="py-16 sm:py-24 bg-white relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Layout: Map & Communities -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start mb-24">
+        
+        <!-- Map Visualization Placeholder -->
+        <div class="lg:col-span-7 relative bg-warm-gray/20 rounded border border-warm-gray p-4 flex flex-col items-center justify-center min-h-[400px]">
+          <svg class="h-16 w-16 text-navy/50 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+          </svg>
+          <span class="text-navy font-bold text-center">[Insert Local Precinct 4 Map Here]</span>
+        </div>
+
+        <!-- Communities Content -->
+        <div class="lg:col-span-5">
+          <h2 class="text-3xl font-bold text-navy mb-6">Communities Served</h2>
+          <p class="text-near-black leading-relaxed mb-8">
+            Precinct 4 encompasses the vibrant, historic city of Elgin, extending through rapid-growth corridors, and protecting the deep rural heritage of eastern Bastrop County. The diversity of this precinct requires a commissioner who understands both urban development and rural land management.
+          </p>
+          
+          <div class="space-y-6">
+            <div class="border-l-4 border-gold pl-4 py-1">
+              <h3 class="text-xl font-bold text-navy mb-1">Elgin & Surrounds</h3>
+              <p class="text-near-black text-sm">Managing unprecedented growth while partnering with the Elgin EDC to ensure development benefits residents.</p>
+            </div>
+            <div class="border-l-4 border-gold pl-4 py-1">
+              <h3 class="text-xl font-bold text-navy mb-1">Rural Corridors</h3>
+              <p class="text-near-black text-sm">Prioritizing safety and maintenance on county roads heavily traveled by agricultural, residential, and commercial traffic.</p>
+            </div>
+            <div class="border-l-4 border-gold pl-4 py-1">
+              <h3 class="text-xl font-bold text-navy mb-1">Eastern Bastrop</h3>
+              <p class="text-near-black text-sm">Protecting the fundamental rural character of Bastrop County from unchecked sprawl.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Active Projects Section -->
+      <div class="mb-24">
+        <div class="mb-10 text-center">
+          <h2 class="text-3xl font-bold text-navy mb-4">Active Projects: What We Are Working On Now</h2>
+          <p class="text-xl text-near-black max-w-2xl mx-auto">Providing transparency on road repairs, infrastructure improvements, and planning efforts.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Project 1 -->
+          <div class="border border-warm-gray rounded p-6 shadow-sm hover:border-gold transition-colors block">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-lg font-bold text-navy">Precinct 4 Road Resurfacing Initiative</h3>
+              <span class="bg-navy text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wide">In Progress</span>
+            </div>
+            <p class="text-near-black text-sm">Executing the approved multi-phase mill and overlay plan across heavily prioritized corridors to extend road lifespan before complete failure occurs.</p>
+          </div>
+          <!-- Project 2 -->
+          <div class="border border-warm-gray rounded p-6 shadow-sm hover:border-gold transition-colors block">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-lg font-bold text-navy">Drainage Clearances - Southeast Corridors</h3>
+              <span class="bg-gold text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wide">Planning Phase</span>
+            </div>
+            <p class="text-near-black text-sm">Evaluating right-of-way boundaries and allocating equipment for major drainage overhauls ahead of the spring storm season.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Report a Concern Hook -->
+      <div class="bg-navy/5 border border-navy/10 rounded p-8 sm:p-12 text-center">
+        <h2 class="text-3xl font-bold text-navy mb-4">Report a Concern</h2>
+        <p class="text-lg text-near-black leading-relaxed max-w-2xl mx-auto mb-8">
+          See a pothole, drainage issue, or missing sign on a county road in Precinct 4? Our crews cannot fix what they do not know about. Let us know immediately.
+        </p>
+        <a href="/contact" class="inline-flex justify-center items-center px-8 py-3 text-lg font-bold rounded bg-navy text-white hover:bg-navy/90 transition shadow-sm">
+          Submit an Issue
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</Base>

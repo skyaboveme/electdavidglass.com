@@ -1,0 +1,45 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const updates = await getCollection('updates');
+  return updates.map(update => ({
+    params: { id: update.id },
+    props: { update },
+  }));
+}
+
+const { update } = Astro.props;
+const { Content } = await render(update);
+---
+
+<Base title={`${update.data.title} | David Glass`} description={update.data.summary}>
+  <article class="py-24 bg-white min-h-[70vh]">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="mb-10 text-center">
+        <div class="flex items-center justify-center gap-3 mb-6">
+          <span class="text-xs font-bold uppercase tracking-wider text-gold bg-gold/10 px-3 py-1.5 rounded">
+            {update.data.category}
+          </span>
+          <time class="text-sm font-semibold text-warm-gray/80" datetime={update.data.date.toISOString()}>
+            {update.data.date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+          </time>
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-navy leading-tight">{update.data.title}</h1>
+      </div>
+      
+      <div class="prose prose-lg prose-navy max-w-none mx-auto border-t border-warm-gray/50 pt-10">
+        <Content />
+      </div>
+
+      <div class="mt-20 pt-10 border-t border-warm-gray flex justify-center">
+        <a href="/updates" class="inline-flex items-center justify-center px-6 py-3 border-2 border-navy text-navy font-bold rounded hover:bg-navy hover:text-white transition-colors group">
+          <span class="mr-2 group-hover:-translate-x-1 transition-transform">&larr;</span> Back to All Updates
+        </a>
+      </div>
+      
+    </div>
+  </article>
+</Base>

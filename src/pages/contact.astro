@@ -1,0 +1,130 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Contact David Glass" description="Get in touch with Bastrop County Commissioner David Glass. Office information, hours, and direct contact form.">
+  
+  <div class="pt-20 pb-16 bg-navy text-white text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl sm:text-5xl font-extrabold mb-6">Contact the Commissioner</h1>
+      <p class="text-xl font-light text-warm-gray leading-relaxed max-w-2xl mx-auto">
+        My door is open. Whether you have a question about the budget, a concern about a county road, or an idea for our community, I want to hear from you.
+      </p>
+    </div>
+  </div>
+
+  <section class="py-16 sm:py-24 bg-warm-gray/10 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        
+        <!-- Contact Form -->
+        <div class="bg-white p-8 sm:p-12 rounded border border-warm-gray shadow-sm">
+          <h2 class="text-3xl font-bold text-navy mb-8">Send a Message</h2>
+          
+          <form class="space-y-6" action="/api/contact" method="POST">
+            <!-- Honeypot -->
+            <div class="hidden">
+              <label for="bot-field">Do not fill this out</label>
+              <input name="bot-field" id="bot-field" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-semibold text-near-black mb-2">Full Name *</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-white border border-warm-gray/80 rounded focus:ring-2 focus:ring-gold focus:border-gold outline-none transition" />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-semibold text-near-black mb-2">Email Address *</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-white border border-warm-gray/80 rounded focus:ring-2 focus:ring-gold focus:border-gold outline-none transition" />
+              </div>
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-semibold text-near-black mb-2">Phone Number (Optional)</label>
+              <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 bg-white border border-warm-gray/80 rounded focus:ring-2 focus:ring-gold focus:border-gold outline-none transition" />
+            </div>
+
+            <div>
+              <label for="subject" class="block text-sm font-semibold text-near-black mb-2">Subject *</label>
+              <select id="subject" name="subject" required class="w-full px-4 py-3 bg-white border border-warm-gray/80 rounded focus:ring-2 focus:ring-gold focus:border-gold outline-none transition">
+                <option value="" disabled selected>Select a topic...</option>
+                <option value="General Question">General Question</option>
+                <option value="Road/Infrastructure Issue">Road/Infrastructure Issue</option>
+                <option value="Community Concern">Community Concern</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-semibold text-near-black mb-2">Message *</label>
+              <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 bg-white border border-warm-gray/80 rounded focus:ring-2 focus:ring-gold focus:border-gold outline-none transition resize-y"></textarea>
+            </div>
+
+            <button type="submit" class="w-full px-8 py-4 text-lg font-bold rounded bg-gold text-white hover:bg-navy transition-colors shadow flex items-center justify-center">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Office Info -->
+        <div class="space-y-12">
+          
+          <div>
+            <h2 class="text-3xl font-bold text-navy mb-6">Precinct 4 Office</h2>
+            <div class="flex items-start mb-6">
+              <svg class="w-6 h-6 text-gold mr-4 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <div>
+                <p class="text-lg font-bold text-near-black">Bastrop County Commissioner, Precinct 4</p>
+                <p class="text-near-black">804 Pecan St</p>
+                <p class="text-near-black">Bastrop, TX 78602</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start mb-6">
+              <svg class="w-6 h-6 text-gold mr-4 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <div>
+                <p class="text-lg font-bold text-near-black">Phone</p>
+                <p class="text-near-black"><a href="tel:+15125817100" class="hover:text-gold transition">(512) 581-7100</a></p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-gold mr-4 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div>
+                <p class="text-lg font-bold text-near-black">Office Hours</p>
+                <p class="text-near-black">Monday - Friday</p>
+                <p class="text-near-black">8:00 AM - 5:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map Embed -->
+          <div class="bg-warm-gray/20 rounded border border-warm-gray p-2 h-[300px] flex items-center justify-center relative overflow-hidden">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3448.245842247249!2d-97.3207775!3d30.1158585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864461014e7a8de9%3A0xe5a3c9a17466ebbc!2s804%20Pecan%20St%2C%20Bastrop%2C%20TX%2078602!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              class="absolute inset-0"
+              title="Map showing office location at 804 Pecan St, Bastrop, TX"
+            ></iframe>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</Base>

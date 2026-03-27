@@ -1,0 +1,116 @@
+---
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
+const { 
+  title, 
+  description = "David Glass - Proven Leadership for Bastrop County Commissioner Precinct 4",
+  image = "/og-image.jpg"
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <title>{title} | David Glass . Bastrop County Commissioner, Precinct 4</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={`${title} | David Glass`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={`${title} | David Glass`} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-navy">
+      Skip to content
+    </a>
+    
+    <Navigation />
+    
+    <main id="main-content" class="flex-grow">
+      <slot />
+    </main>
+
+    <Footer />
+    
+    <!-- Cloudflare Web Analytics -->
+    <!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN"}'></script> -->
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const forms = document.querySelectorAll('form[action^="/api/"]');
+        forms.forEach(form => {
+          form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const f = e.target as HTMLFormElement;
+            const submitBtn = f.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+            const originalText = submitBtn ? submitBtn.textContent : '';
+            
+            const existingError = f.querySelector('.form-error-msg');
+            if (existingError) existingError.remove();
+            
+            try {
+              if(submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+              }
+              
+              const formData = new FormData(f);
+              const response = await fetch(f.action, {
+                method: f.method,
+                body: formData,
+              });
+              
+              const result = await response.json();
+              
+              if (response.ok) {
+                const isContact = f.action.includes('/api/contact');
+                const textColor = isContact ? 'text-navy' : 'text-white';
+                f.innerHTML = `<div class="p-6 bg-warm-gray/20 border border-gold rounded ${textColor} font-bold text-lg text-center shadow-sm">${result.message}</div>`;
+              } else {
+                throw new Error(result.error || "An error occurred.");
+              }
+            } catch(err: any) {
+              const errorDiv = document.createElement('div');
+              errorDiv.className = "mt-4 text-red-500 font-semibold form-error-msg";
+              errorDiv.textContent = err.message || "An error occurred. Please try again.";
+              f.appendChild(errorDiv);
+              if(submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+              }
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
