@@ -1,73 +1,113 @@
 ---
 const links = [
-  { text: 'Home', href: '/' },
   { text: 'About', href: '/about' },
   { text: 'Results', href: '/results' },
-  { text: 'Precinct 4', href: '/precinct-4' },
   { text: 'Priorities', href: '/priorities' },
-  { text: 'Updates', href: '/updates' },
+  { text: 'Precinct 4', href: '/precinct-4' },
   { text: 'Contact', href: '/contact' },
 ];
 ---
 
-<header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-warm-gray shadow-sm transition-all duration-300" id="site-header">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-20">
-      
-      <!-- Logo / Name -->
-      <div class="flex-shrink-0 flex items-center">
-        <a href="/" class="text-2xl font-bold text-navy flex flex-col uppercase tracking-wide leading-none">
-          <span class="text-[1.1rem]">David</span>
-          <span>Glass</span>
-        </a>
-      </div>
-
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex space-x-6 items-center" aria-label="Desktop Navigation">
-        {links.map(link => (
-          <a href={link.href} class="text-base font-semibold text-near-black hover:text-gold transition-colors">
-            {link.text}
+<header class="fixed top-0 z-50 w-full transition-all duration-500" id="site-header">
+  <!-- Top accent bar -->
+  <div class="h-1 w-full bg-gradient-to-r from-red via-gold to-red"></div>
+  
+  <div class="bg-white/95 backdrop-blur-md border-b border-warm-gray/50 shadow-sm" id="header-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        
+        <!-- Logo / Name -->
+        <div class="flex-shrink-0 flex items-center gap-3">
+          <a href="/" class="flex items-center gap-3 group">
+            <!-- Star icon -->
+            <div class="w-10 h-10 bg-navy rounded-full flex items-center justify-center group-hover:bg-gold transition-colors duration-300">
+              <svg class="w-5 h-5 text-gold group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <div class="flex flex-col uppercase tracking-wide leading-none">
+              <span class="text-sm font-sans font-semibold text-gold tracking-widest">David</span>
+              <span class="text-2xl font-serif font-bold text-navy">Glass</span>
+            </div>
           </a>
-        ))}
-        <a href="#get-updates" class="px-5 py-2.5 bg-gold text-white font-bold rounded shadow-sm hover:bg-gold/90 transition hover:-translate-y-0.5 ml-4">
-          Get Updates
-        </a>
-      </nav>
+        </div>
 
-      <!-- Mobile menu button -->
-      <div class="flex md:hidden items-center">
-        <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-navy hover:text-gold focus:outline-none" aria-expanded="false" aria-controls="mobile-menu">
-          <span class="sr-only">Open main menu</span>
-          <!-- Hamburger -->
-          <svg class="block h-8 w-8 transition-transform duration-300 transform" id="menu-icon-open" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <!-- Close -->
-          <svg class="hidden h-8 w-8 transition-transform duration-300 transform" id="menu-icon-close" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-1" aria-label="Desktop Navigation">
+          {links.map(link => (
+            <a href={link.href} class="px-4 py-2 text-sm font-sans font-semibold text-near-black hover:text-gold transition-colors uppercase tracking-wide">
+              {link.text}
+            </a>
+          ))}
+          <a href="#get-involved" class="ml-4 px-6 py-2.5 bg-gold text-white font-sans font-bold text-sm uppercase tracking-wider rounded shadow-md hover:bg-navy hover:shadow-lg transition-all duration-300 pulse-cta">
+            Get Involved
+          </a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <div class="flex lg:hidden items-center gap-3">
+          <a href="#get-involved" class="px-4 py-2 bg-gold text-white font-sans font-bold text-xs uppercase tracking-wider rounded shadow-sm">
+            Get Involved
+          </a>
+          <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-navy hover:text-gold focus:outline-none" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="sr-only">Open main menu</span>
+            <svg class="block h-7 w-7" id="menu-icon-open" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg class="hidden h-7 w-7" id="menu-icon-close" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
       </div>
-
     </div>
   </div>
 
   <!-- Mobile Menu Overlay -->
-  <div class="md:hidden fixed inset-0 top-20 z-40 bg-navy text-white transition-all duration-300 transform translate-x-full h-[calc(100vh-5rem)] overflow-y-auto" id="mobile-menu" aria-hidden="true">
-    <div class="px-6 pt-8 pb-12 space-y-6 flex flex-col text-center">
+  <div class="lg:hidden fixed inset-0 top-[calc(4px+5rem)] z-40 bg-navy text-white transition-all duration-300 transform translate-x-full h-[calc(100vh-5rem-4px)] overflow-y-auto" id="mobile-menu" aria-hidden="true">
+    <div class="px-6 pt-10 pb-12 space-y-1 flex flex-col">
+      <a href="/" class="block text-lg font-sans font-bold py-4 border-b border-white/10 hover:text-gold transition-colors uppercase tracking-wide">
+        Home
+      </a>
       {links.map(link => (
-        <a href={link.href} class="block text-2xl font-bold hover:text-gold transition-colors">
+        <a href={link.href} class="block text-lg font-sans font-bold py-4 border-b border-white/10 hover:text-gold transition-colors uppercase tracking-wide">
           {link.text}
         </a>
       ))}
-      <a href="#get-updates" class="mt-8 mx-auto inline-block px-8 py-4 bg-gold text-white font-bold rounded shadow-md text-xl mobile-cta">
-        Get Updates
+      <a href="/updates" class="block text-lg font-sans font-bold py-4 border-b border-white/10 hover:text-gold transition-colors uppercase tracking-wide">
+        Updates
+      </a>
+      <a href="#get-involved" class="mt-8 mx-auto inline-block px-8 py-4 bg-gold text-white font-sans font-bold rounded shadow-md text-lg mobile-cta uppercase tracking-wider">
+        Get Involved
       </a>
     </div>
   </div>
 </header>
 
 <script>
+  // Scroll effect
+  const header = document.getElementById('site-header');
+  const headerBg = document.getElementById('header-bg');
+
+  if (header && headerBg) {
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      
+      if (scrollY > 60) {
+        headerBg.classList.add('shadow-lg');
+        headerBg.classList.remove('shadow-sm');
+      } else {
+        headerBg.classList.remove('shadow-lg');
+        headerBg.classList.add('shadow-sm');
+      }
+
+      lastScroll = scrollY;
+    });
+  }
+
+  // Mobile menu
   const mobileMenuButton = document.querySelector('.mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
   const iconOpen = document.getElementById('menu-icon-open');
@@ -81,14 +121,12 @@ const links = [
       mobileMenuButton.setAttribute('aria-expanded', (!isExpanded).toString());
       
       if (!isExpanded) {
-        // Open
         mobileMenu.classList.remove('translate-x-full');
         mobileMenu.setAttribute('aria-hidden', 'false');
         iconOpen?.classList.add('hidden');
         iconClose?.classList.remove('hidden');
-        body.style.overflow = 'hidden'; // Prevent scrolling
+        body.style.overflow = 'hidden';
       } else {
-        // Close
         mobileMenu.classList.add('translate-x-full');
         mobileMenu.setAttribute('aria-hidden', 'true');
         iconOpen?.classList.remove('hidden');
@@ -97,7 +135,6 @@ const links = [
       }
     });
 
-    // Close menu when clicking links
     const mobileLinks = mobileMenu.querySelectorAll('a');
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {

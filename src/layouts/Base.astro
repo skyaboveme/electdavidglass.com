@@ -1,7 +1,10 @@
 ---
 import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
 import '@fontsource/inter/600.css';
 import '@fontsource/inter/700.css';
+import '@fontsource/playfair-display/700.css';
+import '@fontsource/playfair-display/800.css';
 import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
@@ -14,11 +17,14 @@ interface Props {
 
 const { 
   title, 
-  description = "David Glass - Proven Leadership for Bastrop County Commissioner Precinct 4",
-  image = "/og-image.jpg"
+  description = "David Glass — Proven Leadership for Bastrop County Commissioner Precinct 4",
+  image = "/DG.jpeg"
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url);
+const fullTitle = title === 'Home' 
+  ? 'David Glass | Bastrop County Commissioner, Precinct 4' 
+  : `${title} | David Glass for Bastrop County`;
 ---
 
 <!doctype html>
@@ -29,24 +35,44 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     
-    <title>{title} | David Glass . Bastrop County Commissioner, Precinct 4</title>
+    <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
 
     <!-- OpenGraph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:title" content={`${title} | David Glass`} />
+    <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL(image, Astro.url)} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
-    <meta property="twitter:title" content={`${title} | David Glass`} />
+    <meta property="twitter:title" content={fullTitle} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
+    <!-- JSON-LD Person Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "David Glass",
+      "jobTitle": "County Commissioner, Precinct 4",
+      "worksFor": {
+        "@type": "GovernmentOrganization",
+        "name": "Bastrop County Commissioner's Court"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "804 Pecan St",
+        "addressLocality": "Bastrop",
+        "addressRegion": "TX",
+        "postalCode": "78602"
+      },
+      "telephone": "(512) 581-7100",
+      "description": "Bastrop County Commissioner for Precinct 4. Lifelong resident, 40+ year business owner, President of Aqua Water Supply Corporation."
+    })} />
   </head>
   <body class="flex flex-col min-h-screen">
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-navy">
@@ -64,6 +90,28 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url);
     <!-- Cloudflare Web Analytics -->
     <!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN"}'></script> -->
 
+    <!-- Scroll Reveal Observer -->
+    <script>
+      const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-stagger');
+
+      if (revealElements.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => observer.observe(el));
+      }
+    </script>
+
+    <!-- Form Handler -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const forms = document.querySelectorAll('form[action^="/api/"]');
@@ -92,15 +140,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url);
               const result = await response.json();
               
               if (response.ok) {
-                const isContact = f.action.includes('/api/contact');
-                const textColor = isContact ? 'text-navy' : 'text-white';
-                f.innerHTML = `<div class="p-6 bg-warm-gray/20 border border-gold rounded ${textColor} font-bold text-lg text-center shadow-sm">${result.message}</div>`;
+                f.innerHTML = `<div class="p-6 bg-gold/10 border border-gold rounded-lg text-navy font-bold text-lg text-center shadow-sm">✓ ${result.message}</div>`;
               } else {
                 throw new Error(result.error || "An error occurred.");
               }
             } catch(err: any) {
               const errorDiv = document.createElement('div');
-              errorDiv.className = "mt-4 text-red-500 font-semibold form-error-msg";
+              errorDiv.className = "mt-4 text-red font-semibold form-error-msg";
               errorDiv.textContent = err.message || "An error occurred. Please try again.";
               f.appendChild(errorDiv);
               if(submitBtn) {
@@ -110,6 +156,41 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url);
             }
           });
         });
+      });
+    </script>
+
+    <!-- Counter Animation -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const counters = document.querySelectorAll('[data-count]');
+        if (counters.length === 0) return;
+
+        const counterObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const el = entry.target as HTMLElement;
+              const target = parseInt(el.dataset.count || '0');
+              const suffix = el.dataset.suffix || '';
+              const prefix = el.dataset.prefix || '';
+              let current = 0;
+              const duration = 1500;
+              const step = target / (duration / 16);
+              
+              const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                  current = target;
+                  clearInterval(timer);
+                }
+                el.textContent = prefix + Math.round(current) + suffix;
+              }, 16);
+              
+              counterObserver.unobserve(el);
+            }
+          });
+        }, { threshold: 0.3 });
+
+        counters.forEach(c => counterObserver.observe(c));
       });
     </script>
   </body>

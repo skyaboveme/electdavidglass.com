@@ -1,94 +1,161 @@
 ---
 import Base from '../layouts/Base.astro';
-
-// Optional image for the personal section
-const placeholderDavid = "/IMG_4833.jpeg"; 
 ---
 
 <Base title="About David Glass" description="Learn about David Glass: A life of service in Bastrop County, his business experience, and his vision for Precinct 4.">
   
-  <div class="pt-20 pb-12 bg-navy text-white text-center">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl sm:text-5xl font-extrabold mb-6">About David Glass</h1>
-      <p class="text-xl font-light text-warm-gray leading-relaxed max-w-2xl mx-auto">
-        A long-time resident, business owner, and community leader dedicated to protecting the future of Bastrop County.
-      </p>
+  <!-- Page Header with Portrait -->
+  <section class="page-header-gradient pt-28 pb-20 relative">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="gold-line mb-6"></div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-extrabold text-white leading-tight mb-6">
+            About David Glass
+          </h1>
+          <p class="text-xl font-sans font-light text-white/70 leading-relaxed max-w-xl">
+            A lifelong resident, business owner, and community leader dedicated to protecting the future of Bastrop County.
+          </p>
+        </div>
+        <div class="hidden lg:flex justify-end">
+          <div class="relative">
+            <div class="absolute -top-3 -right-3 w-full h-full border-2 border-gold/20 rounded-2xl"></div>
+            <img 
+              src="/DG.jpeg" 
+              alt="David Glass" 
+              class="relative z-10 w-80 rounded-2xl shadow-2xl object-cover aspect-[3/4]"
+            />
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <section class="py-16 sm:py-24 bg-white relative">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-navy">
-      <h2 class="text-3xl font-bold text-navy mb-6">Rooted in Bastrop County</h2>
-      <p class="text-xl leading-relaxed text-near-black mb-6">
-        David Glass has spent his life building in Bastrop County. His connection to this land and its communities is not a talking point; it is a defining characteristic of his life and career. As a business owner, rancher, and community leader for more than four decades, he understands what it takes to manage growth without losing what makes this place home.
-      </p>
-      <p class="text-near-black leading-relaxed mb-6">
-        Before entering public service, David spent over 40 years running a successful national software company. He knows what it means to sign a paycheck, balance a complex budget, and be accountable for outcomes. When he stepped away from his business, he brought that exact same operational rigor to Bastrop County government.
-      </p>
-      <p class="text-near-black leading-relaxed mb-12">
-        He serves as County Commissioner not to be a politician, but to be a steward. Bastrop County is growing rapidly, and the challenges we face with traffic, water security, and development require a leader who plans for the future while protecting our past.
-      </p>
+  <!-- Bio Section -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal">
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy mb-6">Rooted in Bastrop County</h2>
+        <p class="text-xl leading-relaxed text-near-black mb-6 font-sans">
+          David Glass has spent his life building in Bastrop County. His connection to this land and its communities is not a talking point; it is a defining characteristic of his life and career. As a business owner, rancher, and community leader for more than four decades, he understands what it takes to manage growth without losing what makes this place home.
+        </p>
+        <p class="text-near-black/70 leading-relaxed mb-6 font-sans">
+          Before entering public service, David spent over 40 years running a successful national software company. He knows what it means to sign a paycheck, balance a complex budget, and be accountable for outcomes. When he stepped away from his business, he brought that exact same operational rigor to Bastrop County government.
+        </p>
+        <p class="text-near-black/70 leading-relaxed font-sans">
+          He serves as County Commissioner not to be a politician, but to be a steward. Bastrop County is growing rapidly, and the challenges we face with traffic, water security, and development require a leader who plans for the future while protecting our past.
+        </p>
+      </div>
 
-      <hr class="border-warm-gray my-12" />
+      <div class="section-divider my-16"></div>
 
-      <h2 class="text-3xl font-bold text-navy mb-8">Leadership Across the County</h2>
-      <p class="text-near-black leading-relaxed mb-8">
-        David's commitment to Bastrop County extends far beyond the Commissioner's Court. Over the years, he has taken on demanding roles to ensure the fundamental systems that keep our communities running are strong and accountable.
-      </p>
+      <!-- Leadership Timeline -->
+      <div class="reveal">
+        <div class="gold-line mb-6"></div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy mb-4">Leadership Across the County</h2>
+        <p class="text-near-black/70 leading-relaxed mb-10 font-sans">
+          David's commitment to Bastrop County extends far beyond the Commissioner's Court. Over the years, he has taken on demanding roles to ensure the fundamental systems that keep our communities running are strong.
+        </p>
+      </div>
       
-      <div class="space-y-6 mb-16 not-prose">
-        <div class="bg-warm-gray/30 p-6 rounded border-l-4 border-gold">
-          <h3 class="text-xl font-bold text-navy mb-2">County Commissioner, Precinct 4</h3>
-          <p class="text-near-black">Managing the county’s infrastructure and budget for Elgin and rural eastern Bastrop County.</p>
-        </div>
-        
-        <div class="bg-warm-gray/30 p-6 rounded border-l-4 border-gold">
-          <h3 class="text-xl font-bold text-navy mb-2">President, Aqua Water Supply Corporation</h3>
-          <p class="text-near-black">Overseeing critical water infrastructure that provides clean, reliable water to thousands of Bastrop County residents.</p>
-        </div>
-
-        <div class="bg-warm-gray/30 p-6 rounded border-l-4 border-gold">
-          <h3 class="text-xl font-bold text-navy mb-2">Board Member, Bastrop County Appraisal District</h3>
-          <p class="text-near-black">Ensuring fair, transparent, and accurate property valuations for every taxpayer.</p>
+      <div class="space-y-6 reveal-stagger">
+        <!-- Role 1 -->
+        <div class="bg-cream rounded-2xl p-6 sm:p-8 border border-warm-gray hover-lift group flex items-start gap-6">
+          <div class="w-12 h-12 bg-navy rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-gold transition-colors">
+            <svg class="w-6 h-6 text-gold group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-serif font-bold text-navy mb-1">County Commissioner, Precinct 4</h3>
+            <p class="text-near-black/70 font-sans text-sm">Managing infrastructure, the county road system, and the Precinct 4 budget for Elgin and rural eastern Bastrop County.</p>
+          </div>
         </div>
 
-        <div class="bg-warm-gray/30 p-6 rounded border-l-4 border-gold">
-          <h3 class="text-xl font-bold text-navy mb-2">President, Elgin Economic Development Corporation</h3>
-          <p class="text-near-black">Guiding economic growth to bring responsible businesses and jobs to the local community.</p>
+        <!-- Role 2 -->
+        <div class="bg-cream rounded-2xl p-6 sm:p-8 border border-warm-gray hover-lift group flex items-start gap-6">
+          <div class="w-12 h-12 bg-navy rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-gold transition-colors">
+            <svg class="w-6 h-6 text-gold group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-serif font-bold text-navy mb-1">President, Aqua Water Supply Corporation</h3>
+            <p class="text-near-black/70 font-sans text-sm">Overseeing critical water infrastructure that provides clean, reliable water to thousands of Bastrop County residents.</p>
+          </div>
         </div>
 
-        <div class="bg-warm-gray/30 p-6 rounded border-l-4 border-gold">
-          <h3 class="text-xl font-bold text-navy mb-2">Educational & Regional Leadership</h3>
-          <p class="text-near-black">Active involvement with Austin Community College and regional transportation boards to position our workforce and infrastructure for tomorrow.</p>
+        <!-- Role 3 -->
+        <div class="bg-cream rounded-2xl p-6 sm:p-8 border border-warm-gray hover-lift group flex items-start gap-6">
+          <div class="w-12 h-12 bg-navy rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-gold transition-colors">
+            <svg class="w-6 h-6 text-gold group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-serif font-bold text-navy mb-1">Board Member, Bastrop County Appraisal District</h3>
+            <p class="text-near-black/70 font-sans text-sm">Ensuring fair, transparent, and accurate property valuations for every taxpayer.</p>
+          </div>
+        </div>
+
+        <!-- Role 4 -->
+        <div class="bg-cream rounded-2xl p-6 sm:p-8 border border-warm-gray hover-lift group flex items-start gap-6">
+          <div class="w-12 h-12 bg-navy rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-gold transition-colors">
+            <svg class="w-6 h-6 text-gold group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-serif font-bold text-navy mb-1">President, Elgin Economic Development Corporation</h3>
+            <p class="text-near-black/70 font-sans text-sm">Guiding economic growth to bring responsible businesses and jobs to the local community.</p>
+          </div>
+        </div>
+
+        <!-- Role 5 -->
+        <div class="bg-cream rounded-2xl p-6 sm:p-8 border border-warm-gray hover-lift group flex items-start gap-6">
+          <div class="w-12 h-12 bg-navy rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-gold transition-colors">
+            <svg class="w-6 h-6 text-gold group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-serif font-bold text-navy mb-1">Educational & Regional Leadership</h3>
+            <p class="text-near-black/70 font-sans text-sm">Active involvement with Austin Community College and regional transportation boards to position our workforce and infrastructure for tomorrow.</p>
+          </div>
         </div>
       </div>
 
-      <hr class="border-warm-gray my-12" />
+      <div class="section-divider my-16"></div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12 not-prose">
+      <!-- Personal Section -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal">
         <div>
-          <h2 class="text-3xl font-bold text-navy mb-6">A Personal Stake</h2>
-          <p class="text-near-black leading-relaxed mb-6">
+          <div class="gold-line mb-6"></div>
+          <h2 class="text-3xl font-serif font-bold text-navy mb-6">A Personal Stake</h2>
+          <p class="text-near-black leading-relaxed mb-6 font-sans">
             David's stake in Bastrop County is personal. He and his wife have been married for over 40 years. They raised their four children here, and are now proudly watching their six grandchildren grow up in the same vibrant community.
           </p>
-          <p class="text-near-black leading-relaxed">
-            When he is not reviewing county budgets or checking on road projects, David is working his own land. His background in ranching and farming keeps him grounded in the realities of rural life—the lifeblood of our county's identity.
+          <p class="text-near-black/70 leading-relaxed font-sans">
+            When he is not reviewing county budgets or checking on road projects, David is working his own land. His background in ranching and farming keeps him grounded in the realities of rural life — the lifeblood of our county's identity.
           </p>
         </div>
-        <div class="relative bg-warm-gray rounded overflow-hidden aspect-[4/3]">
-          <!-- Replace this image with a proper photo of David with family or on his land -->
-          <img src={placeholderDavid} alt="David Glass standing on his property in Bastrop County" class="absolute inset-0 w-full h-full object-cover grayscale mix-blend-multiply opacity-80" />
+        <div class="relative">
+          <div class="absolute -top-3 -left-3 w-full h-full border-2 border-gold/20 rounded-2xl"></div>
+          <img src="/davidglass2.jpeg" alt="David Glass on his property in Bastrop County" class="relative z-10 w-full rounded-2xl shadow-xl object-cover aspect-[4/3]" />
         </div>
       </div>
 
-      <div class="bg-navy text-white p-8 md:p-12 rounded mt-12 text-center not-prose border-t-4 border-gold">
-        <h3 class="text-2xl font-bold mb-4">My Commitment to You</h3>
-        <p class="text-warm-gray leading-relaxed mb-8 max-w-2xl mx-auto">
-          "I will continue to bring business sense, transparency, and hard work to the Commissioner's Court. Bastrop County is our home, and I intend to keep it a place we are all proud of."
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="/contact" class="inline-flex justify-center items-center px-8 py-3 font-bold rounded bg-gold text-white hover:bg-gold/90 transition shadow">
-            Contact Me Today
+      <!-- Commitment Quote Block -->
+      <div class="page-header-gradient text-white p-8 md:p-12 rounded-2xl mt-16 text-center reveal">
+        <div class="relative z-10">
+          <svg class="w-8 h-8 text-gold/40 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H0z"/>
+          </svg>
+          <p class="text-xl sm:text-2xl font-serif italic text-white/80 leading-relaxed mb-6 max-w-2xl mx-auto">
+            "I will continue to bring business sense, transparency, and hard work to the Commissioner's Court. Bastrop County is our home, and I intend to keep it a place we are all proud of."
+          </p>
+          <a href="/contact" class="inline-flex justify-center items-center px-8 py-3 font-sans font-bold text-sm uppercase tracking-wider rounded-lg bg-gold text-white hover:bg-gold-light transition shadow-md">
+            Contact David Today
           </a>
         </div>
       </div>

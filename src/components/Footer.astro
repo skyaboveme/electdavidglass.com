@@ -2,91 +2,104 @@
 const year = new Date().getFullYear();
 
 const links = [
-  { text: 'Home', href: '/' },
-  { text: 'About', href: '/about' },
+  { text: 'About David', href: '/about' },
   { text: 'Results', href: '/results' },
-  { text: 'Precinct 4', href: '/precinct-4' },
   { text: 'Priorities', href: '/priorities' },
+  { text: 'Precinct 4', href: '/precinct-4' },
   { text: 'Updates', href: '/updates' },
   { text: 'Contact', href: '/contact' },
 ];
 ---
 
-<footer class="bg-navy text-white pt-16 pb-8 border-t-4 border-gold">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-      
-      <!-- Brand & Office Info -->
-      <div class="space-y-4">
-        <a href="/" class="text-3xl font-bold text-white flex flex-col uppercase tracking-wide leading-none mb-6">
-          <span class="text-gold text-[1.2rem]">David</span>
-          <span>Glass</span>
-        </a>
-        <p class="text-warm-gray">
-          Bastrop County Commissioner, Precinct 4
-        </p>
-        <div class="pt-2">
-          <h3 class="font-semibold text-white mb-2">Office</h3>
-          <p class="text-warm-gray">804 Pecan St</p>
-          <p class="text-warm-gray">Bastrop, TX 78602</p>
-          <a href="/contact" class="inline-block mt-4 text-gold hover:text-white transition-colors underline decoration-gold underline-offset-4">
-            Contact the office
+<footer class="bg-navy text-white relative overflow-hidden">
+  <!-- Decorative top border -->
+  <div class="h-1 w-full bg-gradient-to-r from-red via-gold to-red"></div>
+  
+  <!-- Subtle pattern overlay -->
+  <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+
+  <div class="relative z-10 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        
+        <!-- Brand & Office Info -->
+        <div class="space-y-4">
+          <a href="/" class="flex items-center gap-3 group mb-6">
+            <div class="w-10 h-10 bg-gold/20 border border-gold/30 rounded-full flex items-center justify-center">
+              <svg class="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <div class="flex flex-col uppercase tracking-wide leading-none">
+              <span class="text-sm font-sans font-semibold text-gold tracking-widest">David</span>
+              <span class="text-2xl font-serif font-bold text-white">Glass</span>
+            </div>
           </a>
-        </div>
-      </div>
-
-      <!-- Quick Links -->
-      <div>
-        <h3 class="font-semibold text-xl mb-6 text-white border-b border-white/20 pb-2 inline-block">Quick Links</h3>
-        <ul class="space-y-3">
-          {links.map(link => (
-            <li>
-              <a href={link.href} class="text-warm-gray hover:text-gold transition-colors flex items-center">
-                <span class="text-gold mr-2 text-sm">&#9656;</span> {link.text}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <!-- Compact Email Signup -->
-      <div>
-        <h3 class="font-semibold text-xl mb-6 text-white border-b border-white/20 pb-2 inline-block">Stay Connected</h3>
-        <p class="text-warm-gray mb-4 text-sm leading-relaxed">
-          Get updates on Precinct 4 projects, county news, and community events directly to your inbox.
-        </p>
-        <form class="space-y-3" id="footer-subscribe-form" action="/api/subscribe" method="POST">
-          <div>
-            <label for="footer-email" class="sr-only">Email address</label>
-            <input 
-              type="email" 
-              id="footer-email" 
-              name="email" 
-              required
-              class="w-full px-4 py-3 bg-white/10 text-white placeholder-white/50 border border-white/20 rounded focus:ring-2 focus:ring-gold focus:border-gold outline-none transition"
-              placeholder="Your email address"
-            />
+          <p class="text-white/60 text-sm leading-relaxed">
+            County Commissioner, Precinct 4<br/>
+            Bastrop County, Texas
+          </p>
+          <div class="pt-2 space-y-1">
+            <p class="text-white/50 text-sm">804 Pecan St, Bastrop, TX 78602</p>
+            <a href="tel:+15125817100" class="text-gold hover:text-gold-light transition text-sm font-semibold">(512) 581-7100</a>
           </div>
-          <button 
-            type="submit" 
-            class="w-full px-4 py-3 bg-gold text-white font-bold rounded hover:bg-gold/90 transition shadow-sm"
-          >
-            Sign Up
-          </button>
-        </form>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="font-sans font-bold text-sm uppercase tracking-widest text-gold mb-6">Quick Links</h3>
+          <ul class="space-y-3">
+            {links.map(link => (
+              <li>
+                <a href={link.href} class="text-white/60 hover:text-gold transition-colors flex items-center text-sm font-sans group">
+                  <span class="text-gold/40 group-hover:text-gold mr-2 transition-colors">→</span> {link.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Email Signup -->
+        <div>
+          <h3 class="font-sans font-bold text-sm uppercase tracking-widest text-gold mb-6">Stay Connected</h3>
+          <p class="text-white/50 mb-4 text-sm leading-relaxed">
+            Get updates on Precinct 4 projects, county news, and community events.
+          </p>
+          <form class="space-y-3" id="footer-subscribe-form" action="/api/subscribe" method="POST">
+            <div>
+              <label for="footer-email" class="sr-only">Email address</label>
+              <input 
+                type="email" 
+                id="footer-email" 
+                name="email" 
+                required
+                class="w-full px-4 py-3 bg-white/5 text-white placeholder-white/30 border border-white/10 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition text-sm"
+                placeholder="Your email address"
+              />
+            </div>
+            <button 
+              type="submit" 
+              class="w-full px-4 py-3 bg-gold text-white font-sans font-bold text-sm uppercase tracking-wider rounded-lg hover:bg-gold-light transition shadow-md"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+
       </div>
 
-    </div>
-
-    <!-- Bottom Bar -->
-    <div class="border-t border-white/20 pt-8 mt-4 flex flex-col md:flex-row justify-between items-center text-sm text-warm-gray gap-4 text-center md:text-left">
-      <div class="border border-white/30 px-4 py-2 uppercase tracking-wide text-xs">
-        Paid for by the David Glass Campaign
-      </div>
-      <div>
-        &copy; {year} David Glass. All rights reserved.
-        <span class="mx-2 hidden sm:inline">|</span>
-        <a href="/privacy" class="hover:text-gold transition-colors block sm:inline mt-2 sm:mt-0">Privacy Policy</a>
+      <!-- Bottom Bar -->
+      <div class="border-t border-white/10 pt-8 mt-4">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+          <div class="border border-gold/30 bg-gold/5 px-4 py-2 rounded-lg uppercase tracking-widest text-[11px] text-gold font-sans font-semibold">
+            ★ Paid for by the David Glass Campaign ★
+          </div>
+          <div class="text-white/40 text-xs font-sans">
+            &copy; {year} David Glass. All rights reserved.
+            <span class="mx-2 hidden sm:inline">|</span>
+            <a href="/privacy" class="hover:text-gold transition-colors inline-block mt-1 sm:mt-0">Privacy Policy</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>

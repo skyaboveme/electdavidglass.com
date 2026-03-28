@@ -2,118 +2,142 @@
 import Base from '../layouts/Base.astro';
 ---
 
-<Base title="Core Priorities | David Glass" description="Explore the core priorities of David Glass: Roads, Fiscal Accountability, Water Security, and Responsible Growth.">
+<Base title="Core Priorities" description="Explore the core priorities of David Glass: Roads, Fiscal Accountability, Water Security, and Responsible Growth.">
   
-  <div class="pt-20 pb-16 bg-navy text-white text-center">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl sm:text-5xl font-extrabold mb-6">Core Priorities</h1>
-      <p class="text-xl font-light text-warm-gray leading-relaxed max-w-2xl mx-auto">
-        Concrete focus areas for Bastrop County's future, backed by the context of why they matter and the actions we are taking today.
+  <!-- Page Header -->
+  <section class="page-header-gradient pt-28 pb-20 relative">
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="gold-line mx-auto mb-6"></div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-extrabold text-white mb-6">Core Priorities</h1>
+      <p class="text-xl font-sans font-light text-white/70 leading-relaxed max-w-2xl mx-auto">
+        Concrete focus areas for Bastrop County's future, backed by action and accountability.
       </p>
     </div>
-  </div>
+  </section>
 
-  <section class="py-16 sm:py-24 bg-warm-gray/10 relative">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-0">
       
       <!-- Priority 1 -->
-      <div>
-        <div class="flex items-center gap-4 mb-6">
-          <div class="w-12 h-12 bg-navy rounded flex items-center justify-center flex-shrink-0">
-            <span class="text-gold font-bold text-xl">1</span>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start py-16 border-b border-warm-gray reveal">
+        <div class="lg:col-span-2 flex lg:flex-col items-center lg:items-start gap-4">
+          <div class="w-16 h-16 bg-navy rounded-2xl flex items-center justify-center flex-shrink-0">
+            <span class="text-gold font-serif font-bold text-2xl">1</span>
           </div>
-          <h2 class="text-3xl font-bold text-navy">Roads and Infrastructure</h2>
         </div>
-        <div class="pl-0 sm:pl-16">
-          <h3 class="text-xl font-semibold text-near-black mb-2">The Challenge</h3>
-          <p class="text-near-black leading-relaxed mb-6">Bastrop County is growing rapidly. Roads that were designed to serve a sprawling rural population are now carrying heavy suburban commuter and construction traffic. Maintaining and systematically upgrading this infrastructure is not optional—it is a public safety imperative.</p>
-          
-          <h3 class="text-xl font-semibold text-near-black mb-2">The Approach</h3>
-          <p class="text-near-black leading-relaxed mb-6">Transitioning from a reactive "patchwork" strategy to a proactive lifecycle management plan. By applying mill and overlay techniques exactly when roads begin to degrade, we prevent the need for total—and massively expensive—road reconstruction.</p>
-          
-          <div class="bg-white border-l-4 border-gold p-4 rounded shadow-sm inline-block">
-            <a href="/results" class="text-navy font-bold hover:text-gold transition flex items-center">
-              View Road Results <span class="ml-2">&rarr;</span>
+        <div class="lg:col-span-10">
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy mb-6">Roads and Infrastructure</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-lg font-sans font-bold text-near-black mb-2 uppercase tracking-wide">The Challenge</h3>
+              <p class="text-near-black/70 leading-relaxed font-sans">Bastrop County is growing rapidly. Roads designed for rural traffic now carry heavy suburban and construction loads. Maintaining and upgrading this infrastructure is a public safety imperative.</p>
+            </div>
+            <div>
+              <h3 class="text-lg font-sans font-bold text-near-black mb-2 uppercase tracking-wide">The Approach</h3>
+              <p class="text-near-black/70 leading-relaxed font-sans">Transitioning from reactive patchwork to proactive lifecycle management. Mill and overlay techniques applied at the right time prevent the need for massively expensive total road reconstruction.</p>
+            </div>
+          </div>
+          <div class="mt-6">
+            <a href="/results" class="inline-flex items-center px-5 py-2.5 bg-cream border border-warm-gray rounded-lg text-navy font-sans font-bold text-sm hover:bg-navy hover:text-white hover:border-navy transition-all">
+              View Road Results →
             </a>
           </div>
         </div>
       </div>
 
       <!-- Priority 2 -->
-      <div>
-        <div class="flex items-center gap-4 mb-6">
-          <div class="w-12 h-12 bg-navy rounded flex items-center justify-center flex-shrink-0">
-            <span class="text-gold font-bold text-xl">2</span>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start py-16 border-b border-warm-gray reveal">
+        <div class="lg:col-span-2">
+          <div class="w-16 h-16 bg-navy rounded-2xl flex items-center justify-center">
+            <span class="text-gold font-serif font-bold text-2xl">2</span>
           </div>
-          <h2 class="text-3xl font-bold text-navy">Responsible Growth Management</h2>
         </div>
-        <div class="pl-0 sm:pl-16">
-          <h3 class="text-xl font-semibold text-near-black mb-2">The Challenge</h3>
-          <p class="text-near-black leading-relaxed mb-6">Growth is coming whether we plan for it or not. The central question for Bastrop County is whether we manage this growth deliberately to serve the people who already live here, or simply stand by and let it happen to us.</p>
-          
-          <h3 class="text-xl font-semibold text-near-black mb-2">The Approach</h3>
-          <p class="text-near-black leading-relaxed mb-6">Holding developers accountable. Subdivision approvals must be contingent on ensuring the developer—not the county taxpayer—pays for the required road improvements, drainage infrastructure, and utilities that the development necessitates.</p>
+        <div class="lg:col-span-10">
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy mb-6">Responsible Growth Management</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-lg font-sans font-bold text-near-black mb-2 uppercase tracking-wide">The Challenge</h3>
+              <p class="text-near-black/70 leading-relaxed font-sans">Growth is coming whether we plan for it or not. The central question is whether we manage it deliberately to serve existing residents, or stand by and let it happen to us.</p>
+            </div>
+            <div>
+              <h3 class="text-lg font-sans font-bold text-near-black mb-2 uppercase tracking-wide">The Approach</h3>
+              <p class="text-near-black/70 leading-relaxed font-sans">Subdivision approvals contingent on the developer — not the county taxpayer — paying for required road improvements, drainage infrastructure, and utilities.</p>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Priority 3 -->
-      <div>
-        <div class="flex items-center gap-4 mb-6">
-          <div class="w-12 h-12 bg-navy rounded flex items-center justify-center flex-shrink-0">
-            <span class="text-gold font-bold text-xl">3</span>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start py-16 border-b border-warm-gray reveal">
+        <div class="lg:col-span-2">
+          <div class="w-16 h-16 bg-navy rounded-2xl flex items-center justify-center">
+            <span class="text-gold font-serif font-bold text-2xl">3</span>
           </div>
-          <h2 class="text-3xl font-bold text-navy">Fiscal Accountability</h2>
         </div>
-        <div class="pl-0 sm:pl-16">
-          <h3 class="text-xl font-semibold text-near-black mb-2">The Challenge</h3>
-          <p class="text-near-black leading-relaxed mb-6">Every single dollar of county spending is a dollar removed from a taxpayer's pocket. In an era of heavy inflation and rising costs, the county government cannot view property tax increases as the default funding mechanism.</p>
-          
-          <h3 class="text-xl font-semibold text-near-black mb-2">The Approach</h3>
-          <p class="text-near-black leading-relaxed mb-6">Bringing private-sector business rigor to the county budget. Every departmental budget must be tight, fully transparent, justified, and firmly attached to measurable outcomes.</p>
-          
-          <div class="bg-white border-l-4 border-gold p-4 rounded shadow-sm inline-block">
-            <a href="/results" class="text-navy font-bold hover:text-gold transition flex items-center">
-              View Fiscal Results <span class="ml-2">&rarr;</span>
+        <div class="lg:col-span-10">
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy mb-6">Fiscal Accountability</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-lg font-sans font-bold text-near-black mb-2 uppercase tracking-wide">The Challenge</h3>
+              <p class="text-near-black/70 leading-relaxed font-sans">Every dollar of county spending is a dollar removed from a taxpayer's pocket. In an era of heavy inflation and rising costs, property tax increases cannot be the default.</p>
+            </div>
+            <div>
+              <h3 class="text-lg font-sans font-bold text-near-black mb-2 uppercase tracking-wide">The Approach</h3>
+              <p class="text-near-black/70 leading-relaxed font-sans">Private-sector business rigor applied to the county budget. Every department must be tight, fully transparent, justified, and tied to measurable outcomes.</p>
+            </div>
+          </div>
+          <div class="mt-6">
+            <a href="/results" class="inline-flex items-center px-5 py-2.5 bg-cream border border-warm-gray rounded-lg text-navy font-sans font-bold text-sm hover:bg-navy hover:text-white hover:border-navy transition-all">
+              View Fiscal Results →
             </a>
           </div>
         </div>
       </div>
 
       <!-- Priority 4 -->
-      <div>
-        <div class="flex items-center gap-4 mb-6">
-          <div class="w-12 h-12 bg-navy rounded flex items-center justify-center flex-shrink-0">
-            <span class="text-gold font-bold text-xl">4</span>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start py-16 border-b border-warm-gray reveal">
+        <div class="lg:col-span-2">
+          <div class="w-16 h-16 bg-navy rounded-2xl flex items-center justify-center">
+            <span class="text-gold font-serif font-bold text-2xl">4</span>
           </div>
-          <h2 class="text-3xl font-bold text-navy">Water Security</h2>
         </div>
-        <div class="pl-0 sm:pl-16">
-          <h3 class="text-xl font-semibold text-near-black mb-2">The Challenge</h3>
-          <p class="text-near-black leading-relaxed mb-6">Water is the absolute foundation of everything. You cannot sustain communities, support agriculture, or harbor healthy economic development without rigorous, long-term water planning.</p>
-          
-          <h3 class="text-xl font-semibold text-near-black mb-2">The Approach</h3>
-          <p class="text-near-black leading-relaxed mb-6">Leveraging deep, hard-won expertise from serving on the Aqua Water Supply Corporation board to protect Bastrop County's aquifers and ensure regional water strategies are built on reality, not optimism.</p>
+        <div class="lg:col-span-10">
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy mb-6">Water Security</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-lg font-sans font-bold text-near-black mb-2 uppercase tracking-wide">The Challenge</h3>
+              <p class="text-near-black/70 leading-relaxed font-sans">Water is the absolute foundation of everything. You cannot sustain communities, support agriculture, or foster economic development without rigorous, long-term water planning.</p>
+            </div>
+            <div>
+              <h3 class="text-lg font-sans font-bold text-near-black mb-2 uppercase tracking-wide">The Approach</h3>
+              <p class="text-near-black/70 leading-relaxed font-sans">Leveraging deep expertise from the Aqua Water Supply Corporation board to protect Bastrop County's aquifers and ensure water strategies are built on reality, not optimism.</p>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Priority 5 -->
-      <div>
-        <div class="flex items-center gap-4 mb-6">
-          <div class="w-12 h-12 bg-navy rounded flex items-center justify-center flex-shrink-0">
-            <span class="text-gold font-bold text-xl">5</span>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start py-16 reveal">
+        <div class="lg:col-span-2">
+          <div class="w-16 h-16 bg-navy rounded-2xl flex items-center justify-center">
+            <span class="text-gold font-serif font-bold text-2xl">5</span>
           </div>
-          <h2 class="text-3xl font-bold text-navy">Community Preservation</h2>
         </div>
-        <div class="pl-0 sm:pl-16">
-          <h3 class="text-xl font-semibold text-near-black mb-2">The Challenge</h3>
-          <p class="text-near-black leading-relaxed mb-6">Growth threatens to homogenize Central Texas. Bastrop County's distinct character—its rural identity, close-knit communities, and agricultural heritage—is under intense pressure.</p>
-          
-          <h3 class="text-xl font-semibold text-near-black mb-2">The Approach</h3>
-          <p class="text-near-black leading-relaxed mb-6">Making decisions that respect property rights while actively preserving the open spaces and community institutions that defined Bastrop County long before the current population boom.</p>
-          
-          <div class="bg-white border-l-4 border-gold p-4 rounded shadow-sm inline-block">
-            <a href="/about" class="text-navy font-bold hover:text-gold transition flex items-center">
-              Read David's Story <span class="ml-2">&rarr;</span>
+        <div class="lg:col-span-10">
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy mb-6">Community Preservation</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-lg font-sans font-bold text-near-black mb-2 uppercase tracking-wide">The Challenge</h3>
+              <p class="text-near-black/70 leading-relaxed font-sans">Growth threatens to homogenize Central Texas. Bastrop County's distinct character — its rural identity, close-knit communities, and agricultural heritage — is under intense pressure.</p>
+            </div>
+            <div>
+              <h3 class="text-lg font-sans font-bold text-near-black mb-2 uppercase tracking-wide">The Approach</h3>
+              <p class="text-near-black/70 leading-relaxed font-sans">Making decisions that respect property rights while actively preserving the open spaces and community institutions that defined Bastrop County long before the current population boom.</p>
+            </div>
+          </div>
+          <div class="mt-6">
+            <a href="/about" class="inline-flex items-center px-5 py-2.5 bg-cream border border-warm-gray rounded-lg text-navy font-sans font-bold text-sm hover:bg-navy hover:text-white hover:border-navy transition-all">
+              Read David's Story →
             </a>
           </div>
         </div>
