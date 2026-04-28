@@ -18,7 +18,7 @@ interface Props {
 const { 
   title, 
   description = "David Glass — Proven Leadership for Bastrop County Commissioner Precinct 4",
-  image = "/DG.jpeg"
+  image = "/og-image.jpg"
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url);
@@ -32,7 +32,7 @@ const fullTitle = title === 'Home'
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     
     <title>{fullTitle}</title>
@@ -73,6 +73,16 @@ const fullTitle = title === 'Home'
       "telephone": "(512) 581-7100",
       "description": "Bastrop County Commissioner for Precinct 4. Lifelong resident, 40+ year business owner, President of Aqua Water Supply Corporation."
     })} />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PS8GTJ9JYS"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-PS8GTJ9JYS');
+    </script>
   </head>
   <body class="flex flex-col min-h-screen">
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-navy">

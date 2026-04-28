@@ -12,8 +12,21 @@ export async function onRequestPost({ request, env }) {
       });
     }
 
-    // In a production environment with D1 bindings:
-    // await env.DB.prepare('INSERT INTO subscribers (first_name, email) VALUES (?, ?)').bind(firstName || '', email).run();
+    // Add a custom subject for context
+    formData.append('_subject', 'New Newsletter Subscriber: ' + email);
+
+    // Forward to FormSubmit
+    const submitResponse = await fetch("https://formsubmit.co/ajax/dglass@sbstexas.com", {
+      method: "POST",
+      headers: {
+        'Accept': 'application/json'
+      },
+      body: formData
+    });
+
+    if (!submitResponse.ok) {
+      throw new Error("Failed to send subscription.");
+    }
 
     return new Response(JSON.stringify({ success: true, message: "You're signed up. Watch your inbox for updates from Precinct 4." }), {
       headers: { 'Content-Type': 'application/json' }

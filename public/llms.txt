@@ -1,0 +1,7 @@
+# David Glass Campaign
+> Bastrop County Commissioner, Precinct 4
+
+This site provides information regarding the re-election campaign for David Glass.
+
+- [Main Narrative & Platform](/llm.txt)
+- [Official Website](https://electdavidglass.com/)

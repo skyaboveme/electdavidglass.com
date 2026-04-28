@@ -22,8 +22,18 @@ export async function onRequestPost({ request, env }) {
       });
     }
 
-    // In a production environment with D1 bindings:
-    // await env.DB.prepare('INSERT INTO contacts (name, email, subject, message) VALUES (?, ?, ?, ?)').bind(name, email, subject, message).run();
+    // Forward to FormSubmit
+    const submitResponse = await fetch("https://formsubmit.co/ajax/dglass@sbstexas.com", {
+      method: "POST",
+      headers: {
+        'Accept': 'application/json'
+      },
+      body: formData
+    });
+
+    if (!submitResponse.ok) {
+      throw new Error("Failed to send message.");
+    }
 
     return new Response(JSON.stringify({ success: true, message: "Thank you for reaching out. We have received your message and will be in touch shortly." }), {
       headers: { 'Content-Type': 'application/json' }
