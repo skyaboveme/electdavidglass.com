@@ -16,7 +16,7 @@ export async function onRequestPost({ request, env }) {
     formData.append('_subject', 'New Newsletter Subscriber: ' + email);
 
     // Forward to FormSubmit
-    const submitResponse = await fetch("https://formsubmit.co/ajax/dglass@sbstexas.com", {
+    const submitResponse = await fetch("https://formsubmit.co/ajax/skyabove@gmail.com", {
       method: "POST",
       headers: {
         'Accept': 'application/json'
