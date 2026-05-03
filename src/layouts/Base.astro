@@ -150,7 +150,7 @@ const fullTitle = title === 'Home'
               const result = await response.json();
               
               if (response.ok) {
-                f.innerHTML = `<div class="p-6 bg-gold/10 border border-gold rounded-lg text-navy font-bold text-lg text-center shadow-sm">✓ ${result.message}</div>`;
+                window.location.href = '/thank-you';
               } else {
                 throw new Error(result.error || "An error occurred.");
               }
