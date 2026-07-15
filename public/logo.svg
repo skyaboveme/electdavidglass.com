@@ -2,7 +2,7 @@
   <!-- Definitions for clip paths, text paths, and styles -->
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&amp;display=swap');
       .logo-name {
         font-family: 'Montserrat', 'Inter', -apple-system, sans-serif;
         font-weight: 900;
@@ -10,7 +10,7 @@
       }
       .logo-action {
         font-family: 'Montserrat', 'Inter', -apple-system, sans-serif;
-        font-weight: 800;
+        font-weight: 900;
         fill: #ffffff;
       }
     </style>
@@ -21,7 +21,7 @@
     </clipPath>
     
     <!-- Path for the curved ELECT text at the bottom -->
-    <path id="text-path-bottom" d="M 101,390 A 205,205 0 0,0 411,390" />
+    <path id="text-path-bottom" d="M 98,392 A 206,206 0 0,0 414,392" />
   </defs>
 
   <!-- Outer thick navy circle -->
@@ -39,54 +39,54 @@
     <rect x="0" y="380" width="512" height="132" fill="#c41e3a" />
 
     <!-- White Circle Outline for Star Area -->
-    <circle cx="256" cy="108" r="60" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.9" />
+    <circle cx="256" cy="104" r="64" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.9" />
 
     <!-- 3D Shaded Star -->
     <g id="star">
       <!-- Top Ray -->
-      <polygon points="256,105 256,63 266.3,90.8" fill="#d5dee5" />
-      <polygon points="256,105 245.7,90.8 256,63" fill="#ffffff" />
+      <polygon points="256,104 256,58 267.2,88.6" fill="#d5dee5" />
+      <polygon points="256,104 244.8,88.6 256,58" fill="#ffffff" />
       
       <!-- Right-Top Ray -->
-      <polygon points="256,105 296,92 272.6,110.4" fill="#d5dee5" />
-      <polygon points="256,105 266.3,90.8 296,92" fill="#ffffff" />
+      <polygon points="256,104 299.7,89.8 274.1,109.9" fill="#d5dee5" />
+      <polygon points="256,104 267.2,88.6 299.7,89.8" fill="#ffffff" />
       
       <!-- Right-Bottom Ray -->
-      <polygon points="256,105 280.7,139 256,122.5" fill="#d5dee5" />
-      <polygon points="256,105 272.6,110.4 280.7,139" fill="#ffffff" />
+      <polygon points="256,104 283,141.2 256,123" fill="#d5dee5" />
+      <polygon points="256,104 274.1,109.9 283,141.2" fill="#ffffff" />
       
       <!-- Left-Bottom Ray -->
-      <polygon points="256,105 231.3,139 239.4,110.4" fill="#ffffff" />
-      <polygon points="256,105 256,122.5 231.3,139" fill="#d5dee5" />
+      <polygon points="256,104 229,141.2 237.9,109.9" fill="#ffffff" />
+      <polygon points="256,104 256,123 229,141.2" fill="#d5dee5" />
       
       <!-- Left-Top Ray -->
-      <polygon points="256,105 216,92 245.7,90.8" fill="#ffffff" />
-      <polygon points="256,105 239.4,110.4 216,92" fill="#d5dee5" />
+      <polygon points="256,104 212.3,89.8 244.8,88.6" fill="#ffffff" />
+      <polygon points="256,104 237.9,109.9 212.3,89.8" fill="#d5dee5" />
     </g>
 
     <!-- Red Swoosh with White Outline -->
-    <path d="M 195,135 C 240,170 300,140 350,80 C 295,120 235,135 195,135 Z" 
+    <path d="M 190,135 C 238,172 302,142 355,80 C 298,122 232,135 190,135 Z" 
           fill="#ffffff" stroke="#ffffff" stroke-width="6" stroke-linejoin="round" />
-    <path d="M 195,135 C 240,170 300,140 350,80 C 295,120 235,135 195,135 Z" 
+    <path d="M 190,135 C 238,172 302,142 355,80 C 298,122 232,135 190,135 Z" 
           fill="#c41e3a" />
   </g>
 
   <!-- Name Text in the Middle White Area -->
-  <text x="256" y="246" 
+  <text x="256" y="242" 
         class="logo-name"
-        font-size="82" 
+        font-size="94" 
         text-anchor="middle" 
-        letter-spacing="-2">DAVID</text>
+        letter-spacing="-3">DAVID</text>
         
-  <text x="256" y="328" 
+  <text x="256" y="326" 
         class="logo-name"
-        font-size="82" 
+        font-size="94" 
         text-anchor="middle" 
-        letter-spacing="-2">GLASS</text>
+        letter-spacing="-3">GLASS</text>
 
   <!-- Curved ELECT Text inside the Bottom Red Banner -->
   <text class="logo-action"
-        font-size="36" 
+        font-size="44" 
         letter-spacing="10">
     <textPath href="#text-path-bottom" startOffset="50%" text-anchor="middle">ELECT</textPath>
   </text>
