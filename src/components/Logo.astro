@@ -15,7 +15,7 @@ const { class: className } = Astro.props;
     </clipPath>
     
     <!-- Path for the curved ELECT text at the bottom -->
-    <path id="text-path-bottom" d="M 98,392 A 206,206 0 0,0 414,392" />
+    <path id="text-path-bottom" d="M 112,408 A 190,190 0 0,0 400,408" />
   </defs>
 
   <!-- Outer thick navy circle -->
@@ -27,60 +27,60 @@ const { class: className } = Astro.props;
   <!-- Inner Content (Clipped to fit inside the thin navy circle) -->
   <g clip-path="url(#inner-clip)">
     <!-- Top Navy Segment -->
-    <rect x="0" y="0" width="512" height="175" fill="#1b2a4a" />
+    <rect x="0" y="0" width="512" height="145" fill="#1b2a4a" />
     
     <!-- Bottom Red Segment -->
-    <rect x="0" y="380" width="512" height="132" fill="#c41e3a" />
+    <rect x="0" y="390" width="512" height="122" fill="#c41e3a" />
 
     <!-- White Circle Outline for Star Area -->
-    <circle cx="256" cy="104" r="64" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.9" />
+    <circle cx="256" cy="82" r="52" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.9" />
 
     <!-- 3D Shaded Star -->
     <g id="star">
       <!-- Top Ray -->
-      <polygon points="256,104 256,58 267.2,88.6" fill="#d5dee5" />
-      <polygon points="256,104 244.8,88.6 256,58" fill="#ffffff" />
+      <polygon points="256,82 256,44 265.4,69.1" fill="#d5dee5" />
+      <polygon points="256,82 246.6,69.1 256,44" fill="#ffffff" />
       
       <!-- Right-Top Ray -->
-      <polygon points="256,104 299.7,89.8 274.1,109.9" fill="#d5dee5" />
-      <polygon points="256,104 267.2,88.6 299.7,89.8" fill="#ffffff" />
+      <polygon points="256,82 292.1,70.3 271.2,86.9" fill="#d5dee5" />
+      <polygon points="256,82 265.4,69.1 292.1,70.3" fill="#ffffff" />
       
       <!-- Right-Bottom Ray -->
-      <polygon points="256,104 283,141.2 256,123" fill="#d5dee5" />
-      <polygon points="256,104 274.1,109.9 283,141.2" fill="#ffffff" />
+      <polygon points="256,82 278.3,112.7 256,98" fill="#d5dee5" />
+      <polygon points="256,82 271.2,86.9 278.3,112.7" fill="#ffffff" />
       
       <!-- Left-Bottom Ray -->
-      <polygon points="256,104 229,141.2 237.9,109.9" fill="#ffffff" />
-      <polygon points="256,104 256,123 229,141.2" fill="#d5dee5" />
+      <polygon points="256,82 233.7,112.7 240.8,86.9" fill="#ffffff" />
+      <polygon points="256,82 256,98 233.7,112.7" fill="#d5dee5" />
       
       <!-- Left-Top Ray -->
-      <polygon points="256,104 212.3,89.8 244.8,88.6" fill="#ffffff" />
-      <polygon points="256,104 237.9,109.9 212.3,89.8" fill="#d5dee5" />
+      <polygon points="256,82 219.9,70.3 246.6,69.1" fill="#ffffff" />
+      <polygon points="256,82 240.8,86.9 219.9,70.3" fill="#d5dee5" />
     </g>
 
     <!-- Red Swoosh with White Outline -->
-    <path d="M 190,135 C 238,172 302,142 355,80 C 298,122 232,135 190,135 Z" 
+    <path d="M 198,110 C 242,142 296,116 342,66 C 292,100 236,110 198,110 Z" 
           fill="#ffffff" stroke="#ffffff" stroke-width="6" stroke-linejoin="round" />
-    <path d="M 190,135 C 238,172 302,142 355,80 C 298,122 232,135 190,135 Z" 
+    <path d="M 198,110 C 242,142 296,116 342,66 C 292,100 236,110 198,110 Z" 
           fill="#c41e3a" />
   </g>
 
   <!-- Name Text in the Middle White Area -->
-  <text x="256" y="242" 
+  <text x="256" y="234" 
         class="font-montserrat-black fill-navy"
-        font-size="94" 
+        font-size="112" 
         text-anchor="middle" 
-        letter-spacing="-3">DAVID</text>
+        letter-spacing="-5">DAVID</text>
         
-  <text x="256" y="326" 
+  <text x="256" y="338" 
         class="font-montserrat-black fill-navy"
-        font-size="94" 
+        font-size="112" 
         text-anchor="middle" 
-        letter-spacing="-3">GLASS</text>
+        letter-spacing="-5">GLASS</text>
 
   <!-- Curved ELECT Text inside the Bottom Red Banner -->
   <text class="font-montserrat-black fill-white"
-        font-size="44" 
+        font-size="42" 
         letter-spacing="10">
     <textPath href="#text-path-bottom" startOffset="50%" text-anchor="middle">ELECT</textPath>
   </text>
