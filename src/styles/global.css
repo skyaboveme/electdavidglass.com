@@ -15,6 +15,17 @@
   /* Typography */
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Playfair Display", "Georgia", serif;
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+.font-montserrat-black {
+  font-family: var(--font-montserrat);
+  font-weight: 900;
+}
+
+.font-montserrat-extrabold {
+  font-family: var(--font-montserrat);
+  font-weight: 800;
 }
 
 /* ============================================
