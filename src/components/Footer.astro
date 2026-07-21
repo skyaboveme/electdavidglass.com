@@ -1,4 +1,6 @@
 ---
+import Logo from './Logo.astro';
+
 const year = new Date().getFullYear();
 
 const links = [
@@ -25,7 +27,7 @@ const links = [
         <!-- Brand & Office Info -->
         <div class="space-y-4">
           <a href="/" class="flex items-center gap-3 group mb-6">
-            <img src="/logo.png" alt="Elect David Glass" class="h-20 w-auto drop-shadow-lg hover:scale-105 transition-transform duration-300" />
+            <Logo class="h-20 w-auto drop-shadow-lg hover:scale-105 transition-transform duration-300" />
           </a>
           <p class="text-white/60 text-sm leading-relaxed">
             County Commissioner, Precinct 4<br/>
