@@ -1,93 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
-  <!-- Definitions for clip paths, text paths, and styles -->
-  <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&amp;display=swap');
-      .logo-name {
-        font-family: 'Montserrat', 'Inter', -apple-system, sans-serif;
-        font-weight: 900;
-        fill: #1b2a4a;
-      }
-      .logo-action {
-        font-family: 'Montserrat', 'Inter', -apple-system, sans-serif;
-        font-weight: 900;
-        fill: #ffffff;
-      }
-    </style>
+---
+interface Props {
+  class?: string;
+}
 
+const { class: className } = Astro.props;
+---
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class={className}>
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f0f2f5"/>
+    </radialGradient>
+    
     <!-- Clipping circle for the inner elements -->
     <clipPath id="inner-clip">
-      <circle cx="256" cy="256" r="222" />
+      <circle cx="256" cy="256" r="226" />
     </clipPath>
-    
-    <!-- Path for the curved ELECT text at the bottom -->
-    <path id="text-path-bottom" d="M 112,408 A 190,190 0 0,0 400,408" />
   </defs>
 
   <!-- Outer thick navy circle -->
-  <circle cx="256" cy="256" r="240" fill="none" stroke="#1b2a4a" stroke-width="12" />
+  <circle cx="256" cy="256" r="248" fill="#1b2a4a" />
+  
+  <!-- White gap -->
+  <circle cx="256" cy="256" r="236" fill="#ffffff" />
+  
+  <!-- Thin navy inner ring -->
+  <circle cx="256" cy="256" r="230" fill="#1b2a4a" />
 
-  <!-- Thin navy circle inside the gap -->
-  <circle cx="256" cy="256" r="224" fill="#ffffff" stroke="#1b2a4a" stroke-width="3" />
+  <!-- Inner Background -->
+  <circle cx="256" cy="256" r="226" fill="url(#bg-grad)" />
 
-  <!-- Inner Content (Clipped to fit inside the thin navy circle) -->
+  <!-- Inner Content (Clipped to fit inside the background circle) -->
   <g clip-path="url(#inner-clip)">
-    <!-- Top Navy Segment -->
-    <rect x="0" y="0" width="512" height="145" fill="#1b2a4a" />
+    <!-- Bottom Navy Section -->
+    <path d="M 0,400 Q 256,330 512,400 L 512,512 L 0,512 Z" fill="#1b2a4a" />
     
-    <!-- Bottom Red Segment -->
-    <rect x="0" y="390" width="512" height="122" fill="#c41e3a" />
+    <!-- Bottom Red Section -->
+    <path d="M 0,395 Q 256,480 512,395 L 512,512 L 0,512 Z" fill="#c41e3a" />
 
-    <!-- White Circle Outline for Star Area -->
-    <circle cx="256" cy="82" r="52" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.9" />
-
-    <!-- 3D Shaded Star -->
-    <g id="star">
-      <!-- Top Ray -->
-      <polygon points="256,82 256,44 265.4,69.1" fill="#d5dee5" />
-      <polygon points="256,82 246.6,69.1 256,44" fill="#ffffff" />
-      
-      <!-- Right-Top Ray -->
-      <polygon points="256,82 292.1,70.3 271.2,86.9" fill="#d5dee5" />
-      <polygon points="256,82 265.4,69.1 292.1,70.3" fill="#ffffff" />
-      
-      <!-- Right-Bottom Ray -->
-      <polygon points="256,82 278.3,112.7 256,98" fill="#d5dee5" />
-      <polygon points="256,82 271.2,86.9 278.3,112.7" fill="#ffffff" />
-      
-      <!-- Left-Bottom Ray -->
-      <polygon points="256,82 233.7,112.7 240.8,86.9" fill="#ffffff" />
-      <polygon points="256,82 256,98 233.7,112.7" fill="#d5dee5" />
-      
-      <!-- Left-Top Ray -->
-      <polygon points="256,82 219.9,70.3 246.6,69.1" fill="#ffffff" />
-      <polygon points="256,82 240.8,86.9 219.9,70.3" fill="#d5dee5" />
-    </g>
-
-    <!-- Red Swoosh with White Outline -->
-    <path d="M 198,110 C 242,142 296,116 342,66 C 292,100 236,110 198,110 Z" 
-          fill="#ffffff" stroke="#ffffff" stroke-width="6" stroke-linejoin="round" />
-    <path d="M 198,110 C 242,142 296,116 342,66 C 292,100 236,110 198,110 Z" 
-          fill="#c41e3a" />
+    <!-- Bottom White Star -->
+    <polygon points="256,382 261,397 277,397 264,407 269,422 256,413 243,422 248,407 235,397 251,397" fill="#ffffff" />
   </g>
 
-  <!-- Name Text in the Middle White Area -->
-  <text x="256" y="234" 
-        class="logo-name"
-        font-size="112" 
-        text-anchor="middle" 
-        letter-spacing="-5">DAVID</text>
-        
-  <text x="256" y="338" 
-        class="logo-name"
-        font-size="112" 
-        text-anchor="middle" 
-        letter-spacing="-5">GLASS</text>
+  <!-- Top Logo Mark -->
+  <g id="top-mark">
+    <!-- Outer thin ring -->
+    <circle cx="256" cy="72" r="34" fill="none" stroke="#1b2a4a" stroke-width="2" />
+    
+    <!-- Inner Navy Circle -->
+    <circle cx="256" cy="72" r="28" fill="#1b2a4a" />
+    
+    <!-- Inner White Star -->
+    <polygon points="256,52 259,62 270,62 261,69 264.5,79 256,73 247.5,79 251,69 242,62 253,62" fill="#ffffff" />
+    
+    <!-- Swoosh -->
+    <path d="M 215,80 Q 256,110 305,60 Q 260,95 215,80 Z" fill="#1b2a4a" stroke="#ffffff" stroke-width="2" />
+  </g>
 
-  <!-- Curved ELECT Text inside the Bottom Red Banner -->
-  <text class="logo-action"
-        font-size="42" 
-        letter-spacing="10">
-    <textPath href="#text-path-bottom" startOffset="50%" text-anchor="middle">ELECT</textPath>
-  </text>
+  <!-- Typography -->
+  <text x="256" y="145" 
+        class="fill-navy font-black"
+        font-family="Montserrat, system-ui, sans-serif"
+        font-size="36" 
+        text-anchor="middle" 
+        letter-spacing="3">ELECT</text>
+        
+  <text x="256" y="245" 
+        class="fill-navy font-black"
+        font-family="Montserrat, system-ui, sans-serif"
+        font-size="115" 
+        text-anchor="middle" 
+        letter-spacing="-2">DAVID</text>
+        
+  <text x="256" y="345" 
+        class="fill-navy font-black"
+        font-family="Montserrat, system-ui, sans-serif"
+        font-size="115" 
+        text-anchor="middle" 
+        letter-spacing="-2">GLASS</text>
 </svg>
