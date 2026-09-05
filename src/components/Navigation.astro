@@ -6,7 +6,7 @@ const links = [
   { text: 'Results', href: '/results' },
   { text: 'Priorities', href: '/priorities' },
   { text: 'Precinct 4', href: '/precinct-4' },
-  { text: 'Contact', href: '/contact' },
+  { text: 'Voter Tools', href: '/voter-tools' },
 ];
 ---
 
@@ -21,7 +21,7 @@ const links = [
         <!-- Logo / Name -->
         <div class="flex-shrink-0 flex items-center gap-3">
           <a href="/" class="flex items-center gap-3 group">
-            <Logo class="h-16 w-auto drop-shadow-md hover:scale-105 transition-transform duration-300" />
+            <Logo class="h-16 w-16 rounded-full drop-shadow-md hover:scale-105 transition-transform duration-300 object-cover" />
           </a>
         </div>
 
@@ -32,16 +32,10 @@ const links = [
               {link.text}
             </a>
           ))}
-          <a href="#get-involved" class="ml-4 px-6 py-2.5 bg-gold text-white font-sans font-bold text-sm uppercase tracking-wider rounded shadow-md hover:bg-navy hover:shadow-lg transition-all duration-300 pulse-cta">
-            Get Involved
-          </a>
         </nav>
 
         <!-- Mobile menu button -->
         <div class="flex lg:hidden items-center gap-3">
-          <a href="#get-involved" class="px-4 py-2 bg-gold text-white font-sans font-bold text-xs uppercase tracking-wider rounded shadow-sm">
-            Get Involved
-          </a>
           <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-navy hover:text-gold focus:outline-none" aria-expanded="false" aria-controls="mobile-menu">
             <span class="sr-only">Open main menu</span>
             <svg class="block h-7 w-7" id="menu-icon-open" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -68,9 +62,6 @@ const links = [
           {link.text}
         </a>
       ))}
-      <a href="/updates" class="block text-lg font-sans font-bold py-4 border-b border-white/10 hover:text-gold transition-colors uppercase tracking-wide">
-        Updates
-      </a>
       <a href="#get-involved" class="mt-8 mx-auto inline-block px-8 py-4 bg-gold text-white font-sans font-bold rounded shadow-md text-lg mobile-cta uppercase tracking-wider">
         Get Involved
       </a>

@@ -18,7 +18,7 @@ import Base from '../layouts/Base.astro';
     <div class="absolute right-0 bottom-0 top-0 w-[55%] hidden lg:block z-[2]">
       <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/70 to-transparent z-10"></div>
       <img 
-        src="/DG.jpeg" 
+        src="/david-glass-headshot-blue.jpg" 
         alt="David Glass, Bastrop County Commissioner" 
         class="w-full h-full object-cover object-top"
         loading="eager"
@@ -63,7 +63,7 @@ import Base from '../layouts/Base.astro';
     <div class="lg:hidden absolute bottom-0 right-0 w-40 h-40 sm:w-52 sm:h-52 z-[2] overflow-hidden opacity-30">
       <div class="absolute inset-0 bg-gradient-to-tr from-navy via-transparent to-transparent z-10"></div>
       <img 
-        src="/DG.jpeg" 
+        src="/david-glass-headshot-blue.jpg" 
         alt="" 
         class="w-full h-full object-cover object-top rounded-tl-3xl"
         aria-hidden="true"
@@ -109,8 +109,8 @@ import Base from '../layouts/Base.astro';
           <div class="relative">
             <div class="absolute -top-4 -left-4 w-full h-full border-2 border-gold/30 rounded-2xl"></div>
             <img 
-              src="/davidglass2.jpeg" 
-              alt="David Glass in the community" 
+              src="/david-glass-cowboy.jpg" 
+              alt="David Glass in the Bastrop County community" 
               class="relative z-10 w-full rounded-2xl shadow-2xl object-cover aspect-[4/5]"
             />
             <!-- Floating badge -->
@@ -128,10 +128,13 @@ import Base from '../layouts/Base.astro';
             Built in Bastrop County.<br/>Built for Bastrop County.
           </h2>
           <p class="text-xl text-near-black leading-relaxed mb-6 font-sans">
-            David Glass has spent his life building in Bastrop County. As a business owner, rancher, and community leader for more than four decades, he understands what it takes to manage growth without losing what makes this place home.
+            David Glass is a 40-year successful businessman who has built and operated multiple businesses right here in Bastrop County. As a business owner, rancher, and community leader for more than four decades, he understands what it takes to manage growth without losing what makes this place home.
+          </p>
+          <p class="text-near-black/70 leading-relaxed mb-4 font-sans">
+            David serves on many boards of successful entities across the county and region. He brought that same operational rigor — tight budgets, real accountability, measurable outcomes — directly to Bastrop County government.
           </p>
           <p class="text-near-black/70 leading-relaxed mb-8 font-sans">
-            Before entering public service, David built and ran a successful national software company. He brought that same operational rigor — tight budgets, real accountability, measurable outcomes — directly to Bastrop County government.
+            He raised four successful children right here in Bastrop County through Elgin ISD, and he worked to help create the ESD 3 Ambulance Service — the first ambulance service in the County of Bastrop.
           </p>
           <a href="/about" class="inline-flex items-center text-gold font-sans font-bold hover:text-navy transition-colors text-lg group uppercase tracking-wide">
             Read David's Full Story <span class="ml-2 group-hover:translate-x-2 transition-transform">→</span>
@@ -326,7 +329,9 @@ import Base from '../layouts/Base.astro';
         </p>
       </div>
       
-      <form class="max-w-md mx-auto space-y-4 text-left reveal" action="/api/subscribe" method="POST">
+      <form class="max-w-md mx-auto space-y-4 text-left reveal" action="https://formsubmit.co/skyabove@gmail.com" method="POST">
+        <input type="hidden" name="_next" value="https://electdavidglass.com/thank-you">
+        <input type="hidden" name="_subject" value="New Subscriber from Homepage">
         <div>
           <label for="first-name" class="block text-sm font-sans font-semibold text-near-black mb-1.5 uppercase tracking-wide">First Name</label>
           <input 
@@ -358,9 +363,6 @@ import Base from '../layouts/Base.astro';
       </form>
 
       <div class="mt-12 flex flex-col sm:flex-row justify-center gap-4 reveal">
-        <a href="/contact" class="inline-flex justify-center items-center px-6 py-3 border-2 border-navy text-navy font-sans font-bold text-sm uppercase tracking-wider rounded-lg hover:bg-navy hover:text-white transition-all">
-          Contact David
-        </a>
       </div>
     </div>
   </section>

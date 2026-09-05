@@ -1,0 +1,307 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Voter Tools" description="Find your precinct, polling location, early voting dates, and voter registration for Bastrop County, Texas.">
+  
+  <!-- Page Header -->
+  <section class="page-header-gradient pt-28 pb-20 relative">
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="gold-line mx-auto mb-6"></div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-extrabold text-white mb-6">Voter Tools</h1>
+      <p class="text-xl font-sans font-light text-white/70 leading-relaxed max-w-2xl mx-auto">
+        Everything you need to make your voice heard in Bastrop County. Check your precinct, find your polling place, and register to vote.
+      </p>
+    </div>
+  </section>
+
+  <!-- Am I in Precinct 4? -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        
+        <!-- Content -->
+        <div class="reveal">
+          <div class="gold-line mb-6"></div>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy mb-6 leading-tight">Am I in Precinct 4?</h2>
+          <p class="text-xl text-near-black leading-relaxed mb-6 font-sans">
+            Precinct 4 covers the northern and eastern stretches of Bastrop County, including <strong>Elgin</strong> and extensive rural communities. Not sure if you're in Precinct 4? Check your voter registration to find out.
+          </p>
+          <p class="text-near-black/70 leading-relaxed mb-8 font-sans">
+            Use the official Bastrop County voter lookup tool to confirm your precinct, verify your registration status, and view your sample ballot.
+          </p>
+          <a 
+            href="https://www.co.bastrop.tx.us/page/elections.home" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center px-8 py-4 bg-navy text-white font-sans font-bold text-sm uppercase tracking-wider rounded-lg hover:bg-gold hover:-translate-y-0.5 transition-all shadow-lg group"
+          >
+            <svg class="w-5 h-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            Look Up My Precinct
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Map Image -->
+        <div class="reveal-right">
+          <div class="relative bg-cream rounded-2xl p-6 shadow-lg border border-warm-gray">
+            <img 
+              src="/pricinctaBastrop county.jpeg" 
+              alt="Map of Bastrop County showing Precinct 4 boundaries" 
+              class="w-full h-auto rounded-xl"
+            />
+            <div class="absolute top-4 right-4 bg-navy text-white px-3 py-1.5 rounded-lg text-xs font-sans font-bold uppercase tracking-wider shadow-md">
+              Precinct 4
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Polling Locations & Early Voting -->
+  <section class="py-16 sm:py-24 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <div class="gold-line mx-auto mb-6"></div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-navy mb-4">Find Your Polling Location</h2>
+        <p class="text-xl text-slate font-sans font-light max-w-2xl mx-auto">
+          Know exactly where and when to vote — whether early or on Election Day.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal-stagger">
+        
+        <!-- Early Voting Card -->
+        <div class="bg-white rounded-2xl p-8 sm:p-10 shadow-sm border border-warm-gray hover-lift group">
+          <div class="w-14 h-14 bg-gold/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
+            <svg class="w-7 h-7 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-serif font-bold text-navy mb-4">Early Voting</h3>
+          <p class="text-near-black/70 leading-relaxed mb-6 font-sans">
+            Bastrop County offers early voting at multiple locations throughout the county. Early voting typically runs for two weeks before Election Day — you can vote at <strong>any</strong> early voting location regardless of your precinct.
+          </p>
+          <div class="bg-cream rounded-xl p-5 mb-6 border border-warm-gray">
+            <h4 class="font-sans font-bold text-near-black text-sm uppercase tracking-wider mb-3">Key Details</h4>
+            <ul class="space-y-2">
+              <li class="flex items-start text-sm font-sans text-near-black/70">
+                <span class="text-gold mr-2 mt-0.5 flex-shrink-0">★</span>
+                Vote at any early voting location in Bastrop County
+              </li>
+              <li class="flex items-start text-sm font-sans text-near-black/70">
+                <span class="text-gold mr-2 mt-0.5 flex-shrink-0">★</span>
+                Bring a valid photo ID (TX Driver's License, Passport, etc.)
+              </li>
+              <li class="flex items-start text-sm font-sans text-near-black/70">
+                <span class="text-gold mr-2 mt-0.5 flex-shrink-0">★</span>
+                Check the county website for exact dates and hours
+              </li>
+            </ul>
+          </div>
+          <a 
+            href="https://www.co.bastrop.tx.us/page/elections.home" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center text-gold font-sans font-bold text-sm uppercase tracking-wide group-hover:text-navy transition-colors"
+          >
+            View Early Voting Locations
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Election Day Card -->
+        <div class="bg-white rounded-2xl p-8 sm:p-10 shadow-sm border border-warm-gray hover-lift group">
+          <div class="w-14 h-14 bg-navy/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy/10 transition-colors">
+            <svg class="w-7 h-7 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-serif font-bold text-navy mb-4">Election Day Voting</h3>
+          <p class="text-near-black/70 leading-relaxed mb-6 font-sans">
+            On Election Day, polls are open from <strong>7:00 AM to 7:00 PM</strong>. Bastrop County uses countywide voting centers — you may vote at any location in the county on Election Day.
+          </p>
+          <div class="bg-cream rounded-xl p-5 mb-6 border border-warm-gray">
+            <h4 class="font-sans font-bold text-near-black text-sm uppercase tracking-wider mb-3">Key Details</h4>
+            <ul class="space-y-2">
+              <li class="flex items-start text-sm font-sans text-near-black/70">
+                <span class="text-gold mr-2 mt-0.5 flex-shrink-0">★</span>
+                Polls open 7:00 AM – 7:00 PM
+              </li>
+              <li class="flex items-start text-sm font-sans text-near-black/70">
+                <span class="text-gold mr-2 mt-0.5 flex-shrink-0">★</span>
+                Vote at any voting center in the county
+              </li>
+              <li class="flex items-start text-sm font-sans text-near-black/70">
+                <span class="text-gold mr-2 mt-0.5 flex-shrink-0">★</span>
+                If you are in line by 7:00 PM, you will be allowed to vote
+              </li>
+            </ul>
+          </div>
+          <a 
+            href="https://www.votetexas.gov/voting/where.html" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center text-gold font-sans font-bold text-sm uppercase tracking-wide group-hover:text-navy transition-colors"
+          >
+            Find My Polling Place
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Voter Registration CTA -->
+  <section class="py-16 sm:py-24 page-header-gradient text-white relative">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <div class="gold-line mx-auto mb-6"></div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white mb-4">Register to Vote</h2>
+        <p class="text-xl text-white/60 font-sans font-light max-w-2xl mx-auto">
+          Your vote is your voice. Make sure you're registered before the deadline.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal-stagger">
+        <!-- Step 1 -->
+        <div class="glass-card p-8 text-center hover-lift">
+          <div class="w-16 h-16 bg-gold/15 rounded-full flex items-center justify-center mx-auto mb-5">
+            <span class="text-gold font-serif font-bold text-3xl">1</span>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-white mb-3">Check Your Status</h3>
+          <p class="text-white/50 text-sm font-sans leading-relaxed">
+            Already registered? Verify that your information is current and correct before the deadline.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass-card p-8 text-center hover-lift">
+          <div class="w-16 h-16 bg-gold/15 rounded-full flex items-center justify-center mx-auto mb-5">
+            <span class="text-gold font-serif font-bold text-3xl">2</span>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-white mb-3">Register Online</h3>
+          <p class="text-white/50 text-sm font-sans leading-relaxed">
+            Texas allows you to apply for voter registration online through VoteTexas.gov. It only takes a few minutes.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass-card p-8 text-center hover-lift">
+          <div class="w-16 h-16 bg-gold/15 rounded-full flex items-center justify-center mx-auto mb-5">
+            <span class="text-gold font-serif font-bold text-3xl">3</span>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-white mb-3">Vote!</h3>
+          <p class="text-white/50 text-sm font-sans leading-relaxed">
+            Show up on Election Day or during early voting, bring a valid photo ID, and cast your ballot.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12 reveal">
+        <a 
+          href="https://www.votetexas.gov/register-to-vote/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center px-10 py-5 bg-gold text-white font-sans font-bold text-lg uppercase tracking-wider rounded-lg hover:bg-gold-light hover:-translate-y-1 transition-all shadow-xl pulse-cta group"
+        >
+          <svg class="w-6 h-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Register at VoteTexas.gov
+          <svg class="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+        <p class="text-white/40 text-sm font-sans mt-4">
+          Registration deadline is 30 days before Election Day.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accepted Photo ID -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <div class="gold-line mx-auto mb-6"></div>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy mb-4">Accepted Photo ID</h2>
+        <p class="text-near-black/70 font-sans font-light max-w-2xl mx-auto">
+          Texas law requires voters to present one of the following forms of photo identification at the polls.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 reveal-stagger">
+        <div class="bg-cream rounded-xl p-5 border border-warm-gray flex items-center gap-4">
+          <span class="text-gold text-lg flex-shrink-0">★</span>
+          <span class="font-sans font-semibold text-near-black">Texas Driver's License</span>
+        </div>
+        <div class="bg-cream rounded-xl p-5 border border-warm-gray flex items-center gap-4">
+          <span class="text-gold text-lg flex-shrink-0">★</span>
+          <span class="font-sans font-semibold text-near-black">Texas Personal ID Card</span>
+        </div>
+        <div class="bg-cream rounded-xl p-5 border border-warm-gray flex items-center gap-4">
+          <span class="text-gold text-lg flex-shrink-0">★</span>
+          <span class="font-sans font-semibold text-near-black">Texas Election ID Certificate</span>
+        </div>
+        <div class="bg-cream rounded-xl p-5 border border-warm-gray flex items-center gap-4">
+          <span class="text-gold text-lg flex-shrink-0">★</span>
+          <span class="font-sans font-semibold text-near-black">Texas Handgun License</span>
+        </div>
+        <div class="bg-cream rounded-xl p-5 border border-warm-gray flex items-center gap-4">
+          <span class="text-gold text-lg flex-shrink-0">★</span>
+          <span class="font-sans font-semibold text-near-black">U.S. Military ID with Photo</span>
+        </div>
+        <div class="bg-cream rounded-xl p-5 border border-warm-gray flex items-center gap-4">
+          <span class="text-gold text-lg flex-shrink-0">★</span>
+          <span class="font-sans font-semibold text-near-black">U.S. Passport (book or card)</span>
+        </div>
+        <div class="bg-cream rounded-xl p-5 border border-warm-gray flex items-center gap-4 sm:col-span-2">
+          <span class="text-gold text-lg flex-shrink-0">★</span>
+          <span class="font-sans font-semibold text-near-black">U.S. Citizenship Certificate with Photo</span>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center reveal">
+        <p class="text-near-black/50 text-sm font-sans mb-2">
+          With some exceptions, IDs must be current or expired within 4 years.
+        </p>
+        <a 
+          href="https://www.votetexas.gov/register-to-vote/need-id.html" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center text-gold font-sans font-bold text-sm uppercase tracking-wide hover:text-navy transition-colors"
+        >
+          Full ID Requirements on VoteTexas.gov
+          <svg class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="py-16 sm:py-20 bg-cream relative">
+    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy mb-6">Ready to Get Involved?</h2>
+      <p class="text-xl text-slate font-sans font-light mb-8 max-w-2xl mx-auto">
+        Voting is just the beginning. Volunteer, request a yard sign, or spread the word for David Glass.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+      </div>
+    </div>
+  </section>
+
+</Base>

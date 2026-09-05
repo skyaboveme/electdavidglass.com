@@ -6,78 +6,10 @@ interface Props {
 const { class: className } = Astro.props;
 ---
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class={className}>
-  <defs>
-    <!-- Background Gradient -->
-    <radialGradient id="bg-grad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f0f2f5"/>
-    </radialGradient>
-    
-    <!-- Clipping circle for the inner elements -->
-    <clipPath id="inner-clip">
-      <circle cx="256" cy="256" r="226" />
-    </clipPath>
-  </defs>
-
-  <!-- Outer thick navy circle -->
-  <circle cx="256" cy="256" r="248" fill="#1b2a4a" />
-  
-  <!-- White gap -->
-  <circle cx="256" cy="256" r="236" fill="#ffffff" />
-  
-  <!-- Thin navy inner ring -->
-  <circle cx="256" cy="256" r="230" fill="#1b2a4a" />
-
-  <!-- Inner Background -->
-  <circle cx="256" cy="256" r="226" fill="url(#bg-grad)" />
-
-  <!-- Inner Content (Clipped to fit inside the background circle) -->
-  <g clip-path="url(#inner-clip)">
-    <!-- Bottom Navy Section -->
-    <path d="M 0,400 Q 256,330 512,400 L 512,512 L 0,512 Z" fill="#1b2a4a" />
-    
-    <!-- Bottom Red Section -->
-    <path d="M 0,395 Q 256,480 512,395 L 512,512 L 0,512 Z" fill="#c41e3a" />
-
-    <!-- Bottom White Star -->
-    <polygon points="256,382 261,397 277,397 264,407 269,422 256,413 243,422 248,407 235,397 251,397" fill="#ffffff" />
-  </g>
-
-  <!-- Top Logo Mark -->
-  <g id="top-mark">
-    <!-- Outer thin ring -->
-    <circle cx="256" cy="72" r="34" fill="none" stroke="#1b2a4a" stroke-width="2" />
-    
-    <!-- Inner Navy Circle -->
-    <circle cx="256" cy="72" r="28" fill="#1b2a4a" />
-    
-    <!-- Inner White Star -->
-    <polygon points="256,52 259,62 270,62 261,69 264.5,79 256,73 247.5,79 251,69 242,62 253,62" fill="#ffffff" />
-    
-    <!-- Swoosh -->
-    <path d="M 215,80 Q 256,110 305,60 Q 260,95 215,80 Z" fill="#1b2a4a" stroke="#ffffff" stroke-width="2" />
-  </g>
-
-  <!-- Typography -->
-  <text x="256" y="145" 
-        class="fill-navy font-black"
-        font-family="Montserrat, system-ui, sans-serif"
-        font-size="36" 
-        text-anchor="middle" 
-        letter-spacing="3">ELECT</text>
-        
-  <text x="256" y="245" 
-        class="fill-navy font-black"
-        font-family="Montserrat, system-ui, sans-serif"
-        font-size="115" 
-        text-anchor="middle" 
-        letter-spacing="-2">DAVID</text>
-        
-  <text x="256" y="345" 
-        class="fill-navy font-black"
-        font-family="Montserrat, system-ui, sans-serif"
-        font-size="115" 
-        text-anchor="middle" 
-        letter-spacing="-2">GLASS</text>
-</svg>
+<img 
+  src="/logo-badge.jpg" 
+  alt="Re-Elect David Glass" 
+  class={className}
+  loading="eager"
+  decoding="async"
+/>

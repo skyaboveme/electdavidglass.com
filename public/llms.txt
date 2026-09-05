@@ -1,7 +1,23 @@
-# David Glass Campaign
-> Bastrop County Commissioner, Precinct 4
+# David Glass — Re-Elect for Bastrop County Commissioner, Precinct 4
 
-This site provides information regarding the re-election campaign for David Glass.
+> Official campaign website for David Glass, incumbent County Commissioner for Precinct 4 in Bastrop County, Texas.
 
-- [Main Narrative & Platform](/llm.txt)
-- [Official Website](https://electdavidglass.com/)
+## Site Information
+- **URL**: https://electdavidglass.com
+- **Subject**: County Commissioner re-election campaign
+- **Location**: Bastrop County, Texas
+- **Office**: County Commissioner, Precinct 4
+
+## Documentation
+
+- [Full Campaign Narrative & Platform](https://electdavidglass.com/llm.txt): Complete biography, platform priorities, leadership history, and office contact information for David Glass.
+
+## Pages
+
+- [Home](https://electdavidglass.com/): Campaign landing page with overview of David Glass's leadership record, core priorities, and engagement opportunities.
+- [About David Glass](https://electdavidglass.com/about): Full biography — lifelong Bastrop County resident, 40+ year business owner, rancher, and community leader. Leadership roles including President of Aqua Water Supply Corporation and Elgin Economic Development Corporation.
+- [Results](https://electdavidglass.com/results): Track record of accomplishments including road projects, fiscal management, and growth stewardship across Precinct 4.
+- [Core Priorities](https://electdavidglass.com/priorities): Five focus areas — Roads & Infrastructure, Responsible Growth Management, Fiscal Accountability, Water Security, and Community Preservation.
+- [Precinct 4](https://electdavidglass.com/precinct-4): District information covering northern and eastern Bastrop County, including Elgin and rural communities.
+- [Voter Tools](https://electdavidglass.com/voter-tools): Precinct lookup, polling location finder, early voting information, voter registration links to VoteTexas.gov, and accepted photo ID guide for Texas voters.
+
