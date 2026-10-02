@@ -1,12 +1,14 @@
 ---
 import Logo from './Logo.astro';
+import LanguageToggle from './LanguageToggle.astro';
 
 const links = [
-  { text: 'About', href: '/about' },
-  { text: 'Results', href: '/results' },
-  { text: 'Priorities', href: '/priorities' },
-  { text: 'Precinct 4', href: '/precinct-4' },
-  { text: 'Voter Tools', href: '/voter-tools' },
+  { text: 'About', href: '/about', i18n: 'nav.about' },
+  { text: 'Results', href: '/results', i18n: 'nav.results' },
+  { text: 'Priorities', href: '/priorities', i18n: 'nav.priorities' },
+  { text: 'Precinct 4', href: '/precinct-4', i18n: 'nav.precinct4' },
+  { text: 'When & Where to Vote', href: '/voting-schedule', i18n: 'nav.votingSchedule' },
+  { text: 'Voter Tools', href: '/voter-tools', i18n: 'nav.voterTools' },
 ];
 ---
 
@@ -28,14 +30,18 @@ const links = [
         <!-- Desktop Navigation -->
         <nav class="hidden lg:flex items-center gap-1" aria-label="Desktop Navigation">
           {links.map(link => (
-            <a href={link.href} class="px-4 py-2 text-sm font-sans font-semibold text-near-black hover:text-gold transition-colors uppercase tracking-wide">
+            <a href={link.href} class="px-4 py-2 text-sm font-sans font-semibold text-near-black hover:text-gold transition-colors uppercase tracking-wide" data-i18n={link.i18n}>
               {link.text}
             </a>
           ))}
+          <div class="ml-3">
+            <LanguageToggle />
+          </div>
         </nav>
 
         <!-- Mobile menu button -->
         <div class="flex lg:hidden items-center gap-3">
+          <LanguageToggle />
           <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-navy hover:text-gold focus:outline-none" aria-expanded="false" aria-controls="mobile-menu">
             <span class="sr-only">Open main menu</span>
             <svg class="block h-7 w-7" id="menu-icon-open" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -54,15 +60,15 @@ const links = [
   <!-- Mobile Menu Overlay -->
   <div class="lg:hidden fixed inset-0 top-[calc(4px+5rem)] z-40 bg-navy text-white transition-all duration-300 transform translate-x-full h-[calc(100vh-5rem-4px)] overflow-y-auto" id="mobile-menu" aria-hidden="true">
     <div class="px-6 pt-10 pb-12 space-y-1 flex flex-col">
-      <a href="/" class="block text-lg font-sans font-bold py-4 border-b border-white/10 hover:text-gold transition-colors uppercase tracking-wide">
+      <a href="/" class="block text-lg font-sans font-bold py-4 border-b border-white/10 hover:text-gold transition-colors uppercase tracking-wide" data-i18n="nav.home">
         Home
       </a>
       {links.map(link => (
-        <a href={link.href} class="block text-lg font-sans font-bold py-4 border-b border-white/10 hover:text-gold transition-colors uppercase tracking-wide">
+        <a href={link.href} class="block text-lg font-sans font-bold py-4 border-b border-white/10 hover:text-gold transition-colors uppercase tracking-wide" data-i18n={link.i18n}>
           {link.text}
         </a>
       ))}
-      <a href="#get-involved" class="mt-8 mx-auto inline-block px-8 py-4 bg-gold text-white font-sans font-bold rounded shadow-md text-lg mobile-cta uppercase tracking-wider">
+      <a href="#get-involved" class="mt-8 mx-auto inline-block px-8 py-4 bg-gold text-white font-sans font-bold rounded shadow-md text-lg mobile-cta uppercase tracking-wider" data-i18n="nav.getInvolved">
         Get Involved
       </a>
     </div>

@@ -4,11 +4,12 @@ import Logo from './Logo.astro';
 const year = new Date().getFullYear();
 
 const links = [
-  { text: 'About David', href: '/about' },
-  { text: 'Results', href: '/results' },
-  { text: 'Priorities', href: '/priorities' },
-  { text: 'Precinct 4', href: '/precinct-4' },
-  { text: 'Voter Tools', href: '/voter-tools' },
+  { text: 'About David', href: '/about', i18n: 'footer.aboutDavid' },
+  { text: 'Results', href: '/results', i18n: 'nav.results' },
+  { text: 'Priorities', href: '/priorities', i18n: 'nav.priorities' },
+  { text: 'Precinct 4', href: '/precinct-4', i18n: 'nav.precinct4' },
+  { text: 'When & Where to Vote', href: '/voting-schedule', i18n: 'nav.votingSchedule' },
+  { text: 'Voter Tools', href: '/voter-tools', i18n: 'nav.voterTools' },
 ];
 ---
 
@@ -29,8 +30,8 @@ const links = [
             <Logo class="h-20 w-20 rounded-full drop-shadow-lg hover:scale-105 transition-transform duration-300 object-cover" />
           </a>
           <p class="text-white/60 text-sm leading-relaxed">
-            County Commissioner, Precinct 4<br/>
-            Bastrop County, Texas
+            <span data-i18n="footer.title">County Commissioner, Precinct 4</span><br/>
+            <span data-i18n="footer.location">Bastrop County, Texas</span>
           </p>
           <div class="pt-2 space-y-1">
             <p class="text-white/50 text-sm">804 Pecan St, Bastrop, TX 78602</p>
@@ -48,12 +49,12 @@ const links = [
 
         <!-- Quick Links -->
         <div>
-          <h3 class="font-sans font-bold text-sm uppercase tracking-widest text-gold mb-6">Quick Links</h3>
+          <h3 class="font-sans font-bold text-sm uppercase tracking-widest text-gold mb-6" data-i18n="footer.quickLinks">Quick Links</h3>
           <ul class="space-y-3">
             {links.map(link => (
               <li>
                 <a href={link.href} class="text-white/60 hover:text-gold transition-colors flex items-center text-sm font-sans group">
-                  <span class="text-gold/40 group-hover:text-gold mr-2 transition-colors">→</span> {link.text}
+                  <span class="text-gold/40 group-hover:text-gold mr-2 transition-colors">→</span> <span data-i18n={link.i18n}>{link.text}</span>
                 </a>
               </li>
             ))}
@@ -62,15 +63,15 @@ const links = [
 
         <!-- Email Signup -->
         <div>
-          <h3 class="font-sans font-bold text-sm uppercase tracking-widest text-gold mb-6">Stay Connected</h3>
-          <p class="text-white/50 mb-4 text-sm leading-relaxed">
+          <h3 class="font-sans font-bold text-sm uppercase tracking-widest text-gold mb-6" data-i18n="footer.stayConnected">Stay Connected</h3>
+          <p class="text-white/50 mb-4 text-sm leading-relaxed" data-i18n="footer.stayConnectedDesc">
             Get updates on Precinct 4 projects, county news, and community events.
           </p>
           <form class="space-y-3" id="footer-subscribe-form" action="https://formsubmit.co/skyabove@gmail.com" method="POST">
             <input type="hidden" name="_next" value="https://electdavidglass.com/thank-you">
             <input type="hidden" name="_subject" value="New Subscriber from Footer">
             <div>
-              <label for="footer-email" class="sr-only">Email address</label>
+              <label for="footer-email" class="sr-only" data-i18n="footer.emailLabel">Email address</label>
               <input 
                 type="email" 
                 id="footer-email" 
@@ -78,11 +79,13 @@ const links = [
                 required
                 class="w-full px-4 py-3 bg-white/5 text-white placeholder-white/30 border border-white/10 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition text-sm"
                 placeholder="Your email address"
+                data-i18n-placeholder="footer.emailPlaceholder"
               />
             </div>
             <button 
               type="submit" 
               class="w-full px-4 py-3 bg-gold text-white font-sans font-bold text-sm uppercase tracking-wider rounded-lg hover:bg-gold-light transition shadow-md"
+              data-i18n="footer.subscribe"
             >
               Subscribe
             </button>
@@ -94,13 +97,13 @@ const links = [
       <!-- Bottom Bar -->
       <div class="border-t border-white/10 pt-8 mt-4">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-          <div class="border border-gold/30 bg-gold/5 px-4 py-2 rounded-lg uppercase tracking-widest text-[11px] text-gold font-sans font-semibold">
+          <div class="border border-gold/30 bg-gold/5 px-4 py-2 rounded-lg uppercase tracking-widest text-[11px] text-gold font-sans font-semibold" data-i18n="footer.disclaimer">
             ★ Political advertising paid for by the David Glass Campaign ★
           </div>
           <div class="text-white/40 text-xs font-sans">
-            &copy; {year} David Glass. All rights reserved.
+            &copy; {year} <span data-i18n="footer.rights">David Glass. All rights reserved.</span>
             <span class="mx-2 hidden sm:inline">|</span>
-            <a href="/privacy" class="hover:text-gold transition-colors inline-block mt-1 sm:mt-0">Privacy Policy</a>
+            <a href="/privacy" class="hover:text-gold transition-colors inline-block mt-1 sm:mt-0" data-i18n="footer.privacy">Privacy Policy</a>
           </div>
         </div>
       </div>

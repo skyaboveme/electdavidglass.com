@@ -33,26 +33,26 @@ import Base from '../layouts/Base.astro';
           <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
           </svg>
-          <span class="text-gold font-sans font-semibold text-sm uppercase tracking-widest">Bastrop County Commissioner · Precinct 4</span>
+          <span class="text-gold font-sans font-semibold text-sm uppercase tracking-widest" data-i18n="home.badge">Bastrop County Commissioner · Precinct 4</span>
         </div>
 
         <!-- Headline -->
         <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-extrabold text-white leading-[1.1] tracking-tight mb-6">
-          Proven Leadership.
-          <span class="block gradient-text mt-2">Real Results.</span>
+          <span data-i18n="home.headline1">Proven Leadership.</span>
+          <span class="block gradient-text mt-2" data-i18n="home.headline2">Real Results.</span>
         </h1>
 
         <!-- Subheadline -->
-        <p class="text-xl sm:text-2xl text-white/70 mb-10 max-w-xl font-sans font-light leading-relaxed">
+        <p class="text-xl sm:text-2xl text-white/70 mb-10 max-w-xl font-sans font-light leading-relaxed" data-i18n="home.subheadline">
           Protecting our roads, managing growth responsibly, and keeping your tax dollars accountable.
         </p>
         
         <!-- CTAs -->
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="#get-involved" class="inline-flex justify-center items-center px-8 py-4 text-lg font-sans font-bold uppercase tracking-wider rounded-lg bg-gold text-white hover:bg-gold-light hover:-translate-y-0.5 transition-all shadow-xl w-full sm:w-auto text-center">
+          <a href="#get-involved" class="inline-flex justify-center items-center px-8 py-4 text-lg font-sans font-bold uppercase tracking-wider rounded-lg bg-gold text-white hover:bg-gold-light hover:-translate-y-0.5 transition-all shadow-xl w-full sm:w-auto text-center" data-i18n="home.cta.involved">
             Get Involved
           </a>
-          <a href="/results" class="inline-flex justify-center items-center px-8 py-4 text-lg font-sans font-bold uppercase tracking-wider rounded-lg bg-transparent border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all w-full sm:w-auto text-center">
+          <a href="/results" class="inline-flex justify-center items-center px-8 py-4 text-lg font-sans font-bold uppercase tracking-wider rounded-lg bg-transparent border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all w-full sm:w-auto text-center" data-i18n="home.cta.record">
             See My Record
           </a>
         </div>
@@ -79,19 +79,19 @@ import Base from '../layouts/Base.astro';
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center reveal-stagger">
         <div class="py-2">
           <div class="counter-number text-3xl sm:text-4xl text-navy mb-1" data-count="40" data-suffix="+">0+</div>
-          <p class="text-slate text-sm font-sans font-medium uppercase tracking-wide">Years in Business</p>
+          <p class="text-slate text-sm font-sans font-medium uppercase tracking-wide" data-i18n="home.stat.years">Years in Business</p>
         </div>
         <div class="py-2">
-          <div class="counter-number text-3xl sm:text-4xl text-navy mb-1">President</div>
-          <p class="text-slate text-sm font-sans font-medium uppercase tracking-wide">Aqua Water Supply</p>
+          <div class="counter-number text-3xl sm:text-4xl text-navy mb-1" data-i18n="home.stat.president">President</div>
+          <p class="text-slate text-sm font-sans font-medium uppercase tracking-wide" data-i18n="home.stat.aqua">Aqua Water Supply</p>
         </div>
         <div class="py-2">
           <div class="counter-number text-3xl sm:text-4xl text-navy mb-1" data-count="6">0</div>
-          <p class="text-slate text-sm font-sans font-medium uppercase tracking-wide">Grandchildren</p>
+          <p class="text-slate text-sm font-sans font-medium uppercase tracking-wide" data-i18n="home.stat.grandchildren">Grandchildren</p>
         </div>
         <div class="py-2">
-          <div class="counter-number text-3xl sm:text-4xl text-navy mb-1">Lifelong</div>
-          <p class="text-slate text-sm font-sans font-medium uppercase tracking-wide">Bastrop Resident</p>
+          <div class="counter-number text-3xl sm:text-4xl text-navy mb-1" data-i18n="home.stat.lifelong">Lifelong</div>
+          <p class="text-slate text-sm font-sans font-medium uppercase tracking-wide" data-i18n="home.stat.resident">Bastrop Resident</p>
         </div>
       </div>
     </div>
@@ -115,8 +115,8 @@ import Base from '../layouts/Base.astro';
             />
             <!-- Floating badge -->
             <div class="absolute -bottom-4 -right-4 z-20 bg-navy text-white px-5 py-3 rounded-xl shadow-lg">
-              <p class="font-serif font-bold text-lg">40+ Years</p>
-              <p class="text-gold text-sm font-sans">Serving Bastrop County</p>
+              <p class="font-serif font-bold text-lg" data-i18n="home.meet.badge">40+ Years</p>
+              <p class="text-gold text-sm font-sans" data-i18n="home.meet.badgeSub">Serving Bastrop County</p>
             </div>
           </div>
         </div>
@@ -124,25 +124,323 @@ import Base from '../layouts/Base.astro';
         <!-- Bio Content -->
         <div class="reveal-right">
           <div class="gold-line mb-6"></div>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-navy mb-6 leading-tight">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-navy mb-6 leading-tight" data-i18n="home.meet.heading">
             Built in Bastrop County.<br/>Built for Bastrop County.
           </h2>
-          <p class="text-xl text-near-black leading-relaxed mb-6 font-sans">
+          <p class="text-xl text-near-black leading-relaxed mb-6 font-sans" data-i18n="home.meet.p1">
             David Glass is a 40-year successful businessman who has built and operated multiple businesses right here in Bastrop County. As a business owner, rancher, and community leader for more than four decades, he understands what it takes to manage growth without losing what makes this place home.
           </p>
-          <p class="text-near-black/70 leading-relaxed mb-4 font-sans">
+          <p class="text-near-black/70 leading-relaxed mb-4 font-sans" data-i18n="home.meet.p2">
             David serves on many boards of successful entities across the county and region. He brought that same operational rigor: tight budgets, real accountability, measurable outcomes, directly to Bastrop County government.
           </p>
-          <p class="text-near-black/70 leading-relaxed mb-8 font-sans">
+          <p class="text-near-black/70 leading-relaxed mb-8 font-sans" data-i18n="home.meet.p3">
             He raised four successful children right here in Bastrop County through Elgin ISD, and he worked to help create the ESD 3 Ambulance Service, the first ambulance service in the County of Bastrop.
           </p>
           <a href="/about" class="inline-flex items-center text-gold font-sans font-bold hover:text-navy transition-colors text-lg group uppercase tracking-wide">
-            Read David's Full Story <span class="ml-2 group-hover:translate-x-2 transition-transform">→</span>
+            <span data-i18n="home.meet.link">Read David's Full Story</span> <span class="ml-2 group-hover:translate-x-2 transition-transform">→</span>
           </a>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- ============================================
+       OFFICIAL ENDORSEMENT - Myles Milburn
+       ============================================ -->
+  <section id="endorsement" class="py-20 sm:py-28 bg-gradient-to-br from-navy via-navy-light to-navy text-white relative overflow-hidden border-y border-gold/20">
+    <!-- Subtle background watermarking / texture -->
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    
+    <!-- Ambient gold glow -->
+    <div class="absolute -top-32 right-1/4 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-32 left-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-gold/15 border border-gold/40 rounded-full mb-6 shadow-sm">
+          <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+          <span class="text-gold font-sans font-bold text-xs sm:text-sm uppercase tracking-widest" data-i18n="home.endorsement.badge">
+            Official Endorsement · Precinct 4 Road & Bridge
+          </span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white mb-6 leading-tight" data-i18n="home.endorsement.heading">
+          49 Years of Dedicated Service Stands With David Glass
+        </h2>
+        <p class="text-lg sm:text-xl text-white/70 font-sans font-light leading-relaxed" data-i18n="home.endorsement.sub">
+          Myles Milburn, 49-year veteran employee of Precinct 4 Road & Bridge, personally endorses David Glass for County Commissioner.
+        </p>
+      </div>
+
+      <!-- Main Showcase Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        
+        <!-- Left Column: Visual Assets Showcase (5 cols on desktop) -->
+        <div class="lg:col-span-5 reveal-left flex flex-col gap-6">
+          
+          <!-- Primary Campaign Graphic -->
+          <div class="relative group">
+            <div class="absolute -inset-1.5 bg-gradient-to-r from-gold/40 via-gold/20 to-gold/40 rounded-3xl blur-md opacity-70 group-hover:opacity-100 transition duration-500"></div>
+            <div class="relative bg-navy-light rounded-2xl overflow-hidden border-2 border-gold/40 shadow-2xl">
+              <picture>
+                <source srcset="/myles-milburn-endorses-david-glass.webp" type="image/webp" />
+                <img 
+                  src="/myles-milburn-endorses-david-glass.png" 
+                  alt="Myles Milburn Endorsement Graphic - Stands with David Glass for Bastrop County Commissioner Precinct 4" 
+                  class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition duration-500"
+                  loading="lazy"
+                  width="1920"
+                  height="1920"
+                />
+              </picture>
+              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-navy/95 via-navy/70 to-transparent p-4 sm:p-5 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span class="text-xs font-sans font-bold uppercase tracking-wider text-gold">Official Endorsement</span>
+                </div>
+                <span class="text-xs text-white/70 font-sans">Precinct 4 Road & Bridge</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Screenshot / Original Signed Statement Card -->
+          <div class="relative bg-white/5 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:border-gold/40 transition-all group">
+            <div class="flex items-center justify-between gap-4 mb-3">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">
+                  ✓
+                </div>
+                <div>
+                  <h4 class="text-white font-sans font-bold text-sm">Original Statement Post</h4>
+                  <p class="text-white/50 text-xs font-sans">Verified Direct Message from Myles Milburn</p>
+                </div>
+              </div>
+              <button 
+                id="open-endorsement-modal"
+                type="button"
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gold/20 hover:bg-gold text-gold hover:text-navy text-xs font-sans font-bold uppercase tracking-wider transition-all cursor-pointer"
+                aria-haspopup="dialog"
+                data-i18n="home.endorsement.viewProof"
+              >
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                <span>View Full</span>
+              </button>
+            </div>
+            
+            <!-- Clickable preview snippet of the screenshot -->
+            <button 
+              id="open-endorsement-modal-img"
+              type="button" 
+              class="w-full text-left relative rounded-xl overflow-hidden border border-white/10 group-hover:border-gold/40 transition-all cursor-pointer block focus:outline-none focus:ring-2 focus:ring-gold"
+              aria-label="Click to enlarge original statement screenshot"
+            >
+              <div class="h-32 sm:h-36 overflow-hidden bg-navy/80 relative">
+                <picture>
+                  <source srcset="/screenshotdg.webp" type="image/webp" />
+                  <img 
+                    src="/screenshotdg.png" 
+                    alt="Screenshot of Myles Milburn's personal endorsement of David Glass" 
+                    class="w-full object-cover object-top opacity-85 group-hover:opacity-100 group-hover:scale-105 transition duration-300"
+                    loading="lazy"
+                  />
+                </picture>
+                <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent flex items-end justify-center pb-3">
+                  <span class="inline-flex items-center gap-1.5 text-xs font-sans font-semibold text-gold bg-navy/90 px-3 py-1 rounded-full border border-gold/30">
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                    </svg>
+                    Click to Enlarge Statement Screenshot
+                  </span>
+                </div>
+              </div>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Narrative & Endorsement Quote (7 cols on desktop) -->
+        <div class="lg:col-span-7 reveal-right flex flex-col justify-center">
+          
+          <!-- Large Highlight Testimonial Box -->
+          <div class="relative bg-white/5 backdrop-blur-md rounded-3xl p-8 sm:p-10 border border-gold/30 shadow-2xl mb-8">
+            <!-- Decorative Large Quote Mark -->
+            <div class="text-gold/25 font-serif text-7xl sm:text-8xl leading-none absolute top-4 left-6 select-none pointer-events-none">“</div>
+            
+            <div class="relative z-10">
+              <!-- Prominent Pull Quote -->
+              <blockquote class="mb-6">
+                <p class="text-xl sm:text-2xl lg:text-3xl font-serif italic text-white font-bold leading-snug mb-6" data-i18n="home.endorsement.quote">
+                  "In the time David has served as Commissioner, Precinct 4 has received more new equipment than I have seen during the 49 years I've been employed at Precinct 4."
+                </p>
+              </blockquote>
+
+              <!-- Detailed Endorsement Statement -->
+              <div class="space-y-4 text-white/80 font-sans text-base sm:text-lg leading-relaxed border-t border-white/10 pt-6">
+                <p data-i18n="home.endorsement.p1">
+                  I, Myles Milburn, am proud to personally endorse my friend, Mr. David Glass, for Commissioner of Precinct 4 Road & Bridge. I've had the opportunity to know David and see the kind of person he is. He cares about the people in our community, takes pride in where he lives, and is willing to put in the hard work to make a difference.
+                </p>
+                <p data-i18n="home.endorsement.p2">
+                  This equipment has made it possible for the Precinct to do its job more efficiently, productively, and effectively than ever before. David has made sure the men and women working for the Precinct have the tools they need to better serve our community and maintain our roads and bridges.
+                </p>
+                <p data-i18n="home.endorsement.p3">
+                  I trust David Glass to listen to the concerns of the people of Precinct 4, stand up for our community, and work diligently to keep our roads and bridges safe and properly maintained. That's why I'm proud to stand with David Glass and support him for Commissioner of Precinct 4 Road & Bridge.
+                </p>
+              </div>
+
+              <!-- Author Attribution Block -->
+              <div class="mt-8 pt-6 border-t border-gold/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div class="flex items-center gap-4">
+                  <div class="w-14 h-14 rounded-2xl bg-gold/20 border border-gold/40 flex items-center justify-center text-gold font-serif font-bold text-2xl shadow-inner">
+                    MM
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-serif font-bold text-white tracking-wide" data-i18n="home.endorsement.author">
+                      Myles Milburn
+                    </h3>
+                    <p class="text-gold text-sm font-sans font-medium" data-i18n="home.endorsement.role">
+                      49-Year Veteran Employee · Precinct 4 Road & Bridge
+                    </p>
+                  </div>
+                </div>
+
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-emerald-300 text-xs font-sans font-semibold self-start sm:self-auto">
+                  <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Verified Endorsement</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Bottom Stat Badges -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-navy/70 border border-white/10 rounded-2xl p-4 sm:p-5 text-center">
+              <div class="text-2xl sm:text-3xl font-serif font-extrabold text-gold mb-1" data-i18n="home.endorsement.stat1Value">49 Years</div>
+              <div class="text-xs sm:text-sm text-white/70 font-sans font-medium uppercase tracking-wider" data-i18n="home.endorsement.stat1Label">Frontline Service in Precinct 4</div>
+            </div>
+            <div class="bg-navy/70 border border-white/10 rounded-2xl p-4 sm:p-5 text-center">
+              <div class="text-2xl sm:text-3xl font-serif font-extrabold text-gold mb-1" data-i18n="home.endorsement.stat2Value">Historic</div>
+              <div class="text-xs sm:text-sm text-white/70 font-sans font-medium uppercase tracking-wider" data-i18n="home.endorsement.stat2Label">Equipment & Tool Upgrades</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Lightbox Modal for Original Endorsement Screenshot -->
+  <div 
+    id="endorsement-modal" 
+    class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 sm:p-6 opacity-0 transition-opacity duration-300"
+    role="dialog" 
+    aria-modal="true" 
+    aria-labelledby="modal-title"
+  >
+    <div class="relative max-w-2xl w-full bg-navy border-2 border-gold/40 rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
+      <!-- Modal Header -->
+      <div class="p-4 sm:p-5 bg-navy-light border-b border-white/10 flex items-center justify-between">
+        <div>
+          <h3 id="modal-title" class="text-lg font-serif font-bold text-white">Original Statement · Myles Milburn</h3>
+          <p class="text-xs text-gold font-sans">Precinct 4 Road & Bridge Endorsement</p>
+        </div>
+        <button 
+          id="close-endorsement-modal"
+          type="button" 
+          class="text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors cursor-pointer"
+          aria-label="Close modal"
+        >
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Modal Image Body (scrollable if needed) -->
+      <div class="p-4 overflow-y-auto flex-1 bg-navy/90 flex justify-center">
+        <picture class="max-w-full">
+          <source srcset="/screenshotdg.webp" type="image/webp" />
+          <img 
+            src="/screenshotdg.png" 
+            alt="Original statement from Myles Milburn endorsing David Glass" 
+            class="w-full max-w-md h-auto rounded-xl shadow-lg border border-white/10 mx-auto"
+          />
+        </picture>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 bg-navy-light border-t border-white/10 flex items-center justify-between text-xs text-white/60">
+        <span>Bastrop County Commissioner Precinct 4</span>
+        <a 
+          href="/screenshotdg.png" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="text-gold hover:underline font-semibold"
+        >
+          Open High-Res Image ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('endorsement-modal');
+      const openBtn1 = document.getElementById('open-endorsement-modal');
+      const openBtn2 = document.getElementById('open-endorsement-modal-img');
+      const closeBtn = document.getElementById('close-endorsement-modal');
+
+      function openModal() {
+        if (!modal) return;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        setTimeout(() => {
+          modal.classList.remove('opacity-0');
+          modal.classList.add('opacity-100');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('opacity-100');
+        modal.classList.add('opacity-0');
+        setTimeout(() => {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          document.body.style.overflow = '';
+        }, 300);
+      }
+
+      openBtn1?.addEventListener('click', openModal);
+      openBtn2?.addEventListener('click', openModal);
+      closeBtn?.addEventListener('click', closeModal);
+
+      // Close when clicking backdrop
+      modal?.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      // Close on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
+          closeModal();
+        }
+      });
+    });
+  </script>
 
   <!-- ============================================
        THREE PILLARS - Priority Cards
@@ -151,8 +449,8 @@ import Base from '../layouts/Base.astro';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 reveal">
         <div class="gold-line mx-auto mb-6"></div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-navy mb-4">Core Priorities</h2>
-        <p class="text-xl text-slate font-sans font-light max-w-2xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-navy mb-4" data-i18n="home.priorities.heading">Core Priorities</h2>
+        <p class="text-xl text-slate font-sans font-light max-w-2xl mx-auto" data-i18n="home.priorities.sub">
           Focused on the issues that directly impact your family and your property.
         </p>
       </div>
@@ -165,11 +463,11 @@ import Base from '../layouts/Base.astro';
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
           </div>
-          <h3 class="text-2xl font-serif font-bold text-navy mb-3">Roads & Infrastructure</h3>
-          <p class="text-near-black/70 leading-relaxed mb-6 font-sans">
+          <h3 class="text-2xl font-serif font-bold text-navy mb-3" data-i18n="home.priorities.roads.title">Roads & Infrastructure</h3>
+          <p class="text-near-black/70 leading-relaxed mb-6 font-sans" data-i18n="home.priorities.roads.desc">
             Maintaining and upgrading the arteries that connect our communities as Bastrop County grows at record pace.
           </p>
-          <a href="/priorities" class="text-gold font-sans font-bold text-sm uppercase tracking-wide group-hover:text-navy transition-colors">
+          <a href="/priorities" class="text-gold font-sans font-bold text-sm uppercase tracking-wide group-hover:text-navy transition-colors" data-i18n="home.priorities.learnMore">
             Learn More →
           </a>
         </div>
@@ -181,11 +479,11 @@ import Base from '../layouts/Base.astro';
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
             </svg>
           </div>
-          <h3 class="text-2xl font-serif font-bold text-navy mb-3">Fiscal Accountability</h3>
-          <p class="text-near-black/70 leading-relaxed mb-6 font-sans">
+          <h3 class="text-2xl font-serif font-bold text-navy mb-3" data-i18n="home.priorities.fiscal.title">Fiscal Accountability</h3>
+          <p class="text-near-black/70 leading-relaxed mb-6 font-sans" data-i18n="home.priorities.fiscal.desc">
             Treating every tax dollar carefully and transparently. Budgets should be tight and tied to measurable outcomes.
           </p>
-          <a href="/priorities" class="text-gold font-sans font-bold text-sm uppercase tracking-wide group-hover:text-navy transition-colors">
+          <a href="/priorities" class="text-gold font-sans font-bold text-sm uppercase tracking-wide group-hover:text-navy transition-colors" data-i18n="home.priorities.learnMore">
             Learn More →
           </a>
         </div>
@@ -197,11 +495,11 @@ import Base from '../layouts/Base.astro';
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h3 class="text-2xl font-serif font-bold text-navy mb-3">Water & Growth</h3>
-          <p class="text-near-black/70 leading-relaxed mb-6 font-sans">
+          <h3 class="text-2xl font-serif font-bold text-navy mb-3" data-i18n="home.priorities.water.title">Water & Growth</h3>
+          <p class="text-near-black/70 leading-relaxed mb-6 font-sans" data-i18n="home.priorities.water.desc">
             Balancing development with the infrastructure and water resources required to support the communities we already have.
           </p>
-          <a href="/priorities" class="text-gold font-sans font-bold text-sm uppercase tracking-wide group-hover:text-navy transition-colors">
+          <a href="/priorities" class="text-gold font-sans font-bold text-sm uppercase tracking-wide group-hover:text-navy transition-colors" data-i18n="home.priorities.learnMore">
             Learn More →
           </a>
         </div>
@@ -216,28 +514,28 @@ import Base from '../layouts/Base.astro';
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 reveal">
         <div class="gold-line mx-auto mb-6"></div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white mb-4">Results That Matter</h2>
-        <p class="text-xl text-white/60 font-sans font-light max-w-2xl mx-auto">Not just talk. Measurable outcomes that protect our quality of life.</p>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white mb-4" data-i18n="home.results.heading">Results That Matter</h2>
+        <p class="text-xl text-white/60 font-sans font-light max-w-2xl mx-auto" data-i18n="home.results.sub">Not just talk. Measurable outcomes that protect our quality of life.</p>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 reveal-stagger">
         <!-- Stat 1 -->
         <div class="glass-card p-8 text-center hover-lift">
-          <div class="counter-number text-5xl text-gold mb-3">Dozens</div>
-          <h3 class="text-xl font-serif font-bold text-white mb-2">Road Projects</h3>
-          <p class="text-white/50 text-sm font-sans leading-relaxed">Completed across Precinct 4 to keep communities connected and safe.</p>
+          <div class="counter-number text-5xl text-gold mb-3" data-i18n="home.results.roads.label">Dozens</div>
+          <h3 class="text-xl font-serif font-bold text-white mb-2" data-i18n="home.results.roads.title">Road Projects</h3>
+          <p class="text-white/50 text-sm font-sans leading-relaxed" data-i18n="home.results.roads.desc">Completed across Precinct 4 to keep communities connected and safe.</p>
         </div>
         <!-- Stat 2 -->
         <div class="glass-card p-8 text-center hover-lift">
-          <div class="counter-number text-5xl text-gold mb-3">Steady</div>
-          <h3 class="text-xl font-serif font-bold text-white mb-2">Tax Strategy</h3>
-          <p class="text-white/50 text-sm font-sans leading-relaxed">Consistent budgetary restraint to deliver core services without tax hikes.</p>
+          <div class="counter-number text-5xl text-gold mb-3" data-i18n="home.results.tax.label">Steady</div>
+          <h3 class="text-xl font-serif font-bold text-white mb-2" data-i18n="home.results.tax.title">Tax Strategy</h3>
+          <p class="text-white/50 text-sm font-sans leading-relaxed" data-i18n="home.results.tax.desc">Consistent budgetary restraint to deliver core services without tax hikes.</p>
         </div>
         <!-- Stat 3 -->
         <div class="glass-card p-8 text-center hover-lift">
-          <div class="counter-number text-5xl text-gold mb-3">Managed</div>
-          <h3 class="text-xl font-serif font-bold text-white mb-2">Growth & Water</h3>
-          <p class="text-white/50 text-sm font-sans leading-relaxed">Balancing development with the resources required to sustain it.</p>
+          <div class="counter-number text-5xl text-gold mb-3" data-i18n="home.results.growth.label">Managed</div>
+          <h3 class="text-xl font-serif font-bold text-white mb-2" data-i18n="home.results.growth.title">Growth & Water</h3>
+          <p class="text-white/50 text-sm font-sans leading-relaxed" data-i18n="home.results.growth.desc">Balancing development with the resources required to sustain it.</p>
         </div>
       </div>
 
@@ -247,16 +545,16 @@ import Base from '../layouts/Base.astro';
           <svg class="w-10 h-10 text-gold/30 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H0z"/>
           </svg>
-          <p class="text-xl sm:text-2xl font-serif italic text-white/80 leading-relaxed mb-6">
+          <p class="text-xl sm:text-2xl font-serif italic text-white/80 leading-relaxed mb-6" data-i18n="home.results.quote">
             "I will continue to bring business sense, transparency, and hard work to the Commissioner's Court. Bastrop County is our home, and I intend to keep it a place we are all proud of."
           </p>
-          <cite class="text-gold font-sans font-semibold uppercase tracking-widest text-sm not-italic">- David Glass</cite>
+          <cite class="text-gold font-sans font-semibold uppercase tracking-widest text-sm not-italic" data-i18n="home.results.cite">- David Glass</cite>
         </blockquote>
       </div>
       
       <div class="text-center mt-12 reveal">
         <a href="/results" class="inline-flex items-center text-gold font-sans font-bold hover:text-white transition-colors text-lg group uppercase tracking-wide">
-          See Full Record <span class="ml-2 group-hover:translate-x-2 transition-transform">→</span>
+          <span data-i18n="home.results.link">See Full Record</span> <span class="ml-2 group-hover:translate-x-2 transition-transform">→</span>
         </a>
       </div>
     </div>
@@ -276,7 +574,7 @@ import Base from '../layouts/Base.astro';
               alt="Map of Bastrop County showing Precinct 4 boundaries" 
               class="w-full h-auto rounded-xl"
             />
-            <div class="absolute top-4 right-4 bg-navy text-white px-3 py-1.5 rounded-lg text-xs font-sans font-bold uppercase tracking-wider shadow-md">
+            <div class="absolute top-4 right-4 bg-navy text-white px-3 py-1.5 rounded-lg text-xs font-sans font-bold uppercase tracking-wider shadow-md" data-i18n="home.precinct.badge">
               Precinct 4
             </div>
           </div>
@@ -285,27 +583,27 @@ import Base from '../layouts/Base.astro';
         <!-- Content -->
         <div class="reveal-right order-1 lg:order-2">
           <div class="gold-line mb-6"></div>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-navy mb-6 leading-tight">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-navy mb-6 leading-tight" data-i18n="home.precinct.heading">
             Your Precinct.<br/>Your Home.
           </h2>
-          <p class="text-xl text-near-black leading-relaxed mb-6 font-sans">
+          <p class="text-xl text-near-black leading-relaxed mb-6 font-sans" data-i18n="home.precinct.p1">
             Precinct 4 covers the vital northern and eastern stretches of Bastrop County, including Elgin and our extensive rural communities.
           </p>
           <ul class="space-y-4 mb-8">
             <li class="flex items-start">
               <span class="text-gold mr-3 mt-1 text-lg">★</span>
-              <span class="text-near-black font-sans font-semibold">Active road maintenance schedules</span>
+              <span class="text-near-black font-sans font-semibold" data-i18n="home.precinct.bullet1">Active road maintenance schedules</span>
             </li>
             <li class="flex items-start">
               <span class="text-gold mr-3 mt-1 text-lg">★</span>
-              <span class="text-near-black font-sans font-semibold">Community-driven infrastructure improvements</span>
+              <span class="text-near-black font-sans font-semibold" data-i18n="home.precinct.bullet2">Community-driven infrastructure improvements</span>
             </li>
             <li class="flex items-start">
               <span class="text-gold mr-3 mt-1 text-lg">★</span>
-              <span class="text-near-black font-sans font-semibold">Protecting our rural character</span>
+              <span class="text-near-black font-sans font-semibold" data-i18n="home.precinct.bullet3">Protecting our rural character</span>
             </li>
           </ul>
-          <a href="/precinct-4" class="inline-flex items-center px-6 py-3 border-2 border-navy text-navy font-sans font-bold text-sm uppercase tracking-wider rounded-lg hover:bg-navy hover:text-white transition-all">
+          <a href="/precinct-4" class="inline-flex items-center px-6 py-3 border-2 border-navy text-navy font-sans font-bold text-sm uppercase tracking-wider rounded-lg hover:bg-navy hover:text-white transition-all" data-i18n="home.precinct.cta">
             Explore Precinct 4 Projects
           </a>
         </div>
@@ -323,8 +621,8 @@ import Base from '../layouts/Base.astro';
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <div class="reveal">
         <div class="gold-line mx-auto mb-6"></div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-navy mb-6">Stay Connected</h2>
-        <p class="text-xl text-slate mb-10 max-w-2xl mx-auto font-sans font-light leading-relaxed">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-navy mb-6" data-i18n="home.involved.heading">Stay Connected</h2>
+        <p class="text-xl text-slate mb-10 max-w-2xl mx-auto font-sans font-light leading-relaxed" data-i18n="home.involved.sub">
           Get updates on Precinct 4 projects, county news, and community events. No spam. Just the information that matters to you.
         </p>
       </div>
@@ -333,7 +631,7 @@ import Base from '../layouts/Base.astro';
         <input type="hidden" name="_next" value="https://electdavidglass.com/thank-you">
         <input type="hidden" name="_subject" value="New Subscriber from Homepage">
         <div>
-          <label for="first-name" class="block text-sm font-sans font-semibold text-near-black mb-1.5 uppercase tracking-wide">First Name</label>
+          <label for="first-name" class="block text-sm font-sans font-semibold text-near-black mb-1.5 uppercase tracking-wide" data-i18n="home.involved.firstName">First Name</label>
           <input 
             type="text" 
             id="first-name" 
@@ -344,7 +642,7 @@ import Base from '../layouts/Base.astro';
           />
         </div>
         <div class="pb-2">
-          <label for="email-address" class="block text-sm font-sans font-semibold text-near-black mb-1.5 uppercase tracking-wide">Email Address</label>
+          <label for="email-address" class="block text-sm font-sans font-semibold text-near-black mb-1.5 uppercase tracking-wide" data-i18n="home.involved.email">Email Address</label>
           <input 
             type="email" 
             id="email-address" 
@@ -357,6 +655,7 @@ import Base from '../layouts/Base.astro';
         <button 
           type="submit" 
           class="w-full px-6 py-4 text-lg font-sans font-bold uppercase tracking-wider rounded-lg bg-gold text-white hover:bg-navy transition-all shadow-lg mt-2 flex justify-center items-center"
+          data-i18n="home.involved.submit"
         >
           Sign Me Up
         </button>

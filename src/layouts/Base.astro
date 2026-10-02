@@ -114,7 +114,7 @@ const fullTitle = title === 'Home'
     </script>
   </head>
   <body class="flex flex-col min-h-screen">
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-navy">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-navy" data-i18n="skip.content">
       Skip to content
     </a>
     
@@ -128,6 +128,64 @@ const fullTitle = title === 'Home'
     
     <!-- Cloudflare Web Analytics -->
     <!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN"}'></script> -->
+
+    <!-- i18n Runtime -->
+    <script>
+      import { translations } from '../i18n/translations';
+
+      function applyLanguage(lang: string) {
+        // Update html lang attribute
+        document.documentElement.lang = lang === 'es' ? 'es' : 'en';
+
+        // Swap all data-i18n text nodes
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (!key || !translations[key]) return;
+          const text = translations[key][lang as 'en' | 'es'] || translations[key].en;
+          
+          // Use innerHTML for keys that contain <br/> tags
+          if (text.includes('<br/>') || text.includes('<br>')) {
+            el.innerHTML = text;
+          } else {
+            el.textContent = text;
+          }
+        });
+
+        // Swap placeholder attributes
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+          const key = el.getAttribute('data-i18n-placeholder');
+          if (!key || !translations[key]) return;
+          const text = translations[key][lang as 'en' | 'es'] || translations[key].en;
+          (el as HTMLInputElement).placeholder = text;
+        });
+
+        // Update toggle button active states (all toggles on page)
+        document.querySelectorAll('.lang-option').forEach(opt => {
+          const optLang = opt.getAttribute('data-lang');
+          if (optLang === lang) {
+            opt.classList.add('active');
+          } else {
+            opt.classList.remove('active');
+          }
+        });
+
+        // Persist
+        localStorage.setItem('lang', lang);
+      }
+
+      // Initialize on page load
+      const savedLang = localStorage.getItem('lang') || 'en';
+      applyLanguage(savedLang);
+
+      // Bind toggle clicks (desktop + mobile)
+      document.querySelectorAll('.lang-toggle').forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          const current = localStorage.getItem('lang') || 'en';
+          const next = current === 'en' ? 'es' : 'en';
+          applyLanguage(next);
+        });
+      });
+    </script>
 
     <!-- Scroll Reveal Observer -->
     <script>
