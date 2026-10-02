@@ -182,7 +182,71 @@ export const translations: Record<string, { en: string; es: string }> = {
     es: "Lee la Historia Completa de David"
   },
 
-  // Endorsement Section (Myles Milburn)
+  // Endorsements Section
+  "home.endorsements.sectionBadge": {
+    en: "Official Endorsements · Bastrop County Leadership",
+    es: "Respaldos Oficiales · Liderazgo del Condado de Bastrop"
+  },
+  "home.endorsements.sectionHeading": {
+    en: "Trusted by Law Enforcement & Frontline Leaders",
+    es: "Respaldado por las Fuerzas del Orden y Líderes de Primera Línea"
+  },
+  "home.endorsements.sectionSub": {
+    en: "Respected community leaders and public servants stand with David Glass for Bastrop County Commissioner, Precinct 4.",
+    es: "Respetados líderes comunitarios y servidores públicos apoyan a David Glass para Comisionado del Condado de Bastrop, Precinto 4."
+  },
+
+  // Endorsement 1: Sheriff Maurice C. Cook
+  "home.endorsement.sheriff.badge": {
+    en: "Official Endorsement · Law Enforcement",
+    es: "Respaldo Oficial · Fuerzas del Orden"
+  },
+  "home.endorsement.sheriff.heading": {
+    en: "Sheriff Maurice C. Cook Endorses David Glass",
+    es: "El Sheriff Maurice C. Cook Respalda a David Glass"
+  },
+  "home.endorsement.sheriff.quote": {
+    en: "\"You are a leader who listens and cares about solutions, always making yourself available to solve problems rather than just point them out.\"",
+    es: "\"Usted es un líder que escucha y se preocupa por las soluciones, siempre estando disponible para resolver problemas en lugar de solo señalarlos.\""
+  },
+  "home.endorsement.sheriff.p1": {
+    en: "I’m honored to receive the endorsement of Sheriff Maurice C. Cook for re-election as Bastrop County Commissioner, Precinct 4.",
+    es: "Me siento honrado de recibir el respaldo del Sheriff Maurice C. Cook para la reelección como Comisionado del Condado de Bastrop, Precinto 4."
+  },
+  "home.endorsement.sheriff.p2": {
+    en: "Sheriff Cook shared that I have shown \"proven support for Law Enforcement\" and called me \"a leader who listens and cares about solutions.\" Those words mean a great deal to me.",
+    es: "El Sheriff Cook compartió que he demostrado un \"apoyo comprobado a las Fuerzas del Orden\" y me llamó \"un líder que escucha y se preocupa por las soluciones\". Esas palabras significan mucho para mí."
+  },
+  "home.endorsement.sheriff.p3": {
+    en: "Thank you, Sheriff Cook, for your confidence and partnership. I look forward to continuing our work together to make Bastrop County a great place to work, live, and raise our families.",
+    es: "Gracias, Sheriff Cook, por su confianza y colaboración. Espero seguir trabajando juntos para hacer del Condado de Bastrop un excelente lugar para trabajar, vivir y criar a nuestras familias."
+  },
+  "home.endorsement.sheriff.author": {
+    en: "Sheriff Maurice C. Cook",
+    es: "Sheriff Maurice C. Cook"
+  },
+  "home.endorsement.sheriff.role": {
+    en: "Bastrop County Sheriff",
+    es: "Sheriff del Condado de Bastrop"
+  },
+  "home.endorsement.sheriff.stat1Value": {
+    en: "Proven Support",
+    es: "Apoyo Comprobado"
+  },
+  "home.endorsement.sheriff.stat1Label": {
+    en: "For Law Enforcement & Public Safety",
+    es: "Para las Fuerzas del Orden y Seguridad Pública"
+  },
+  "home.endorsement.sheriff.stat2Value": {
+    en: "Solutions-First",
+    es: "Enfoque en Soluciones"
+  },
+  "home.endorsement.sheriff.stat2Label": {
+    en: "Dedicated Problem Solver",
+    es: "Dedicado a Resolver Problemas"
+  },
+
+  // Endorsement 2: Myles Milburn
   "home.endorsement.badge": {
     en: "Official Endorsement · Precinct 4 Road & Bridge",
     es: "Respaldo Oficial · Caminos y Puentes del Precinto 4"

@@ -145,9 +145,9 @@ import Base from '../layouts/Base.astro';
   </section>
 
   <!-- ============================================
-       OFFICIAL ENDORSEMENT - Myles Milburn
+       OFFICIAL ENDORSEMENTS - Sheriff Cook & Myles Milburn
        ============================================ -->
-  <section id="endorsement" class="py-20 sm:py-28 bg-gradient-to-br from-navy via-navy-light to-navy text-white relative overflow-hidden border-y border-gold/20">
+  <section id="endorsements" class="py-20 sm:py-28 bg-gradient-to-br from-navy via-navy-light to-navy text-white relative overflow-hidden border-y border-gold/20">
     <!-- Subtle background watermarking / texture -->
     <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
     
@@ -158,180 +158,297 @@ import Base from '../layouts/Base.astro';
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+      <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20 reveal">
         <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-gold/15 border border-gold/40 rounded-full mb-6 shadow-sm">
           <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
           </svg>
-          <span class="text-gold font-sans font-bold text-xs sm:text-sm uppercase tracking-widest" data-i18n="home.endorsement.badge">
-            Official Endorsement · Precinct 4 Road & Bridge
+          <span class="text-gold font-sans font-bold text-xs sm:text-sm uppercase tracking-widest" data-i18n="home.endorsements.sectionBadge">
+            Official Endorsements · Bastrop County Leadership
           </span>
         </div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white mb-6 leading-tight" data-i18n="home.endorsement.heading">
-          49 Years of Dedicated Service Stands With David Glass
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white mb-6 leading-tight" data-i18n="home.endorsements.sectionHeading">
+          Trusted by Law Enforcement & Frontline Leaders
         </h2>
-        <p class="text-lg sm:text-xl text-white/70 font-sans font-light leading-relaxed" data-i18n="home.endorsement.sub">
-          Myles Milburn, 49-year veteran employee of Precinct 4 Road & Bridge, personally endorses David Glass for County Commissioner.
+        <p class="text-lg sm:text-xl text-white/70 font-sans font-light leading-relaxed" data-i18n="home.endorsements.sectionSub">
+          Respected community leaders and public servants stand with David Glass for Bastrop County Commissioner, Precinct 4.
         </p>
       </div>
 
-      <!-- Main Showcase Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-        
-        <!-- Left Column: Visual Assets Showcase (5 cols on desktop) -->
-        <div class="lg:col-span-5 reveal-left flex flex-col gap-6">
+      <!-- ============================================
+           ENDORSEMENT 1: SHERIFF MAURICE C. COOK
+           ============================================ -->
+      <div class="mb-20 sm:mb-28">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
-          <!-- Primary Campaign Graphic -->
-          <div class="relative group">
-            <div class="absolute -inset-1.5 bg-gradient-to-r from-gold/40 via-gold/20 to-gold/40 rounded-3xl blur-md opacity-70 group-hover:opacity-100 transition duration-500"></div>
-            <div class="relative bg-navy-light rounded-2xl overflow-hidden border-2 border-gold/40 shadow-2xl">
-              <picture>
-                <source srcset="/myles-milburn-endorses-david-glass.webp" type="image/webp" />
-                <img 
-                  src="/myles-milburn-endorses-david-glass.png" 
-                  alt="Myles Milburn Endorsement Graphic - Stands with David Glass for Bastrop County Commissioner Precinct 4" 
-                  class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition duration-500"
-                  loading="lazy"
-                  width="1920"
-                  height="1920"
-                />
-              </picture>
-              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-navy/95 via-navy/70 to-transparent p-4 sm:p-5 flex items-center justify-between">
-                <div class="flex items-center gap-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  <span class="text-xs font-sans font-bold uppercase tracking-wider text-gold">Official Endorsement</span>
-                </div>
-                <span class="text-xs text-white/70 font-sans">Precinct 4 Road & Bridge</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Secondary Screenshot / Original Signed Statement Card -->
-          <div class="relative bg-white/5 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:border-gold/40 transition-all group">
-            <div class="flex items-center justify-between gap-4 mb-3">
-              <div class="flex items-center gap-2.5">
-                <div class="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">
-                  ✓
-                </div>
-                <div>
-                  <h4 class="text-white font-sans font-bold text-sm">Original Statement Post</h4>
-                  <p class="text-white/50 text-xs font-sans">Verified Direct Message from Myles Milburn</p>
-                </div>
-              </div>
-              <button 
-                id="open-endorsement-modal"
-                type="button"
-                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gold/20 hover:bg-gold text-gold hover:text-navy text-xs font-sans font-bold uppercase tracking-wider transition-all cursor-pointer"
-                aria-haspopup="dialog"
-                data-i18n="home.endorsement.viewProof"
-              >
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                </svg>
-                <span>View Full</span>
-              </button>
-            </div>
-            
-            <!-- Clickable preview snippet of the screenshot -->
-            <button 
-              id="open-endorsement-modal-img"
-              type="button" 
-              class="w-full text-left relative rounded-xl overflow-hidden border border-white/10 group-hover:border-gold/40 transition-all cursor-pointer block focus:outline-none focus:ring-2 focus:ring-gold"
-              aria-label="Click to enlarge original statement screenshot"
-            >
-              <div class="h-32 sm:h-36 overflow-hidden bg-navy/80 relative">
+          <!-- Left Column: Sheriff Graphic (5 cols) -->
+          <div class="lg:col-span-5 reveal-left flex flex-col gap-6">
+            <div class="relative group">
+              <div class="absolute -inset-1.5 bg-gradient-to-r from-gold/40 via-gold/20 to-gold/40 rounded-3xl blur-md opacity-70 group-hover:opacity-100 transition duration-500"></div>
+              <div class="relative bg-navy-light rounded-2xl overflow-hidden border-2 border-gold/40 shadow-2xl">
                 <picture>
-                  <source srcset="/screenshotdg.webp" type="image/webp" />
+                  <source srcset="/sheriff-maurice-c-cook-endorses-david-glass.webp" type="image/webp" />
                   <img 
-                    src="/screenshotdg.png" 
-                    alt="Screenshot of Myles Milburn's personal endorsement of David Glass" 
-                    class="w-full object-cover object-top opacity-85 group-hover:opacity-100 group-hover:scale-105 transition duration-300"
+                    src="/sheriff-maurice-c-cook-endorses-david-glass.png" 
+                    alt="Sheriff Maurice C. Cook Endorses David Glass for Bastrop County Commissioner Precinct 4" 
+                    class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition duration-500"
                     loading="lazy"
+                    width="1920"
+                    height="1920"
                   />
                 </picture>
-                <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent flex items-end justify-center pb-3">
-                  <span class="inline-flex items-center gap-1.5 text-xs font-sans font-semibold text-gold bg-navy/90 px-3 py-1 rounded-full border border-gold/30">
-                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-                    </svg>
-                    Click to Enlarge Statement Screenshot
-                  </span>
+                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-navy/95 via-navy/70 to-transparent p-4 sm:p-5 flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-gold animate-pulse"></span>
+                    <span class="text-xs font-sans font-bold uppercase tracking-wider text-gold" data-i18n="home.endorsement.sheriff.badge">Official Endorsement</span>
+                  </div>
+                  <span class="text-xs text-white/70 font-sans">Bastrop County Sheriff</span>
                 </div>
               </div>
-            </button>
+            </div>
           </div>
 
-        </div>
-
-        <!-- Right Column: Narrative & Endorsement Quote (7 cols on desktop) -->
-        <div class="lg:col-span-7 reveal-right flex flex-col justify-center">
-          
-          <!-- Large Highlight Testimonial Box -->
-          <div class="relative bg-white/5 backdrop-blur-md rounded-3xl p-8 sm:p-10 border border-gold/30 shadow-2xl mb-8">
-            <!-- Decorative Large Quote Mark -->
-            <div class="text-gold/25 font-serif text-7xl sm:text-8xl leading-none absolute top-4 left-6 select-none pointer-events-none">“</div>
+          <!-- Right Column: Sheriff Statement & Narrative (7 cols) -->
+          <div class="lg:col-span-7 reveal-right flex flex-col justify-center">
             
-            <div class="relative z-10">
-              <!-- Prominent Pull Quote -->
-              <blockquote class="mb-6">
-                <p class="text-xl sm:text-2xl lg:text-3xl font-serif italic text-white font-bold leading-snug mb-6" data-i18n="home.endorsement.quote">
-                  "In the time David has served as Commissioner, Precinct 4 has received more new equipment than I have seen during the 49 years I've been employed at Precinct 4."
-                </p>
-              </blockquote>
+            <div class="relative bg-white/5 backdrop-blur-md rounded-3xl p-8 sm:p-10 border border-gold/30 shadow-2xl mb-8">
+              <!-- Decorative Large Quote Mark -->
+              <div class="text-gold/25 font-serif text-7xl sm:text-8xl leading-none absolute top-4 left-6 select-none pointer-events-none">“</div>
+              
+              <div class="relative z-10">
+                <!-- Highlight Pull Quote -->
+                <blockquote class="mb-6">
+                  <p class="text-xl sm:text-2xl lg:text-3xl font-serif italic text-white font-bold leading-snug mb-6" data-i18n="home.endorsement.sheriff.quote">
+                    "You are a leader who listens and cares about solutions, always making yourself available to solve problems rather than just point them out."
+                  </p>
+                </blockquote>
 
-              <!-- Detailed Endorsement Statement -->
-              <div class="space-y-4 text-white/80 font-sans text-base sm:text-lg leading-relaxed border-t border-white/10 pt-6">
-                <p data-i18n="home.endorsement.p1">
-                  I, Myles Milburn, am proud to personally endorse my friend, Mr. David Glass, for Commissioner of Precinct 4 Road & Bridge. I've had the opportunity to know David and see the kind of person he is. He cares about the people in our community, takes pride in where he lives, and is willing to put in the hard work to make a difference.
-                </p>
-                <p data-i18n="home.endorsement.p2">
-                  This equipment has made it possible for the Precinct to do its job more efficiently, productively, and effectively than ever before. David has made sure the men and women working for the Precinct have the tools they need to better serve our community and maintain our roads and bridges.
-                </p>
-                <p data-i18n="home.endorsement.p3">
-                  I trust David Glass to listen to the concerns of the people of Precinct 4, stand up for our community, and work diligently to keep our roads and bridges safe and properly maintained. That's why I'm proud to stand with David Glass and support him for Commissioner of Precinct 4 Road & Bridge.
-                </p>
+                <!-- Full Endorsement Statement -->
+                <div class="space-y-4 text-white/80 font-sans text-base sm:text-lg leading-relaxed border-t border-white/10 pt-6">
+                  <p data-i18n="home.endorsement.sheriff.p1">
+                    I’m honored to receive the endorsement of Sheriff Maurice C. Cook for re-election as Bastrop County Commissioner, Precinct 4.
+                  </p>
+                  <p data-i18n="home.endorsement.sheriff.p2">
+                    Sheriff Cook shared that I have shown "proven support for Law Enforcement" and called me "a leader who listens and cares about solutions." Those words mean a great deal to me.
+                  </p>
+                  <p data-i18n="home.endorsement.sheriff.p3">
+                    Thank you, Sheriff Cook, for your confidence and partnership. I look forward to continuing our work together to make Bastrop County a great place to work, live, and raise our families.
+                  </p>
+                </div>
+
+                <!-- Author Attribution Block -->
+                <div class="mt-8 pt-6 border-t border-gold/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl bg-gold/20 border border-gold/40 flex items-center justify-center text-gold font-serif font-bold text-xl shadow-inner">
+                      ★
+                    </div>
+                    <div>
+                      <h3 class="text-xl font-serif font-bold text-white tracking-wide" data-i18n="home.endorsement.sheriff.author">
+                        Sheriff Maurice C. Cook
+                      </h3>
+                      <p class="text-gold text-sm font-sans font-medium" data-i18n="home.endorsement.sheriff.role">
+                        Bastrop County Sheriff
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-emerald-300 text-xs font-sans font-semibold self-start sm:self-auto">
+                    <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Verified Law Enforcement Endorsement</span>
+                  </div>
+                </div>
+
               </div>
+            </div>
 
-              <!-- Author Attribution Block -->
-              <div class="mt-8 pt-6 border-t border-gold/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div class="flex items-center gap-4">
-                  <div class="w-14 h-14 rounded-2xl bg-gold/20 border border-gold/40 flex items-center justify-center text-gold font-serif font-bold text-2xl shadow-inner">
-                    MM
+            <!-- Bottom Stat Badges for Sheriff -->
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-navy/70 border border-white/10 rounded-2xl p-4 sm:p-5 text-center">
+                <div class="text-xl sm:text-2xl font-serif font-extrabold text-gold mb-1" data-i18n="home.endorsement.sheriff.stat1Value">Proven Support</div>
+                <div class="text-xs sm:text-sm text-white/70 font-sans font-medium uppercase tracking-wider" data-i18n="home.endorsement.sheriff.stat1Label">For Law Enforcement & Safety</div>
+              </div>
+              <div class="bg-navy/70 border border-white/10 rounded-2xl p-4 sm:p-5 text-center">
+                <div class="text-xl sm:text-2xl font-serif font-extrabold text-gold mb-1" data-i18n="home.endorsement.sheriff.stat2Value">Solutions-First</div>
+                <div class="text-xs sm:text-sm text-white/70 font-sans font-medium uppercase tracking-wider" data-i18n="home.endorsement.sheriff.stat2Label">Dedicated Problem Solver</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Separator Line -->
+      <div class="relative flex items-center justify-center my-12 sm:my-16">
+        <div class="w-full border-t border-gold/20"></div>
+        <div class="absolute px-4 bg-navy text-gold text-sm font-sans flex items-center gap-2">
+          <span>★</span>
+          <span class="text-xs uppercase tracking-widest text-white/60">Frontline Leadership & Experience</span>
+          <span>★</span>
+        </div>
+      </div>
+
+      <!-- ============================================
+           ENDORSEMENT 2: MYLES MILBURN (49-YEAR VETERAN)
+           ============================================ -->
+      <div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          
+          <!-- Left Column: Visual Assets Showcase (5 cols) -->
+          <div class="lg:col-span-5 reveal-left flex flex-col gap-6">
+            
+            <!-- Primary Campaign Graphic -->
+            <div class="relative group">
+              <div class="absolute -inset-1.5 bg-gradient-to-r from-gold/40 via-gold/20 to-gold/40 rounded-3xl blur-md opacity-70 group-hover:opacity-100 transition duration-500"></div>
+              <div class="relative bg-navy-light rounded-2xl overflow-hidden border-2 border-gold/40 shadow-2xl">
+                <picture>
+                  <source srcset="/myles-milburn-endorses-david-glass.webp" type="image/webp" />
+                  <img 
+                    src="/myles-milburn-endorses-david-glass.png" 
+                    alt="Myles Milburn Endorsement Graphic - Stands with David Glass for Bastrop County Commissioner Precinct 4" 
+                    class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition duration-500"
+                    loading="lazy"
+                    width="1920"
+                    height="1920"
+                  />
+                </picture>
+                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-navy/95 via-navy/70 to-transparent p-4 sm:p-5 flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="text-xs font-sans font-bold uppercase tracking-wider text-gold">Official Endorsement</span>
+                  </div>
+                  <span class="text-xs text-white/70 font-sans">Precinct 4 Road & Bridge</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Secondary Screenshot / Original Signed Statement Card -->
+            <div class="relative bg-white/5 backdrop-blur-md rounded-2xl p-5 border border-white/10 hover:border-gold/40 transition-all group">
+              <div class="flex items-center justify-between gap-4 mb-3">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-sm">
+                    ✓
                   </div>
                   <div>
-                    <h3 class="text-xl font-serif font-bold text-white tracking-wide" data-i18n="home.endorsement.author">
-                      Myles Milburn
-                    </h3>
-                    <p class="text-gold text-sm font-sans font-medium" data-i18n="home.endorsement.role">
-                      49-Year Veteran Employee · Precinct 4 Road & Bridge
-                    </p>
+                    <h4 class="text-white font-sans font-bold text-sm">Original Statement Post</h4>
+                    <p class="text-white/50 text-xs font-sans">Verified Direct Message from Myles Milburn</p>
+                  </div>
+                </div>
+                <button 
+                  id="open-endorsement-modal"
+                  type="button"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gold/20 hover:bg-gold text-gold hover:text-navy text-xs font-sans font-bold uppercase tracking-wider transition-all cursor-pointer"
+                  aria-haspopup="dialog"
+                  data-i18n="home.endorsement.viewProof"
+                >
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                  <span>View Full</span>
+                </button>
+              </div>
+              
+              <!-- Clickable preview snippet of the screenshot -->
+              <button 
+                id="open-endorsement-modal-img"
+                type="button" 
+                class="w-full text-left relative rounded-xl overflow-hidden border border-white/10 group-hover:border-gold/40 transition-all cursor-pointer block focus:outline-none focus:ring-2 focus:ring-gold"
+                aria-label="Click to enlarge original statement screenshot"
+              >
+                <div class="h-32 sm:h-36 overflow-hidden bg-navy/80 relative">
+                  <picture>
+                    <source srcset="/screenshotdg.webp" type="image/webp" />
+                    <img 
+                      src="/screenshotdg.png" 
+                      alt="Screenshot of Myles Milburn's personal endorsement of David Glass" 
+                      class="w-full object-cover object-top opacity-85 group-hover:opacity-100 group-hover:scale-105 transition duration-300"
+                      loading="lazy"
+                    />
+                  </picture>
+                  <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent flex items-end justify-center pb-3">
+                    <span class="inline-flex items-center gap-1.5 text-xs font-sans font-semibold text-gold bg-navy/90 px-3 py-1 rounded-full border border-gold/30">
+                      <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                      </svg>
+                      Click to Enlarge Statement Screenshot
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Myles Milburn Narrative & Quote (7 cols) -->
+          <div class="lg:col-span-7 reveal-right flex flex-col justify-center">
+            
+            <div class="relative bg-white/5 backdrop-blur-md rounded-3xl p-8 sm:p-10 border border-gold/30 shadow-2xl mb-8">
+              <!-- Decorative Large Quote Mark -->
+              <div class="text-gold/25 font-serif text-7xl sm:text-8xl leading-none absolute top-4 left-6 select-none pointer-events-none">“</div>
+              
+              <div class="relative z-10">
+                <!-- Highlight Pull Quote -->
+                <blockquote class="mb-6">
+                  <p class="text-xl sm:text-2xl lg:text-3xl font-serif italic text-white font-bold leading-snug mb-6" data-i18n="home.endorsement.quote">
+                    "In the time David has served as Commissioner, Precinct 4 has received more new equipment than I have seen during the 49 years I've been employed at Precinct 4."
+                  </p>
+                </blockquote>
+
+                <!-- Full Endorsement Statement -->
+                <div class="space-y-4 text-white/80 font-sans text-base sm:text-lg leading-relaxed border-t border-white/10 pt-6">
+                  <p data-i18n="home.endorsement.p1">
+                    I, Myles Milburn, am proud to personally endorse my friend, Mr. David Glass, for Commissioner of Precinct 4 Road & Bridge. I've had the opportunity to know David and see the kind of person he is. He cares about the people in our community, takes pride in where he lives, and is willing to put in the hard work to make a difference.
+                  </p>
+                  <p data-i18n="home.endorsement.p2">
+                    This equipment has made it possible for the Precinct to do its job more efficiently, productively, and effectively than ever before. David has made sure the men and women working for the Precinct have the tools they need to better serve our community and maintain our roads and bridges.
+                  </p>
+                  <p data-i18n="home.endorsement.p3">
+                    I trust David Glass to listen to the concerns of the people of Precinct 4, stand up for our community, and work diligently to keep our roads and bridges safe and properly maintained. That's why I'm proud to stand with David Glass and support him for Commissioner of Precinct 4 Road & Bridge.
+                  </p>
+                </div>
+
+                <!-- Author Attribution Block -->
+                <div class="mt-8 pt-6 border-t border-gold/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl bg-gold/20 border border-gold/40 flex items-center justify-center text-gold font-serif font-bold text-2xl shadow-inner">
+                      MM
+                    </div>
+                    <div>
+                      <h3 class="text-xl font-serif font-bold text-white tracking-wide" data-i18n="home.endorsement.author">
+                        Myles Milburn
+                      </h3>
+                      <p class="text-gold text-sm font-sans font-medium" data-i18n="home.endorsement.role">
+                        49-Year Veteran Employee · Precinct 4 Road & Bridge
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-emerald-300 text-xs font-sans font-semibold self-start sm:self-auto">
+                    <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Verified Endorsement</span>
                   </div>
                 </div>
 
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-emerald-300 text-xs font-sans font-semibold self-start sm:self-auto">
-                  <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span>Verified Endorsement</span>
-                </div>
               </div>
-
             </div>
+
+            <!-- Bottom Stat Badges for Myles Milburn -->
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-navy/70 border border-white/10 rounded-2xl p-4 sm:p-5 text-center">
+                <div class="text-2xl sm:text-3xl font-serif font-extrabold text-gold mb-1" data-i18n="home.endorsement.stat1Value">49 Years</div>
+                <div class="text-xs sm:text-sm text-white/70 font-sans font-medium uppercase tracking-wider" data-i18n="home.endorsement.stat1Label">Frontline Service in Precinct 4</div>
+              </div>
+              <div class="bg-navy/70 border border-white/10 rounded-2xl p-4 sm:p-5 text-center">
+                <div class="text-2xl sm:text-3xl font-serif font-extrabold text-gold mb-1" data-i18n="home.endorsement.stat2Value">Historic</div>
+                <div class="text-xs sm:text-sm text-white/70 font-sans font-medium uppercase tracking-wider" data-i18n="home.endorsement.stat2Label">Equipment & Tool Upgrades</div>
+              </div>
+            </div>
+
           </div>
-
-          <!-- Bottom Stat Badges -->
-          <div class="grid grid-cols-2 gap-4">
-            <div class="bg-navy/70 border border-white/10 rounded-2xl p-4 sm:p-5 text-center">
-              <div class="text-2xl sm:text-3xl font-serif font-extrabold text-gold mb-1" data-i18n="home.endorsement.stat1Value">49 Years</div>
-              <div class="text-xs sm:text-sm text-white/70 font-sans font-medium uppercase tracking-wider" data-i18n="home.endorsement.stat1Label">Frontline Service in Precinct 4</div>
-            </div>
-            <div class="bg-navy/70 border border-white/10 rounded-2xl p-4 sm:p-5 text-center">
-              <div class="text-2xl sm:text-3xl font-serif font-extrabold text-gold mb-1" data-i18n="home.endorsement.stat2Value">Historic</div>
-              <div class="text-xs sm:text-sm text-white/70 font-sans font-medium uppercase tracking-wider" data-i18n="home.endorsement.stat2Label">Equipment & Tool Upgrades</div>
-            </div>
-          </div>
-
         </div>
       </div>
 
