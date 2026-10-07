@@ -246,6 +246,56 @@ export const translations: Record<string, { en: string; es: string }> = {
     es: "Dedicado a Resolver Problemas"
   },
 
+  // Endorsement: All Four Bastrop County Constables
+  "home.endorsement.constables.badge": {
+    en: "Joint Endorsement · All Four Constables",
+    es: "Respaldo Conjunto · Los Cuatro Alguaciles"
+  },
+  "home.endorsement.constables.quote": {
+    en: "\"Commissioner Glass understands that effective leadership begins with listening.\"",
+    es: "\"El Comisionado Glass entiende que el liderazgo efectivo comienza escuchando.\""
+  },
+  "home.endorsement.constables.p1": {
+    en: "I’m honored to receive the joint endorsement of all four Bastrop County Constables for re-election as County Commissioner, Precinct 4.",
+    es: "Me siento honrado de recibir el respaldo conjunto de los cuatro Alguaciles del Condado de Bastrop para la reelección como Comisionado del Condado, Precinto 4."
+  },
+  "home.endorsement.constables.p2": {
+    en: "Their letter recognizes my steadfast commitment to supporting law enforcement, listening to the concerns of those on the front lines, and working toward practical solutions that keep our communities safe.",
+    es: "Su carta reconoce mi firme compromiso de apoyar a las fuerzas del orden, escuchar las inquietudes de quienes están en primera línea y trabajar en soluciones prácticas que mantengan seguras a nuestras comunidades."
+  },
+  "home.endorsement.constables.p3": {
+    en: "I’m grateful for their confidence and partnership. I will continue working to support law enforcement, protect our communities, and keep Bastrop County a safe, exceptional place to live, work, and raise a family.",
+    es: "Agradezco su confianza y colaboración. Seguiré trabajando para apoyar a las fuerzas del orden, proteger a nuestras comunidades y mantener el Condado de Bastrop como un lugar seguro y excepcional para vivir, trabajar y criar una familia."
+  },
+  "home.endorsement.constables.author": {
+    en: "Bastrop County Constables",
+    es: "Alguaciles del Condado de Bastrop"
+  },
+  "home.endorsement.constables.role": {
+    en: "Pct. 1 · Pct. 2 · Pct. 3 · Pct. 4",
+    es: "Pct. 1 · Pct. 2 · Pct. 3 · Pct. 4"
+  },
+  "home.endorsement.constables.verified": {
+    en: "Unanimous Constable Endorsement",
+    es: "Respaldo Unánime de los Alguaciles"
+  },
+  "home.endorsement.constables.stat1Value": {
+    en: "4 of 4",
+    es: "4 de 4"
+  },
+  "home.endorsement.constables.stat1Label": {
+    en: "County Constables Endorse",
+    es: "Alguaciles del Condado Respaldan"
+  },
+  "home.endorsement.constables.stat2Value": {
+    en: "Listens First",
+    es: "Escucha Primero"
+  },
+  "home.endorsement.constables.stat2Label": {
+    en: "Accessible & Responsive",
+    es: "Accesible y Receptivo"
+  },
+
   // Endorsement 2: Myles Milburn
   "home.endorsement.badge": {
     en: "Official Endorsement · Precinct 4 Road & Bridge",
