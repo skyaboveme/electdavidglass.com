@@ -105,6 +105,10 @@ export const translations: Record<string, { en: string; es: string }> = {
     en: "Bastrop County Commissioner · Precinct 4",
     es: "Comisionado del Condado de Bastrop · Precinto 4"
   },
+  "home.name": {
+    en: "David Glass",
+    es: "David Glass"
+  },
   "home.headline1": {
     en: "Proven Leadership.",
     es: "Liderazgo Probado."
