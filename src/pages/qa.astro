@@ -1,0 +1,875 @@
+---
+import Base from '../layouts/Base.astro';
+
+// FAQ Schema data for rich snippets and AI search engines
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you plan to address data centers in Bastrop County?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I understand why folks are concerned about data centers. They're big projects, and before one goes in, we ought to know what it means for our water, our roads, our electrical grid, and our environmental concerns. I also believe we have to be direct with people about the laws and how little regulatory authority a county has. A county commissioner, nor the court as a whole, cannot simply vote to ban every data center. What we can do is take a hard look at the agreements that come before the court, ask tough questions, and insist that any commitments the county negotiates are clear and enforceable. These agreements are most often through Tax abatements. As the Texas Legislature has declined to give counties any zoning or other developmental controls. I want businesses to carry their fair share of the costs they create. As such, I will work diligently to ensure when agreements come to the Commissioner Court the deals that are agreed to are a net positive for Bastrop County. I don't believe in giving away tax dollars without showing the public what we're getting in return."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will you promise not to vote for property tax increases?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I don't want to raise taxes. I know what property owners are dealing with, and I believe county government should watch its spending just as closely as any family or small business. But I won't make a blanket promise without knowing the facts of a future budget. My job is to look at every department, question expenses, plan ahead, and make sure we can pay for essential services. The county sets the county tax rate; it doesn't set your school or city tax rates, ESD (fire services), or ESD 3 (ambulance service) tax rates, and it doesn't decide your individual appraisal. I'll work to keep our county rate down while being honest about what public safety, roads, and other necessary services cost. This is why we need to diversify our tax base. Housing developments require a lot of county services, whereas some of these high-value commercial projects require very few county services while paying a large portion of county taxes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How will you make Bastrop County better?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To me, making the county better starts with getting the basics right. People want roads they can drive on, deputies who can respond when they're needed, dependable emergency services, and a county government that spends their money wisely. The new ESD 3 started offering ambulance service on October 1st. They also want to know we're planning for growth instead of playing catch-up year after year. I believe in listening to people, but listening is only the beginning. You've got to put a plan together, fund it, get the work done, and be willing to answer for the results. That's how I'd judge whether we're making progress. We also formed the first County Health Department, a service greatly needed. This was the first county health department formed in the State of Texas in almost 50 years. I also served as the Court's liaison with a group of volunteers who worked diligently to be approved for a grant that will provide fiber broadband countywide. It was an approximately $54 million grant through the state. I served on the committee for the new Judicial Center, and we have purchased 27 acres to build a new courthouse. There are other improvements to be announced very soon."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What powers does a county commissioner actually have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A commissioner has a vote on the five-member Commissioners Court. That means helping set the county budget and tax rate, approving contracts, and making countywide decisions. Commissioners also supervise road operations in their precincts, making sure crews have what they need, setting maintenance priorities, dealing with drainage problems, and seeing that equipment and materials are put to good use. No one commissioner gets to dictate what the whole court does. You have to do your homework, make your case, and earn the other votes. And when a job falls under your supervision, people ought to be able to hold you accountable for getting it done. Each commissioner is a liaison for different departments. I am the Court's liaison for Economic Development and Tourism, as well as the liaison for the Animal Shelter. An example of how I used these powers for the good of our community, is what I did to help with the DarPro issue. We started by monitoring for months with our new Bastrop County Health Department with the assistance of Texas A&M. They were able to substantiate the gases that were being emitted into the community. We had a graduate student that would travel from College Station with short notice to come do the testing of the air when the odor was bad. It took that to begin to build the patterns of noncompliance. I had many meetings after that with the DarPro team. They brought in a complete new management team. They agreed there was a horrendous problem and committed to making all improvements necessary to correct the situation. The initial commitment was 34 million dollars worth of improvements. I believe that has grown to approximately 50 million."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How will you improve the number of sheriff's deputies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This requires commissioners to sit down with the sheriff and look at the actual numbers: calls for service, response times, areas that need more coverage, and how growth is changing the workload. Then we need a realistic plan for additional deputies where they're needed. A deputy isn't just a salary. There's a patrol vehicle, equipment, training, insurance, benefits, and continuing costs. The sheriff runs the department, and Commissioners Court makes the funding decisions. I believe we should work together on a multiyear plan that the county can afford to keep in place, rather than announcing positions we can't sustain. I have worked hard with the sheriff and the constables to make sure they have what they need. This is why I have the endorsements from Sheriff Cook and all four constables. For the first time in several years, we were fully staffed this last year. I attribute that to some salary adjustments made a couple of years ago. While again it had to be approved by the court. I championed this adjustment to help ensure we did not lose our deputies to neighboring counties due to pay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How will you ensure animal control receives adequate funding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I care about the animal shelter, and I also know that adding kennels alone won't solve every problem. We need to look at how many animals come in, how quickly they can be adopted or returned home, how animal-control calls are handled, and what it takes to support the staff doing that work. We should keep building relationships with rescue groups, veterinarians, volunteers, and organizations that may help with grants. But grants come and go. We still need a sound county budget, clear goals, and regular reporting so people can see whether the shelter is improving. I want a humane shelter and animal-control services that work for our growing county. I have worked with the shelter director to add over 40 new kennels. They were desperately needed. I negotiated, with the Court's approval, to purchase 15 acres on Hwy. 95 for a new shelter facility. I fought to get $5 million added to the five-year CIP budget to help construct the all-new facility."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How will you improve county roads, particularly FM 969?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Roads are something a commissioner should know firsthand. You have to know where the trouble spots are, what condition the pavement is in, where drainage is failing, and what your crews and equipment can accomplish. On county roads, that means planning maintenance and following through. FM 969 is a different matter because it's a state highway under TxDOT. We can't just send out a county crew and widen it. But we can work with TxDOT, put documented safety problems in front of them, push for studies and funding, and stay on the issue. My approach is simple: take care of the roads the county is responsible for, and keep working with the state on the highways we depend on. I work regularly with the TxDOT district office on concerns of constituents regarding state roadways. I've worked with TxDOT to get several turn lanes on FM 969, and they were funded by the businesses. I've added several new four-way stops on our county roads."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How will you work with other commissioners and the sheriff?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You're not going to get much done in county government if you can't work with people. The commissioners, the county judge, the sheriff, and other elected officials all have jobs to do. We won't agree on every issue, and that's fine. I think you should be able to disagree in court, explain your vote, and then sit down and work together on the next problem. With the sheriff, that means listening to operational needs while also asking the hard budget questions. I don't think politics or personal disagreements ought to get in the way of roads, public safety, or basic county services. We can all agree that we may not always agree with each other, but we should be respectful in disagreements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you want to decrease property taxes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely, I'd like to see people pay less in property taxes. But there's a difference between saying that and showing how to make it happen. We need to control spending and grow the tax base in ways that don't leave existing property owners holding the bag. When a major company wants a tax abatement, we ought to look at both sides of the ledger: what revenue the project brings in, what it costs the county, and what happens when the abatement ends. We also need to remember that a county can't simply charge a higher tax rate to a company because it's wealthy. My focus would be a strong tax base, careful spending, and a lower tax burden wherever the numbers allow it. We have to diversify our tax base with more high-value commercial projects. I feel if we can successfully get these types of projects, we could reduce our tax rates drastically in the next five years."
+      }
+    }
+  ]
+};
+---
+
+<Base 
+  title="Q&A" 
+  description="Questions submitted by Matt Turner: Straight answers on data centers, property taxes, road improvements on FM 969, sheriff deputies, DarPro accountability, and animal control from Bastrop County Commissioner David Glass."
+>
+  <!-- Schema Injection for Google & AI Engines -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Page Header -->
+  <section class="page-header-gradient pt-28 pb-16 sm:pb-20 relative">
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-gold text-xs sm:text-sm font-sans font-semibold uppercase tracking-widest mb-6">
+        <span class="text-gold">★</span>
+        <span data-i18n="qa.badge">Constituent Q&A · Straight Talk</span>
+        <span class="text-gold">★</span>
+      </div>
+      
+      <div class="gold-line mx-auto mb-6"></div>
+      
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-extrabold text-white mb-4 tracking-tight" data-i18n="qa.title">
+        Questions & Answers (Q&A)
+      </h1>
+
+      <!-- Attribution Pill Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/20 border border-gold/40 text-gold-light text-xs sm:text-sm font-sans font-semibold mb-6">
+        <span data-i18n="qa.attributionBadge">Questions submitted by Matt Turner</span>
+        <span class="text-white/40">·</span>
+        <span class="text-white">Direct Answers from David Glass</span>
+      </div>
+      
+      <p class="text-lg sm:text-xl font-sans font-light text-white/80 leading-relaxed max-w-3xl mx-auto mb-8" data-i18n="qa.subtitle">
+        These questions were submitted by Matt Turner. Below are Commissioner David Glass's direct, in-depth responses on data centers, property taxes, road improvements, public safety, and managing growth responsibly in Bastrop County.
+      </p>
+
+      <!-- Authority Quick Stats Ribbon -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto text-left">
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/10">
+          <div class="text-gold font-serif font-bold text-lg sm:text-xl">40+ Years</div>
+          <div class="text-white/70 text-xs font-sans">Bastrop County Business & Civic Leadership</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/10">
+          <div class="text-gold font-serif font-bold text-lg sm:text-xl">Fully Staffed</div>
+          <div class="text-white/70 text-xs font-sans">Sheriff's Office Staffing Record Achieved</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/10">
+          <div class="text-gold font-serif font-bold text-lg sm:text-xl">$54 Million</div>
+          <div class="text-white/70 text-xs font-sans">State Fiber Broadband Grant Secured</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/10">
+          <div class="text-gold font-serif font-bold text-lg sm:text-xl">100% Backed</div>
+          <div class="text-white/70 text-xs font-sans">Endorsed by Sheriff Cook & All 4 Constables</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Area -->
+  <section class="py-12 sm:py-20 bg-warm-gray/30">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Attribution Banner Card -->
+      <div class="bg-navy text-white rounded-2xl p-6 sm:p-7 shadow-sm border border-gold/30 mb-8 reveal flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-gold/20 border border-gold/40 flex items-center justify-center flex-shrink-0 text-gold font-serif font-bold text-xl">
+          ★
+        </div>
+        <div class="flex-grow">
+          <div class="text-gold font-sans font-bold text-xs uppercase tracking-widest mb-1" data-i18n="qa.attributionHeading">
+            Questions Submitted by Matt Turner
+          </div>
+          <p class="text-white/85 font-sans text-sm sm:text-base leading-relaxed" data-i18n="qa.attributionText">
+            The questions below were submitted by Matt Turner on key issues facing Bastrop County. Below are Commissioner David Glass's direct answers, statutory realities, and track-record proof.
+          </p>
+        </div>
+      </div>
+
+      <!-- Interactive Search & Topic Filter -->
+      <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-warm-gray mb-12 reveal">
+        <div class="flex flex-col md:flex-row gap-4 items-center justify-between mb-6">
+          <div class="relative w-full">
+            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-near-black/40">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+            </div>
+            <input 
+              type="text" 
+              id="qa-search-input"
+              class="w-full pl-11 pr-4 py-3 bg-warm-gray/40 border border-warm-gray rounded-xl text-near-black placeholder-near-black/50 text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold transition-all"
+              placeholder="Search questions by keyword (e.g. data centers, taxes, FM 969, deputies, DarPro)..."
+              data-i18n-placeholder="qa.search.placeholder"
+              aria-label="Search questions"
+            />
+          </div>
+          <button 
+            type="button" 
+            id="qa-clear-search" 
+            class="hidden text-xs font-sans font-semibold text-navy hover:text-gold uppercase tracking-wider flex-shrink-0 transition-colors"
+          >
+            Clear Filter
+          </button>
+        </div>
+
+        <!-- Topic Pills -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none" id="topic-pills" role="tablist">
+          <button 
+            type="button"
+            class="topic-btn active px-3.5 py-1.5 rounded-lg text-xs font-sans font-bold uppercase tracking-wider transition-all whitespace-nowrap bg-navy text-white shadow-sm"
+            data-topic="all"
+            data-i18n="qa.filter.all"
+          >
+            All Topics
+          </button>
+          <button 
+            type="button"
+            class="topic-btn px-3.5 py-1.5 rounded-lg text-xs font-sans font-bold uppercase tracking-wider transition-all whitespace-nowrap bg-warm-gray text-near-black/70 hover:bg-gold/20 hover:text-navy"
+            data-topic="datacenters"
+            data-i18n="qa.filter.datacenters"
+          >
+            Data Centers
+          </button>
+          <button 
+            type="button"
+            class="topic-btn px-3.5 py-1.5 rounded-lg text-xs font-sans font-bold uppercase tracking-wider transition-all whitespace-nowrap bg-warm-gray text-near-black/70 hover:bg-gold/20 hover:text-navy"
+            data-topic="taxes"
+            data-i18n="qa.filter.taxes"
+          >
+            Property Taxes
+          </button>
+          <button 
+            type="button"
+            class="topic-btn px-3.5 py-1.5 rounded-lg text-xs font-sans font-bold uppercase tracking-wider transition-all whitespace-nowrap bg-warm-gray text-near-black/70 hover:bg-gold/20 hover:text-navy"
+            data-topic="progress"
+            data-i18n="qa.filter.progress"
+          >
+            County Progress
+          </button>
+          <button 
+            type="button"
+            class="topic-btn px-3.5 py-1.5 rounded-lg text-xs font-sans font-bold uppercase tracking-wider transition-all whitespace-nowrap bg-warm-gray text-near-black/70 hover:bg-gold/20 hover:text-navy"
+            data-topic="powers"
+            data-i18n="qa.filter.powers"
+          >
+            Powers & DarPro
+          </button>
+          <button 
+            type="button"
+            class="topic-btn px-3.5 py-1.5 rounded-lg text-xs font-sans font-bold uppercase tracking-wider transition-all whitespace-nowrap bg-warm-gray text-near-black/70 hover:bg-gold/20 hover:text-navy"
+            data-topic="deputies"
+            data-i18n="qa.filter.deputies"
+          >
+            Sheriff's Deputies
+          </button>
+          <button 
+            type="button"
+            class="topic-btn px-3.5 py-1.5 rounded-lg text-xs font-sans font-bold uppercase tracking-wider transition-all whitespace-nowrap bg-warm-gray text-near-black/70 hover:bg-gold/20 hover:text-navy"
+            data-topic="animals"
+            data-i18n="qa.filter.animals"
+          >
+            Animal Shelter
+          </button>
+          <button 
+            type="button"
+            class="topic-btn px-3.5 py-1.5 rounded-lg text-xs font-sans font-bold uppercase tracking-wider transition-all whitespace-nowrap bg-warm-gray text-near-black/70 hover:bg-gold/20 hover:text-navy"
+            data-topic="roads"
+            data-i18n="qa.filter.roads"
+          >
+            Roads & FM 969
+          </button>
+          <button 
+            type="button"
+            class="topic-btn px-3.5 py-1.5 rounded-lg text-xs font-sans font-bold uppercase tracking-wider transition-all whitespace-nowrap bg-warm-gray text-near-black/70 hover:bg-gold/20 hover:text-navy"
+            data-topic="collaboration"
+            data-i18n="qa.filter.collaboration"
+          >
+            Court Collaboration
+          </button>
+        </div>
+      </div>
+
+      <!-- No Results State -->
+      <div id="no-results-msg" class="hidden bg-white rounded-2xl p-12 text-center border border-warm-gray my-8">
+        <div class="w-16 h-16 bg-gold/15 text-gold rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h3 class="text-2xl font-serif font-bold text-navy mb-2">No matching questions found</h3>
+        <p class="text-near-black/70 font-sans text-sm max-w-md mx-auto mb-6">
+          Try adjusting your search terms or browse all topics above.
+        </p>
+        <button type="button" id="reset-search-btn" class="px-5 py-2.5 bg-navy text-white text-xs font-sans font-bold uppercase tracking-wider rounded-lg hover:bg-gold hover:text-navy transition">
+          Reset Filter
+        </button>
+      </div>
+
+      <!-- Questions List -->
+      <div class="space-y-8" id="qa-cards-container">
+
+        <!-- QUESTION 1: Data Centers -->
+        <article 
+          class="qa-card bg-white rounded-2xl p-6 sm:p-10 border border-warm-gray shadow-sm hover:shadow-md transition-all duration-300 reveal" 
+          id="q1"
+          data-topics="datacenters growth"
+        >
+          <div class="flex items-center justify-between gap-4 mb-4 pb-4 border-b border-warm-gray/70">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-navy text-gold font-serif font-bold text-sm">
+                01
+              </span>
+              <span class="px-3 py-1 rounded-md bg-gold/15 text-navy font-sans text-xs font-bold uppercase tracking-wider">
+                Technology & Growth
+              </span>
+            </div>
+            <a href="#q1" class="text-xs font-sans text-near-black/40 hover:text-gold transition flex items-center gap-1" title="Direct link to Question 1">
+              <span>#1</span>
+            </a>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-navy mb-6 leading-snug" data-i18n="qa.q1.question">
+            How do you plan to address data centers in Bastrop County?
+          </h2>
+
+          <div class="prose prose-lg text-near-black/85 font-sans leading-relaxed space-y-4">
+            <p data-i18n="qa.q1.p1">
+              I understand why folks are concerned about data centers. They're big projects, and before one goes in, we ought to know what it means for our water, our roads, our electrical grid, and our environmental concerns. I also believe we have to be direct with people about the laws and how little regulatory authority a county has.
+            </p>
+            <p data-i18n="qa.q1.p2">
+              A county commissioner, nor the court as a whole, cannot simply vote to ban every data center. What we can do is take a hard look at the agreements that come before the court, ask tough questions, and insist that any commitments the county negotiates are clear and enforceable. These agreements are most often through Tax abatements. As the Texas Legislature has declined to give counties any zoning or other developmental controls.
+            </p>
+            <p data-i18n="qa.q1.p3">
+              I want businesses to carry their fair share of the costs they create. As such, I will work diligently to ensure when agreements come to the Commissioner Court the deals that are agreed to are a net positive for Bastrop County. I don't believe in giving away tax dollars without showing the public what we're getting in return.
+            </p>
+          </div>
+
+          <!-- Highlight Key Fact Box -->
+          <div class="mt-6 p-4 sm:p-5 rounded-xl bg-cream border-l-4 border-gold">
+            <h4 class="font-sans font-bold text-xs uppercase tracking-widest text-navy mb-1">Key Takeaway</h4>
+            <p class="text-sm font-sans text-near-black/80">
+              Texas law grants counties zero zoning power. Commissioner Glass leverages tax abatement negotiations to force enforceable protections for our water, power grid, and roads, ensuring taxpayers never subsidize private industrial growth.
+            </p>
+          </div>
+        </article>
+
+        <!-- QUESTION 2: Property Tax Increases -->
+        <article 
+          class="qa-card bg-white rounded-2xl p-6 sm:p-10 border border-warm-gray shadow-sm hover:shadow-md transition-all duration-300 reveal" 
+          id="q2"
+          data-topics="taxes budget"
+        >
+          <div class="flex items-center justify-between gap-4 mb-4 pb-4 border-b border-warm-gray/70">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-navy text-gold font-serif font-bold text-sm">
+                02
+              </span>
+              <span class="px-3 py-1 rounded-md bg-gold/15 text-navy font-sans text-xs font-bold uppercase tracking-wider">
+                Fiscal Accountability
+              </span>
+            </div>
+            <a href="#q2" class="text-xs font-sans text-near-black/40 hover:text-gold transition flex items-center gap-1" title="Direct link to Question 2">
+              <span>#2</span>
+            </a>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-navy mb-6 leading-snug" data-i18n="qa.q2.question">
+            Will you promise not to vote for property tax increases?
+          </h2>
+
+          <div class="prose prose-lg text-near-black/85 font-sans leading-relaxed space-y-4">
+            <p data-i18n="qa.q2.p1">
+              I don't want to raise taxes. I know what property owners are dealing with, and I believe county government should watch its spending just as closely as any family or small business. But I won't make a blanket promise without knowing the facts of a future budget.
+            </p>
+            <p data-i18n="qa.q2.p2">
+              My job is to look at every department, question expenses, plan ahead, and make sure we can pay for essential services. The county sets the county tax rate; it doesn't set your school or city tax rates, ESD (fire services), or ESD 3 (ambulance service) tax rates, and it doesn't decide your individual appraisal.
+            </p>
+            <p data-i18n="qa.q2.p3">
+              I'll work to keep our county rate down while being honest about what public safety, roads, and other necessary services cost. This is why we need to diversify our tax base. Housing developments require a lot of county services, whereas some of these high-value commercial projects require very few county services while paying a large portion of county taxes.
+            </p>
+          </div>
+
+          <!-- Highlight Key Fact Box -->
+          <div class="mt-6 p-4 sm:p-5 rounded-xl bg-cream border-l-4 border-navy">
+            <h4 class="font-sans font-bold text-xs uppercase tracking-widest text-navy mb-1">Understanding Your Tax Bill</h4>
+            <p class="text-sm font-sans text-near-black/80">
+              The Commissioners Court sets only the Bastrop County tax rate. School districts, cities, and Emergency Service Districts set their own separate rates. Commercial diversification is the single most viable mechanism to relieve the tax burden on homeowners.
+            </p>
+          </div>
+        </article>
+
+        <!-- QUESTION 3: Making Bastrop County Better -->
+        <article 
+          class="qa-card bg-white rounded-2xl p-6 sm:p-10 border border-warm-gray shadow-sm hover:shadow-md transition-all duration-300 reveal" 
+          id="q3"
+          data-topics="progress growth health broadband judicial"
+        >
+          <div class="flex items-center justify-between gap-4 mb-4 pb-4 border-b border-warm-gray/70">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-navy text-gold font-serif font-bold text-sm">
+                03
+              </span>
+              <span class="px-3 py-1 rounded-md bg-gold/15 text-navy font-sans text-xs font-bold uppercase tracking-wider">
+                County Progress & Vision
+              </span>
+            </div>
+            <a href="#q3" class="text-xs font-sans text-near-black/40 hover:text-gold transition flex items-center gap-1" title="Direct link to Question 3">
+              <span>#3</span>
+            </a>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-navy mb-6 leading-snug" data-i18n="qa.q3.question">
+            How will you make Bastrop County better?
+          </h2>
+
+          <div class="prose prose-lg text-near-black/85 font-sans leading-relaxed space-y-4">
+            <p data-i18n="qa.q3.p1">
+              To me, making the county better starts with getting the basics right. People want roads they can drive on, deputies who can respond when they're needed, dependable emergency services, and a county government that spends their money wisely. The new ESD 3 started offering ambulance service on October 1st.
+            </p>
+            <p data-i18n="qa.q3.p2">
+              They also want to know we're planning for growth instead of playing catch-up year after year. I believe in listening to people, but listening is only the beginning. You've got to put a plan together, fund it, get the work done, and be willing to answer for the results. That's how I'd judge whether we're making progress.
+            </p>
+            <p data-i18n="qa.q3.p3">
+              We also formed the first County Health Department, a service greatly needed. This was the first county health department formed in the State of Texas in almost 50 years.
+            </p>
+            <p data-i18n="qa.q3.p4">
+              I also served as the Court's liaison with a group of volunteers who worked diligently to be approved for a grant that will provide fiber broadband countywide. It was an approximately $54 million grant through the state.
+            </p>
+            <p data-i18n="qa.q3.p5">
+              I served on the committee for the new Judicial Center, and we have purchased 27 acres to build a new courthouse. There are other improvements to be announced very soon.
+            </p>
+          </div>
+
+          <!-- Highlight Proven Deliverables -->
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            <div class="bg-cream rounded-xl p-3.5 border border-warm-gray">
+              <div class="text-navy font-serif font-bold text-base">ESD 3 Ambulance</div>
+              <div class="text-xs text-near-black/70 mt-1 font-sans">Launched Oct 1 to deliver dependable medical response countywide.</div>
+            </div>
+            <div class="bg-cream rounded-xl p-3.5 border border-warm-gray">
+              <div class="text-navy font-serif font-bold text-base">County Health Dept</div>
+              <div class="text-xs text-near-black/70 mt-1 font-sans">First county health department launched in Texas in nearly 50 years.</div>
+            </div>
+            <div class="bg-cream rounded-xl p-3.5 border border-warm-gray">
+              <div class="text-navy font-serif font-bold text-base">$54M Fiber Grant</div>
+              <div class="text-xs text-near-black/70 mt-1 font-sans">Secured state broadband funding to bring fiber internet countywide.</div>
+            </div>
+            <div class="bg-cream rounded-xl p-3.5 border border-warm-gray">
+              <div class="text-navy font-serif font-bold text-base">27-Acre Judicial Center</div>
+              <div class="text-xs text-near-black/70 mt-1 font-sans">Land purchased to construct a modern courthouse and legal facility.</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- QUESTION 4: Commissioner Powers & DarPro -->
+        <article 
+          class="qa-card bg-white rounded-2xl p-6 sm:p-10 border border-warm-gray shadow-sm hover:shadow-md transition-all duration-300 reveal" 
+          id="q4"
+          data-topics="powers darpro governance"
+        >
+          <div class="flex items-center justify-between gap-4 mb-4 pb-4 border-b border-warm-gray/70">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-navy text-gold font-serif font-bold text-sm">
+                04
+              </span>
+              <span class="px-3 py-1 rounded-md bg-gold/15 text-navy font-sans text-xs font-bold uppercase tracking-wider">
+                Authority & Action
+              </span>
+            </div>
+            <a href="#q4" class="text-xs font-sans text-near-black/40 hover:text-gold transition flex items-center gap-1" title="Direct link to Question 4">
+              <span>#4</span>
+            </a>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-navy mb-6 leading-snug" data-i18n="qa.q4.question">
+            What powers does a county commissioner actually have?
+          </h2>
+
+          <div class="prose prose-lg text-near-black/85 font-sans leading-relaxed space-y-4">
+            <p data-i18n="qa.q4.p1">
+              A commissioner has a vote on the five-member Commissioners Court. That means helping set the county budget and tax rate, approving contracts, and making countywide decisions.
+            </p>
+            <p data-i18n="qa.q4.p2">
+              Commissioners also supervise road operations in their precincts, making sure crews have what they need, setting maintenance priorities, dealing with drainage problems, and seeing that equipment and materials are put to good use.
+            </p>
+            <p data-i18n="qa.q4.p3">
+              No one commissioner gets to dictate what the whole court does. You have to do your homework, make your case, and earn the other votes. And when a job falls under your supervision, people ought to be able to hold you accountable for getting it done.
+            </p>
+            <p data-i18n="qa.q4.p4">
+              Each commissioner is a liaison for different departments. I am the Court's liaison for Economic Development and Tourism, as well as the liaison for the Animal Shelter.
+            </p>
+            <div class="p-6 bg-cream rounded-xl border border-warm-gray my-4">
+              <h4 class="font-serif font-bold text-lg text-navy mb-2">Case Study in Action: The DarPro Resolution</h4>
+              <p class="text-sm font-sans text-near-black/85 leading-relaxed" data-i18n="qa.q4.p5">
+                An example of how I used these powers for the good of our community, is what I did to help with the DarPro issue. We started by monitoring for months with our new Bastrop County Health Department with the assistance of Texas A&M. They were able to substantiate the gases that were being emitted into the community. We had a graduate student that would travel from College Station with short notice to come do the testing of the air when the odor was bad. It took that to begin to build the patterns of noncompliance. I had many meetings after that with the DarPro team. They brought in a complete new management team. They agreed there was a horrendous problem and committed to making all improvements necessary to correct the situation. The initial commitment was 34 million dollars worth of improvements. I believe that has grown to approximately 50 million.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- QUESTION 5: Sheriff's Deputies -->
+        <article 
+          class="qa-card bg-white rounded-2xl p-6 sm:p-10 border border-warm-gray shadow-sm hover:shadow-md transition-all duration-300 reveal" 
+          id="q5"
+          data-topics="deputies safety police"
+        >
+          <div class="flex items-center justify-between gap-4 mb-4 pb-4 border-b border-warm-gray/70">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-navy text-gold font-serif font-bold text-sm">
+                05
+              </span>
+              <span class="px-3 py-1 rounded-md bg-gold/15 text-navy font-sans text-xs font-bold uppercase tracking-wider">
+                Public Safety & Law Enforcement
+              </span>
+            </div>
+            <a href="#q5" class="text-xs font-sans text-near-black/40 hover:text-gold transition flex items-center gap-1" title="Direct link to Question 5">
+              <span>#5</span>
+            </a>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-navy mb-6 leading-snug" data-i18n="qa.q5.question">
+            How will you improve the number of sheriff's deputies?
+          </h2>
+
+          <div class="prose prose-lg text-near-black/85 font-sans leading-relaxed space-y-4">
+            <p data-i18n="qa.q5.p1">
+              This requires commissioners to sit down with the sheriff and look at the actual numbers: calls for service, response times, areas that need more coverage, and how growth is changing the workload.
+            </p>
+            <p data-i18n="qa.q5.p2">
+              Then we need a realistic plan for additional deputies where they're needed. A deputy isn't just a salary. There's a patrol vehicle, equipment, training, insurance, benefits, and continuing costs.
+            </p>
+            <p data-i18n="qa.q5.p3">
+              The sheriff runs the department, and Commissioners Court makes the funding decisions. I believe we should work together on a multiyear plan that the county can afford to keep in place, rather than announcing positions we can't sustain.
+            </p>
+            <p data-i18n="qa.q5.p4">
+              I have worked hard with the sheriff and the constables to make sure they have what they need. This is why I have the endorsements from Sheriff Cook and all four constables.
+            </p>
+            <p data-i18n="qa.q5.p5">
+              For the first time in several years, we were fully staffed this last year. I attribute that to some salary adjustments made a couple of years ago. While again it had to be approved by the court. I championed this adjustment to help ensure we did not lose our deputies to neighboring counties due to pay.
+            </p>
+          </div>
+
+          <!-- Highlight Endorsements & Proof -->
+          <div class="mt-6 p-4 sm:p-5 rounded-xl bg-navy text-white flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <div class="text-gold font-serif font-bold text-base sm:text-lg">Unanimously Backed by Bastrop County Law Enforcement</div>
+              <div class="text-white/70 text-xs sm:text-sm font-sans mt-0.5">Endorsed by Sheriff Maurice C. Cook and all 4 Precinct Constables.</div>
+            </div>
+            <a href="/about" class="px-4 py-2 bg-gold text-navy text-xs font-sans font-bold uppercase tracking-wider rounded-lg hover:bg-gold-light transition flex-shrink-0">
+              Read Endorsements →
+            </a>
+          </div>
+        </article>
+
+        <!-- QUESTION 6: Animal Shelter & Control -->
+        <article 
+          class="qa-card bg-white rounded-2xl p-6 sm:p-10 border border-warm-gray shadow-sm hover:shadow-md transition-all duration-300 reveal" 
+          id="q6"
+          data-topics="animals shelter"
+        >
+          <div class="flex items-center justify-between gap-4 mb-4 pb-4 border-b border-warm-gray/70">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-navy text-gold font-serif font-bold text-sm">
+                06
+              </span>
+              <span class="px-3 py-1 rounded-md bg-gold/15 text-navy font-sans text-xs font-bold uppercase tracking-wider">
+                Animal Shelter & Community Care
+              </span>
+            </div>
+            <a href="#q6" class="text-xs font-sans text-near-black/40 hover:text-gold transition flex items-center gap-1" title="Direct link to Question 6">
+              <span>#6</span>
+            </a>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-navy mb-6 leading-snug" data-i18n="qa.q6.question">
+            How will you ensure animal control receives adequate funding?
+          </h2>
+
+          <div class="prose prose-lg text-near-black/85 font-sans leading-relaxed space-y-4">
+            <p data-i18n="qa.q6.p1">
+              I care about the animal shelter, and I also know that adding kennels alone won't solve every problem. We need to look at how many animals come in, how quickly they can be adopted or returned home, how animal-control calls are handled, and what it takes to support the staff doing that work.
+            </p>
+            <p data-i18n="qa.q6.p2">
+              We should keep building relationships with rescue groups, veterinarians, volunteers, and organizations that may help with grants. But grants come and go. We still need a sound county budget, clear goals, and regular reporting so people can see whether the shelter is improving.
+            </p>
+            <p data-i18n="qa.q6.p3">
+              I want a humane shelter and animal-control services that work for our growing county.
+            </p>
+            <p data-i18n="qa.q6.p4">
+              I have worked with the shelter director to add over 40 new kennels. They were desperately needed.
+            </p>
+            <p data-i18n="qa.q6.p5">
+              I negotiated, with the Court's approval, to purchase 15 acres on Hwy. 95 for a new shelter facility. I fought to get $5 million added to the five-year CIP budget to help construct the all-new facility.
+            </p>
+          </div>
+
+          <!-- Highlight Milestone Numbers -->
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div class="bg-cream rounded-xl p-4 border border-warm-gray text-center">
+              <div class="text-gold font-serif font-bold text-2xl sm:text-3xl">40+</div>
+              <div class="text-xs font-sans text-navy font-bold uppercase tracking-wider mt-1">New Kennels Added</div>
+            </div>
+            <div class="bg-cream rounded-xl p-4 border border-warm-gray text-center">
+              <div class="text-navy font-serif font-bold text-2xl sm:text-3xl">15 Acres</div>
+              <div class="text-xs font-sans text-navy font-bold uppercase tracking-wider mt-1">Purchased on Hwy 95</div>
+            </div>
+            <div class="bg-cream rounded-xl p-4 border border-warm-gray text-center">
+              <div class="text-gold font-serif font-bold text-2xl sm:text-3xl">$5 Million</div>
+              <div class="text-xs font-sans text-navy font-bold uppercase tracking-wider mt-1">Added to 5-Year CIP Budget</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- QUESTION 7: Roads & FM 969 -->
+        <article 
+          class="qa-card bg-white rounded-2xl p-6 sm:p-10 border border-warm-gray shadow-sm hover:shadow-md transition-all duration-300 reveal" 
+          id="q7"
+          data-topics="roads infrastructure txdot"
+        >
+          <div class="flex items-center justify-between gap-4 mb-4 pb-4 border-b border-warm-gray/70">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-navy text-gold font-serif font-bold text-sm">
+                07
+              </span>
+              <span class="px-3 py-1 rounded-md bg-gold/15 text-navy font-sans text-xs font-bold uppercase tracking-wider">
+                Roads & Traffic Safety
+              </span>
+            </div>
+            <a href="#q7" class="text-xs font-sans text-near-black/40 hover:text-gold transition flex items-center gap-1" title="Direct link to Question 7">
+              <span>#7</span>
+            </a>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-navy mb-6 leading-snug" data-i18n="qa.q7.question">
+            How will you improve county roads, particularly FM 969?
+          </h2>
+
+          <div class="prose prose-lg text-near-black/85 font-sans leading-relaxed space-y-4">
+            <p data-i18n="qa.q7.p1">
+              Roads are something a commissioner should know firsthand. You have to know where the trouble spots are, what condition the pavement is in, where drainage is failing, and what your crews and equipment can accomplish.
+            </p>
+            <p data-i18n="qa.q7.p2">
+              On county roads, that means planning maintenance and following through. FM 969 is a different matter because it's a state highway under TxDOT. We can't just send out a county crew and widen it.
+            </p>
+            <p data-i18n="qa.q7.p3">
+              But we can work with TxDOT, put documented safety problems in front of them, push for studies and funding, and stay on the issue.
+            </p>
+            <p data-i18n="qa.q7.p4">
+              My approach is simple: take care of the roads the county is responsible for, and keep working with the state on the highways we depend on.
+            </p>
+            <p data-i18n="qa.q7.p5">
+              I work regularly with the TxDOT district office on concerns of constituents regarding state roadways. I've worked with TxDOT to get several turn lanes on FM 969, and they were funded by the businesses.
+            </p>
+            <p data-i18n="qa.q7.p6">
+              I've added several new four-way stops on our county roads.
+            </p>
+          </div>
+
+          <!-- Highlight Proven Road Action -->
+          <div class="mt-6 p-4 sm:p-5 rounded-xl bg-cream border-l-4 border-gold">
+            <h4 class="font-sans font-bold text-xs uppercase tracking-widest text-navy mb-1">Fiscal Leverage on State Highways</h4>
+            <p class="text-sm font-sans text-near-black/80">
+              Rather than waiting years for state tax dollars or burdening county residents, Commissioner Glass negotiated turn lanes on FM 969 directly funded by incoming businesses, saving local taxpayer money while improving driver safety immediately.
+            </p>
+          </div>
+        </article>
+
+        <!-- QUESTION 8: Working with Court & Sheriff -->
+        <article 
+          class="qa-card bg-white rounded-2xl p-6 sm:p-10 border border-warm-gray shadow-sm hover:shadow-md transition-all duration-300 reveal" 
+          id="q8"
+          data-topics="collaboration governance sheriff"
+        >
+          <div class="flex items-center justify-between gap-4 mb-4 pb-4 border-b border-warm-gray/70">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-navy text-gold font-serif font-bold text-sm">
+                08
+              </span>
+              <span class="px-3 py-1 rounded-md bg-gold/15 text-navy font-sans text-xs font-bold uppercase tracking-wider">
+                Leadership & Collaboration
+              </span>
+            </div>
+            <a href="#q8" class="text-xs font-sans text-near-black/40 hover:text-gold transition flex items-center gap-1" title="Direct link to Question 8">
+              <span>#8</span>
+            </a>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-navy mb-6 leading-snug" data-i18n="qa.q8.question">
+            How will you work with other commissioners and the sheriff?
+          </h2>
+
+          <div class="prose prose-lg text-near-black/85 font-sans leading-relaxed space-y-4">
+            <p data-i18n="qa.q8.p1">
+              You're not going to get much done in county government if you can't work with people. The commissioners, the county judge, the sheriff, and other elected officials all have jobs to do.
+            </p>
+            <p data-i18n="qa.q8.p2">
+              We won't agree on every issue, and that's fine. I think you should be able to disagree in court, explain your vote, and then sit down and work together on the next problem.
+            </p>
+            <p data-i18n="qa.q8.p3">
+              With the sheriff, that means listening to operational needs while also asking the hard budget questions. I don't think politics or personal disagreements ought to get in the way of roads, public safety, or basic county services.
+            </p>
+            <p data-i18n="qa.q8.p4">
+              We can all agree that we may not always agree with each other, but we should be respectful in disagreements.
+            </p>
+          </div>
+        </article>
+
+        <!-- QUESTION 9: Decreasing Property Taxes -->
+        <article 
+          class="qa-card bg-white rounded-2xl p-6 sm:p-10 border border-warm-gray shadow-sm hover:shadow-md transition-all duration-300 reveal" 
+          id="q9"
+          data-topics="taxes budget economy"
+        >
+          <div class="flex items-center justify-between gap-4 mb-4 pb-4 border-b border-warm-gray/70">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-navy text-gold font-serif font-bold text-sm">
+                09
+              </span>
+              <span class="px-3 py-1 rounded-md bg-gold/15 text-navy font-sans text-xs font-bold uppercase tracking-wider">
+                Tax Relief & Economic Strategy
+              </span>
+            </div>
+            <a href="#q9" class="text-xs font-sans text-near-black/40 hover:text-gold transition flex items-center gap-1" title="Direct link to Question 9">
+              <span>#9</span>
+            </a>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-navy mb-6 leading-snug" data-i18n="qa.q9.question">
+            Do you want to decrease property taxes?
+          </h2>
+
+          <div class="prose prose-lg text-near-black/85 font-sans leading-relaxed space-y-4">
+            <p data-i18n="qa.q9.p1">
+              Absolutely, I'd like to see people pay less in property taxes. But there's a difference between saying that and showing how to make it happen.
+            </p>
+            <p data-i18n="qa.q9.p2">
+              We need to control spending and grow the tax base in ways that don't leave existing property owners holding the bag.
+            </p>
+            <p data-i18n="qa.q9.p3">
+              When a major company wants a tax abatement, we ought to look at both sides of the ledger: what revenue the project brings in, what it costs the county, and what happens when the abatement ends.
+            </p>
+            <p data-i18n="qa.q9.p4">
+              We also need to remember that a county can't simply charge a higher tax rate to a company because it's wealthy.
+            </p>
+            <p data-i18n="qa.q9.p5">
+              My focus would be a strong tax base, careful spending, and a lower tax burden wherever the numbers allow it.
+            </p>
+            <p data-i18n="qa.q9.p6">
+              We have to diversify our tax base with more high-value commercial projects. I feel if we can successfully get these types of projects, we could reduce our tax rates drastically in the next five years.
+            </p>
+          </div>
+
+          <!-- Highlight 5-Year Goal -->
+          <div class="mt-6 p-4 sm:p-5 rounded-xl bg-gold/15 border-l-4 border-gold">
+            <h4 class="font-sans font-bold text-xs uppercase tracking-widest text-navy mb-1">5-Year Vision</h4>
+            <p class="text-sm font-sans text-near-black/85 font-semibold">
+              Attracting high-value commercial investments that consume minimal county services can drastically lower residential property tax rates within the next five years.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Constituent Contact CTA Card -->
+      <div class="mt-16 bg-navy text-white rounded-3xl p-8 sm:p-12 shadow-xl border border-white/10 text-center relative overflow-hidden reveal">
+        <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <div class="gold-line mx-auto mb-6"></div>
+          <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white mb-4" data-i18n="qa.cta.heading">
+            Have Another Question for David Glass?
+          </h3>
+          <p class="text-white/70 font-sans text-base sm:text-lg leading-relaxed mb-8" data-i18n="qa.cta.sub">
+            David believes in accessible, transparent county leadership. Reach out directly to discuss Precinct 4 issues, road questions, or county services.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a 
+              href="/about#contact" 
+              class="w-full sm:w-auto px-8 py-4 bg-gold text-white font-sans font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-light transition shadow-lg text-center"
+              data-i18n="qa.cta.reachOut"
+            >
+              Reach Out to David
+            </a>
+            <a 
+              href="tel:+15125817100" 
+              class="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-sans font-semibold text-sm uppercase tracking-wider rounded-xl border border-white/20 transition text-center"
+              data-i18n="qa.cta.callOffice"
+            >
+              Call (512) 581-7100
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Client-side Interactive Filter & Search Script -->
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('qa-search-input');
+      const clearBtn = document.getElementById('qa-clear-search');
+      const topicBtns = document.querySelectorAll('.topic-btn');
+      const cards = document.querySelectorAll('.qa-card');
+      const noResults = document.getElementById('no-results-msg');
+      const resetSearchBtn = document.getElementById('reset-search-btn');
+
+      let currentTopic = 'all';
+      let currentQuery = '';
+
+      function filterCards() {
+        let visibleCount = 0;
+        const q = currentQuery.toLowerCase().trim();
+
+        cards.forEach(card => {
+          const topics = (card.getAttribute('data-topics') || '').toLowerCase();
+          const cardText = card.textContent.toLowerCase();
+
+          const matchesTopic = (currentTopic === 'all') || topics.includes(currentTopic);
+          const matchesQuery = !q || cardText.includes(q);
+
+          if (matchesTopic && matchesQuery) {
+            card.style.display = 'block';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (noResults) {
+          if (visibleCount === 0) {
+            noResults.classList.remove('hidden');
+          } else {
+            noResults.classList.add('hidden');
+          }
+        }
+
+        if (clearBtn) {
+          if (q.length > 0 || currentTopic !== 'all') {
+            clearBtn.classList.remove('hidden');
+          } else {
+            clearBtn.classList.add('hidden');
+          }
+        }
+      }
+
+      // Search input listener
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentQuery = e.target.value;
+          filterCards();
+        });
+      }
+
+      // Topic button listeners
+      topicBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          topicBtns.forEach(b => {
+            b.classList.remove('active', 'bg-navy', 'text-white', 'shadow-sm');
+            b.classList.add('bg-warm-gray', 'text-near-black/70');
+          });
+
+          btn.classList.add('active', 'bg-navy', 'text-white', 'shadow-sm');
+          btn.classList.remove('bg-warm-gray', 'text-near-black/70');
+
+          currentTopic = btn.getAttribute('data-topic') || 'all';
+          filterCards();
+        });
+      });
+
+      // Clear search button
+      function resetFilters() {
+        if (searchInput) searchInput.value = '';
+        currentQuery = '';
+        currentTopic = 'all';
+
+        topicBtns.forEach(b => {
+          if (b.getAttribute('data-topic') === 'all') {
+            b.classList.add('active', 'bg-navy', 'text-white', 'shadow-sm');
+            b.classList.remove('bg-warm-gray', 'text-near-black/70');
+          } else {
+            b.classList.remove('active', 'bg-navy', 'text-white', 'shadow-sm');
+            b.classList.add('bg-warm-gray', 'text-near-black/70');
+          }
+        });
+
+        filterCards();
+      }
+
+      if (clearBtn) clearBtn.addEventListener('click', resetFilters);
+      if (resetSearchBtn) resetSearchBtn.addEventListener('click', resetFilters);
+    });
+  </script>
+</Base>

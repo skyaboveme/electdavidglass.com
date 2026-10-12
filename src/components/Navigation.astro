@@ -6,10 +6,28 @@ const links = [
   { text: 'About', href: '/about', i18n: 'nav.about' },
   { text: 'Results', href: '/results', i18n: 'nav.results' },
   { text: 'Priorities', href: '/priorities', i18n: 'nav.priorities' },
+  { text: 'Q&A', href: '/qa', i18n: 'nav.qa' },
   { text: 'Precinct 4', href: '/precinct-4', i18n: 'nav.precinct4' },
-  { text: 'When & Where to Vote', href: '/voting-schedule', i18n: 'nav.votingSchedule' },
-  { text: 'Voter Tools', href: '/voter-tools', i18n: 'nav.voterTools' },
 ];
+
+const voteDropdown = {
+  text: 'Vote',
+  i18n: 'nav.vote',
+  children: [
+    { 
+      text: 'When & Where to Vote', 
+      href: '/voting-schedule', 
+      i18n: 'nav.votingSchedule',
+      desc: 'Polling locations, dates & hours'
+    },
+    { 
+      text: 'Voter Tools', 
+      href: '/voter-tools', 
+      i18n: 'nav.voterTools',
+      desc: 'Precinct lookup & accepted photo IDs'
+    },
+  ]
+};
 ---
 
 <header class="fixed top-0 z-50 w-full transition-all duration-500" id="site-header">
@@ -28,13 +46,57 @@ const links = [
         </div>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center gap-1" aria-label="Desktop Navigation">
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Desktop Navigation">
           {links.map(link => (
-            <a href={link.href} class="px-4 py-2 text-sm font-sans font-semibold text-near-black hover:text-gold transition-colors uppercase tracking-wide" data-i18n={link.i18n}>
+            <a href={link.href} class="px-3 xl:px-4 py-2 text-xs xl:text-sm font-sans font-semibold text-near-black hover:text-gold transition-colors uppercase tracking-wider" data-i18n={link.i18n}>
               {link.text}
             </a>
           ))}
-          <div class="ml-3">
+
+          <!-- Vote Dropdown -->
+          <div class="relative group" id="vote-dropdown-container">
+            <button 
+              type="button" 
+              class="inline-flex items-center gap-1.5 px-3 xl:px-4 py-2 text-xs xl:text-sm font-sans font-semibold text-near-black group-hover:text-gold transition-colors uppercase tracking-wider focus:outline-none cursor-pointer"
+              id="vote-dropdown-button"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              <span data-i18n="nav.vote">Vote</span>
+              <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180 text-near-black/60 group-hover:text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            <!-- Dropdown Panel -->
+            <div 
+              class="absolute left-0 top-full pt-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 transition-all duration-200 z-50 pointer-events-none group-hover:pointer-events-auto group-focus-within:pointer-events-auto"
+              id="vote-dropdown-menu"
+              role="menu"
+            >
+              <div class="w-72 bg-white rounded-2xl shadow-xl border border-warm-gray p-2">
+                <div class="px-3 py-1.5 text-[10px] font-sans font-bold uppercase tracking-widest text-gold border-b border-warm-gray/60 mb-1">
+                  Voter Resources
+                </div>
+                {voteDropdown.children.map(child => (
+                  <a 
+                    href={child.href} 
+                    class="block px-3 py-2.5 rounded-xl hover:bg-cream hover:text-navy text-near-black transition group/item"
+                    role="menuitem"
+                  >
+                    <div class="font-sans font-bold text-xs uppercase tracking-wide group-hover/item:text-gold transition-colors" data-i18n={child.i18n}>
+                      {child.text}
+                    </div>
+                    <div class="text-[11px] text-near-black/60 font-sans mt-0.5 normal-case font-normal">
+                      {child.desc}
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div class="ml-2 xl:ml-3">
             <LanguageToggle />
           </div>
         </nav>
@@ -68,6 +130,33 @@ const links = [
           {link.text}
         </a>
       ))}
+
+      <!-- Mobile Vote Collapsible Submenu -->
+      <div class="border-b border-white/10 py-2">
+        <button 
+          type="button" 
+          id="mobile-vote-toggle" 
+          class="w-full flex items-center justify-between py-3 text-lg font-sans font-bold text-white hover:text-gold uppercase tracking-wide text-left focus:outline-none"
+          aria-expanded="true"
+        >
+          <span data-i18n="nav.vote">Vote</span>
+          <svg id="mobile-vote-chevron" class="w-5 h-5 text-gold transition-transform duration-200 transform rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="mobile-vote-submenu" class="pl-3 pb-2 space-y-2">
+          {voteDropdown.children.map(child => (
+            <a 
+              href={child.href} 
+              class="block py-2 text-base font-sans font-medium text-white/80 hover:text-gold transition-colors uppercase tracking-wide"
+              data-i18n={child.i18n}
+            >
+              <span class="text-gold mr-1.5 font-bold">↳</span> {child.text}
+            </a>
+          ))}
+        </div>
+      </div>
+
       <a href="#get-involved" class="mt-8 mx-auto inline-block px-8 py-4 bg-gold text-white font-sans font-bold rounded shadow-md text-lg mobile-cta uppercase tracking-wider" data-i18n="nav.getInvolved">
         Get Involved
       </a>
@@ -135,6 +224,43 @@ const links = [
         iconClose?.classList.add('hidden');
         body.style.overflow = '';
       });
+    });
+
+    // Mobile Vote Accordion toggle
+    const mobileVoteToggle = document.getElementById('mobile-vote-toggle');
+    const mobileVoteSubmenu = document.getElementById('mobile-vote-submenu');
+    const mobileVoteChevron = document.getElementById('mobile-vote-chevron');
+
+    if (mobileVoteToggle && mobileVoteSubmenu && mobileVoteChevron) {
+      mobileVoteToggle.addEventListener('click', () => {
+        const isCollapsed = mobileVoteSubmenu.classList.contains('hidden');
+        if (isCollapsed) {
+          mobileVoteSubmenu.classList.remove('hidden');
+          mobileVoteChevron.classList.add('rotate-180');
+          mobileVoteToggle.setAttribute('aria-expanded', 'true');
+        } else {
+          mobileVoteSubmenu.classList.add('hidden');
+          mobileVoteChevron.classList.remove('rotate-180');
+          mobileVoteToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  }
+
+  // Desktop Vote dropdown keyboard support
+  const voteBtn = document.getElementById('vote-dropdown-button');
+  const voteContainer = document.getElementById('vote-dropdown-container');
+  if (voteBtn && voteContainer) {
+    voteBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isExpanded = voteBtn.getAttribute('aria-expanded') === 'true';
+      voteBtn.setAttribute('aria-expanded', (!isExpanded).toString());
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        voteBtn.setAttribute('aria-expanded', 'false');
+      }
     });
   }
 </script>

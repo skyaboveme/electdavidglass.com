@@ -21,9 +21,17 @@ export const translations: Record<string, { en: string; es: string }> = {
     en: "Priorities",
     es: "Prioridades"
   },
+  "nav.qa": {
+    en: "Q&A",
+    es: "Preguntas y Respuestas"
+  },
   "nav.precinct4": {
     en: "Precinct 4",
     es: "Precinto 4"
+  },
+  "nav.vote": {
+    en: "Vote",
+    es: "Votar"
   },
   "nav.votingSchedule": {
     en: "When & Where to Vote",
@@ -1205,4 +1213,312 @@ export const translations: Record<string, { en: string; es: string }> = {
     en: "David Glass, Bastrop County Commissioner, Precinct 4",
     es: "David Glass, Comisionado del Condado de Bastrop, Precinto 4"
   },
+
+  // ============================================
+  // Q&A PAGE
+  // ============================================
+  "qa.badge": {
+    en: "Constituent Q&A · Straight Talk",
+    es: "Preguntas de Constituyentes · Respuestas Claras"
+  },
+  "qa.title": {
+    en: "Questions & Answers (Q&A)",
+    es: "Preguntas y Respuestas (Q&A)"
+  },
+  "qa.attributionBadge": {
+    en: "Questions submitted by Matt Turner",
+    es: "Preguntas enviadas por Matt Turner"
+  },
+  "qa.attributionHeading": {
+    en: "Questions Submitted by Matt Turner",
+    es: "Preguntas Enviadas por Matt Turner"
+  },
+  "qa.attributionText": {
+    en: "The questions below were submitted by Matt Turner on key issues facing Bastrop County. Below are Commissioner David Glass's direct answers, statutory realities, and track-record proof.",
+    es: "Las preguntas a continuación fueron enviadas por Matt Turner sobre temas clave que enfrenta el Condado de Bastrop. A continuación se presentan las respuestas directas, las realidades legales y las pruebas del historial del Comisionado David Glass."
+  },
+  "qa.subtitle": {
+    en: "These questions were submitted by Matt Turner. Below are Commissioner David Glass's direct, in-depth responses on data centers, property taxes, road improvements, public safety, and managing growth responsibly in Bastrop County.",
+    es: "Estas preguntas fueron enviadas por Matt Turner. A continuación se presentan las respuestas directas y detalladas del Comisionado David Glass sobre centros de datos, impuestos a la propiedad, mejoras viales, seguridad pública y el manejo responsable del crecimiento en el Condado de Bastrop."
+  },
+  "qa.search.placeholder": {
+    en: "Search questions by keyword (e.g. data centers, taxes, FM 969, deputies, DarPro)...",
+    es: "Buscar preguntas por palabra clave (ej. centros de datos, impuestos, FM 969, agentes, DarPro)..."
+  },
+  "qa.filter.all": {
+    en: "All Topics",
+    es: "Todos los Temas"
+  },
+  "qa.filter.datacenters": {
+    en: "Data Centers",
+    es: "Centros de Datos"
+  },
+  "qa.filter.taxes": {
+    en: "Property Taxes",
+    es: "Impuestos a la Propiedad"
+  },
+  "qa.filter.progress": {
+    en: "County Progress",
+    es: "Progreso del Condado"
+  },
+  "qa.filter.powers": {
+    en: "Powers & DarPro",
+    es: "Facultades y DarPro"
+  },
+  "qa.filter.deputies": {
+    en: "Sheriff's Deputies",
+    es: "Agentes del Alguacil"
+  },
+  "qa.filter.animals": {
+    en: "Animal Shelter",
+    es: "Refugio de Animales"
+  },
+  "qa.filter.roads": {
+    en: "Roads & FM 969",
+    es: "Caminos y FM 969"
+  },
+  "qa.filter.collaboration": {
+    en: "Court Collaboration",
+    es: "Colaboración en la Corte"
+  },
+
+  // Question 1
+  "qa.q1.question": {
+    en: "How do you plan to address data centers in Bastrop County?",
+    es: "¿Cómo planea abordar los centros de datos en el Condado de Bastrop?"
+  },
+  "qa.q1.p1": {
+    en: "I understand why folks are concerned about data centers. They're big projects, and before one goes in, we ought to know what it means for our water, our roads, our electrical grid, and our environmental concerns. I also believe we have to be direct with people about the laws and how little regulatory authority a county has.",
+    es: "Entiendo por qué la gente está preocupada por los centros de datos. Son proyectos grandes y, antes de que se instale uno, debemos saber qué significa para nuestra agua, nuestras carreteras, nuestra red eléctrica y nuestras preocupaciones ambientales. También creo que debemos ser directos con la gente sobre las leyes y la poca autoridad regulatoria que tiene un condado."
+  },
+  "qa.q1.p2": {
+    en: "A county commissioner, nor the court as a whole, cannot simply vote to ban every data center. What we can do is take a hard look at the agreements that come before the court, ask tough questions, and insist that any commitments the county negotiates are clear and enforceable. These agreements are most often through Tax abatements. As the Texas Legislature has declined to give counties any zoning or other developmental controls.",
+    es: "Un comisionado del condado, ni la corte en su conjunto, pueden simplemente votar para prohibir cada centro de datos. Lo que sí podemos hacer es examinar detenidamente los acuerdos que se presentan ante la corte, hacer preguntas difíciles e insistir en que cualquier compromiso que el condado negocie sea claro y exigible. Estos acuerdos se realizan más a menudo a través de exenciones fiscales. Dado que la Legislatura de Texas ha declinado otorgar a los condados controles de zonificación u otros controles de desarrollo."
+  },
+  "qa.q1.p3": {
+    en: "I want businesses to carry their fair share of the costs they create. As such, I will work diligently to ensure when agreements come to the Commissioner Court the deals that are agreed to are a net positive for Bastrop County. I don't believe in giving away tax dollars without showing the public what we're getting in return.",
+    es: "Quiero que las empresas asuman su parte justa de los costos que generan. Como tal, trabajaré diligentemente para asegurar que cuando los acuerdos lleguen a la Corte de Comisionados, los tratos acordados sean un beneficio neto para el Condado de Bastrop. No creo en regalar dinero de los impuestos sin mostrarle al público qué estamos recibiendo a cambio."
+  },
+
+  // Question 2
+  "qa.q2.question": {
+    en: "Will you promise not to vote for property tax increases?",
+    es: "¿Prometerá no votar por aumentos a los impuestos sobre la propiedad?"
+  },
+  "qa.q2.p1": {
+    en: "I don't want to raise taxes. I know what property owners are dealing with, and I believe county government should watch its spending just as closely as any family or small business. But I won't make a blanket promise without knowing the facts of a future budget.",
+    es: "No quiero aumentar los impuestos. Sé por lo que están pasando los propietarios y creo que el gobierno del condado debe vigilar sus gastos con tanto cuidado como cualquier familia o pequeño negocio. Pero no haré una promesa general sin conocer los hechos de un presupuesto futuro."
+  },
+  "qa.q2.p2": {
+    en: "My job is to look at every department, question expenses, plan ahead, and make sure we can pay for essential services. The county sets the county tax rate; it doesn't set your school or city tax rates, ESD (fire services), or ESD 3 (ambulance service) tax rates, and it doesn't decide your individual appraisal.",
+    es: "Mi trabajo es revisar cada departamento, cuestionar los gastos, planificar hacia adelante y asegurarme de que podamos pagar los servicios esenciales. El condado establece la tasa impositiva del condado; no establece las tasas de impuestos de sus escuelas o de la ciudad, de los distritos de bomberos (ESD), ni del servicio de ambulancias (ESD 3), y tampoco decide su avalúo individual."
+  },
+  "qa.q2.p3": {
+    en: "I'll work to keep our county rate down while being honest about what public safety, roads, and other necessary services cost. This is why we need to diversify our tax base. Housing developments require a lot of county services, whereas some of these high-value commercial projects require very few county services while paying a large portion of county taxes.",
+    es: "Trabajaré para mantener baja la tasa del condado mientras soy honesto sobre lo que cuestan la seguridad pública, las carreteras y otros servicios necesarios. Por eso necesitamos diversificar nuestra base impositiva. Los desarrollos residenciales requieren muchos servicios del condado, mientras que algunos de estos proyectos comerciales de alto valor requieren muy pocos servicios y pagan una gran porción de los impuestos del condado."
+  },
+
+  // Question 3
+  "qa.q3.question": {
+    en: "How will you make Bastrop County better?",
+    es: "¿Cómo mejorará el Condado de Bastrop?"
+  },
+  "qa.q3.p1": {
+    en: "To me, making the county better starts with getting the basics right. People want roads they can drive on, deputies who can respond when they're needed, dependable emergency services, and a county government that spends their money wisely. The new ESD 3 started offering ambulance service on October 1st.",
+    es: "Para mí, mejorar el condado comienza con hacer bien lo básico. La gente quiere carreteras por las que se pueda transitar, agentes que respondan cuando se les necesita, servicios de emergencia confiables y un gobierno del condado que gaste su dinero con prudencia. El nuevo ESD 3 comenzó a ofrecer servicio de ambulancia el 1 de octubre."
+  },
+  "qa.q3.p2": {
+    en: "They also want to know we're planning for growth instead of playing catch-up year after year. I believe in listening to people, but listening is only the beginning. You've got to put a plan together, fund it, get the work done, and be willing to answer for the results. That's how I'd judge whether we're making progress.",
+    es: "También quieren saber que estamos planificando el crecimiento en lugar de tratar de ponernos al día año tras año. Creo en escuchar a la gente, pero escuchar es solo el comienzo. Hay que armar un plan, financiarlo, hacer el trabajo y estar dispuesto a responder por los resultados. Así es como evaluaría si estamos progresando."
+  },
+  "qa.q3.p3": {
+    en: "We also formed the first County Health Department, a service greatly needed. This was the first county health department formed in the State of Texas in almost 50 years.",
+    es: "También formamos el primer Departamento de Salud del Condado, un servicio muy necesario. Este fue el primer departamento de salud del condado formado en el Estado de Texas en casi 50 años."
+  },
+  "qa.q3.p4": {
+    en: "I also served as the Court's liaison with a group of volunteers who worked diligently to be approved for a grant that will provide fiber broadband countywide. It was an approximately $54 million grant through the state.",
+    es: "También serví como enlace de la Corte con un grupo de voluntarios que trabajaron diligentemente para ser aprobados para una subvención que proporcionará banda ancha de fibra en todo el condado. Fue una subvención de aproximadamente 54 millones de dólares a través del estado."
+  },
+  "qa.q3.p5": {
+    en: "I served on the committee for the new Judicial Center, and we have purchased 27 acres to build a new courthouse. There are other improvements to be announced very soon.",
+    es: "Serví en el comité para el nuevo Centro Judicial y hemos comprado 27 acres para construir un nuevo palacio de justicia. Hay otras mejoras que se anunciarán muy pronto."
+  },
+
+  // Question 4
+  "qa.q4.question": {
+    en: "What powers does a county commissioner actually have?",
+    es: "¿Qué facultades tiene realmente un comisionado del condado?"
+  },
+  "qa.q4.p1": {
+    en: "A commissioner has a vote on the five-member Commissioners Court. That means helping set the county budget and tax rate, approving contracts, and making countywide decisions.",
+    es: "Un comisionado tiene un voto en la Corte de Comisionados de cinco miembros. Eso significa ayudar a fijar el presupuesto del condado y la tasa impositiva, aprobar contratos y tomar decisiones para todo el condado."
+  },
+  "qa.q4.p2": {
+    en: "Commissioners also supervise road operations in their precincts, making sure crews have what they need, setting maintenance priorities, dealing with drainage problems, and seeing that equipment and materials are put to good use.",
+    es: "Los comisionados también supervisan las operaciones viales en sus precintos, asegurándose de que las cuadrillas tengan lo necesario, estableciendo prioridades de mantenimiento, atendiendo problemas de drenaje y vigilando que el equipo y los materiales se aprovechen bien."
+  },
+  "qa.q4.p3": {
+    en: "No one commissioner gets to dictate what the whole court does. You have to do your homework, make your case, and earn the other votes. And when a job falls under your supervision, people ought to be able to hold you accountable for getting it done.",
+    es: "Ningún comisionado dicta lo que hace toda la corte. Hay que hacer la tarea, presentar los argumentos y ganarse los demás votos. Y cuando un trabajo cae bajo su supervisión, la gente debe poder pedirle cuentas sobre su cumplimiento."
+  },
+  "qa.q4.p4": {
+    en: "Each commissioner is a liaison for different departments. I am the Court's liaison for Economic Development and Tourism, as well as the liaison for the Animal Shelter.",
+    es: "Cada comisionado es enlace de diferentes departamentos. Soy el enlace de la Corte para el Desarrollo Económico y Turismo, así como enlace del Refugio de Animales."
+  },
+  "qa.q4.p5": {
+    en: "An example of how I used these powers for the good of our community, is what I did to help with the DarPro issue. We started by monitoring for months with our new Bastrop County Health Department with the assistance of Texas A&M. They were able to substantiate the gases that were being emitted into the community. We had a graduate student that would travel from College Station with short notice to come do the testing of the air when the odor was bad. It took that to begin to build the patterns of noncompliance. I had many meetings after that with the DarPro team. They brought in a complete new management team. They agreed there was a horrendous problem and committed to making all improvements necessary to correct the situation. The initial commitment was 34 million dollars worth of improvements. I believe that has grown to approximately 50 million.",
+    es: "Un ejemplo de cómo utilicé estas facultades para el bien de nuestra comunidad es lo que hice para ayudar con el problema de DarPro. Comenzamos monitoreando durante meses con nuestro nuevo Departamento de Salud del Condado de Bastrop con la asistencia de Texas A&M. Pudieron corroborar los gases que se emitían a la comunidad. Tuvimos un estudiante de posgrado que viajaba desde College Station con poco aviso para realizar pruebas del aire cuando el olor era intenso. Se requirió de eso para comenzar a documentar los patrones de incumplimiento. Después de eso tuve muchas reuniones con el equipo de DarPro. Trajeron un equipo directivo completamente nuevo. Aceptaron que había un problema tremendo y se comprometieron a realizar todas las mejoras necesarias para corregir la situación. El compromiso inicial fue de 34 millones de dólares en mejoras. Creo que eso ha crecido a aproximadamente 50 millones."
+  },
+
+  // Question 5
+  "qa.q5.question": {
+    en: "How will you improve the number of sheriff's deputies?",
+    es: "¿Cómo mejorará el número de agentes del alguacil?"
+  },
+  "qa.q5.p1": {
+    en: "This requires commissioners to sit down with the sheriff and look at the actual numbers: calls for service, response times, areas that need more coverage, and how growth is changing the workload.",
+    es: "Esto requiere que los comisionados se sienten con el alguacil y revisen las cifras reales: llamadas de servicio, tiempos de respuesta, áreas que necesitan más cobertura y cómo el crecimiento está transformando la carga de trabajo."
+  },
+  "qa.q5.p2": {
+    en: "Then we need a realistic plan for additional deputies where they're needed. A deputy isn't just a salary. There's a patrol vehicle, equipment, training, insurance, benefits, and continuing costs.",
+    es: "Luego necesitamos un plan realista para incorporar agentes adicionales donde hagan falta. Un agente no es solo un salario. Hay una patrulla, equipo, capacitación, seguros, beneficios y costos continuos."
+  },
+  "qa.q5.p3": {
+    en: "The sheriff runs the department, and Commissioners Court makes the funding decisions. I believe we should work together on a multiyear plan that the county can afford to keep in place, rather than announcing positions we can't sustain.",
+    es: "El alguacil administra el departamento y la Corte de Comisionados toma las decisiones de financiamiento. Creo que debemos trabajar juntos en un plan plurianual que el condado pueda sostener, en lugar de anunciar puestos que luego no podamos costear."
+  },
+  "qa.q5.p4": {
+    en: "I have worked hard with the sheriff and the constables to make sure they have what they need. This is why I have the endorsements from Sheriff Cook and all four constables.",
+    es: "He trabajado arduamente con el alguacil y los cuatro alguaciles auxiliares para garantizar que tengan lo necesario. Por eso cuento con el respaldo del Alguacil Cook y de los cuatro alguaciles auxiliares."
+  },
+  "qa.q5.p5": {
+    en: "For the first time in several years, we were fully staffed this last year. I attribute that to some salary adjustments made a couple of years ago. While again it had to be approved by the court. I championed this adjustment to help ensure we did not lose our deputies to neighboring counties due to pay.",
+    es: "Por primera vez en varios años, estuvimos con el personal completo este último año. Atribuyo eso a algunos ajustes salariales realizados hace un par de años. Si bien tuvo que ser aprobado por la corte, defendí este ajuste para ayudar a garantizar que no perdiéramos a nuestros agentes ante condados vecinos por cuestiones de sueldo."
+  },
+
+  // Question 6
+  "qa.q6.question": {
+    en: "How will you ensure animal control receives adequate funding?",
+    es: "¿Cómo asegurará que el control de animales reciba financiamiento adecuado?"
+  },
+  "qa.q6.p1": {
+    en: "I care about the animal shelter, and I also know that adding kennels alone won't solve every problem. We need to look at how many animals come in, how quickly they can be adopted or returned home, how animal-control calls are handled, and what it takes to support the staff doing that work.",
+    es: "Me importa el refugio de animales, y también sé que agregar jaulas por sí solo no resolverá todos los problemas. Debemos observar cuántos animales ingresan, con qué rapidez pueden ser adoptados o devueltos a sus hogares, cómo se atienden las llamadas de control de animales y qué se necesita para apoyar al personal que realiza ese trabajo."
+  },
+  "qa.q6.p2": {
+    en: "We should keep building relationships with rescue groups, veterinarians, volunteers, and organizations that may help with grants. But grants come and go. We still need a sound county budget, clear goals, and regular reporting so people can see whether the shelter is improving.",
+    es: "Debemos seguir fortaleciendo relaciones con grupos de rescate, veterinarios, voluntarios y organizaciones que puedan ayudar con subvenciones. Pero las subvenciones van y vienen. Aún necesitamos un presupuesto del condado sólido, metas claras y reportes periódicos para que la gente vea si el refugio está mejorando."
+  },
+  "qa.q6.p3": {
+    en: "I want a humane shelter and animal-control services that work for our growing county.",
+    es: "Quiero un refugio compasivo y servicios de control de animales que funcionen para nuestro condado en crecimiento."
+  },
+  "qa.q6.p4": {
+    en: "I have worked with the shelter director to add over 40 new kennels. They were desperately needed.",
+    es: "He trabajado con la directora del refugio para añadir más de 40 jaulas nuevas. Eran urgentemente necesarias."
+  },
+  "qa.q6.p5": {
+    en: "I negotiated, with the Court's approval, to purchase 15 acres on Hwy. 95 for a new shelter facility. I fought to get $5 million added to the five-year CIP budget to help construct the all-new facility.",
+    es: "Negocié, con la aprobación de la Corte, la compra de 15 acres en la autopista Hwy. 95 para una nueva instalación del refugio. Luché para que se incluyeran 5 millones de dólares en el presupuesto de mejoras de capital (CIP) a cinco años para ayudar a construir las nuevas instalaciones."
+  },
+
+  // Question 7
+  "qa.q7.question": {
+    en: "How will you improve county roads, particularly FM 969?",
+    es: "¿Cómo mejorará los caminos del condado, en particular la FM 969?"
+  },
+  "qa.q7.p1": {
+    en: "Roads are something a commissioner should know firsthand. You have to know where the trouble spots are, what condition the pavement is in, where drainage is failing, and what your crews and equipment can accomplish.",
+    es: "Las carreteras son algo que un comisionado debe conocer de primera mano. Hay que saber dónde están los puntos críticos, en qué condiciones está el pavimento, dónde está fallando el drenaje y qué pueden lograr sus cuadrillas y su maquinaria."
+  },
+  "qa.q7.p2": {
+    en: "On county roads, that means planning maintenance and following through. FM 969 is a different matter because it's a state highway under TxDOT. We can't just send out a county crew and widen it.",
+    es: "En los caminos del condado, eso significa planificar el mantenimiento y cumplirlo. La FM 969 es un asunto distinto porque es una carretera estatal bajo la jurisdicción de TxDOT. No podemos simplemente enviar una cuadrilla del condado a ensancharla."
+  },
+  "qa.q7.p3": {
+    en: "But we can work with TxDOT, put documented safety problems in front of them, push for studies and funding, and stay on the issue.",
+    es: "Pero sí podemos trabajar con TxDOT, presentarles problemas de seguridad documentados, presionar para obtener estudios y financiamiento, y mantenernos firmes en el tema."
+  },
+  "qa.q7.p4": {
+    en: "My approach is simple: take care of the roads the county is responsible for, and keep working with the state on the highways we depend on.",
+    es: "Mi enfoque es sencillo: ocuparnos de las carreteras de las que el condado es responsable y seguir colaborando con el estado en las autopistas de las que dependemos."
+  },
+  "qa.q7.p5": {
+    en: "I work regularly with the TxDOT district office on concerns of constituents regarding state roadways. I've worked with TxDOT to get several turn lanes on FM 969, and they were funded by the businesses.",
+    es: "Trabajo periódicamente con la oficina del distrito de TxDOT sobre las inquietudes de los ciudadanos respecto a las carreteras estatales. He colaborado con TxDOT para conseguir varios carriles para dar vuelta en la FM 969, los cuales fueron financiados por los comercios locales."
+  },
+  "qa.q7.p6": {
+    en: "I've added several new four-way stops on our county roads.",
+    es: "He añadido varios cruces de cuatro altos nuevos en nuestros caminos del condado."
+  },
+
+  // Question 8
+  "qa.q8.question": {
+    en: "How will you work with other commissioners and the sheriff?",
+    es: "¿Cómo trabajará con los otros comisionados y con el alguacil?"
+  },
+  "qa.q8.p1": {
+    en: "You're not going to get much done in county government if you can't work with people. The commissioners, the county judge, the sheriff, and other elected officials all have jobs to do.",
+    es: "No se logra mucho en el gobierno del condado si no se puede trabajar con la gente. Los comisionados, el juez del condado, el alguacil y los demás funcionarios electos tienen una labor que cumplir."
+  },
+  "qa.q8.p2": {
+    en: "We won't agree on every issue, and that's fine. I think you should be able to disagree in court, explain your vote, and then sit down and work together on the next problem.",
+    es: "No vamos a estar de acuerdo en cada tema, y eso es normal. Creo que uno debe poder discrepar en la corte, explicar su voto y luego sentarse a trabajar juntos en el siguiente problema."
+  },
+  "qa.q8.p3": {
+    en: "With the sheriff, that means listening to operational needs while also asking the hard budget questions. I don't think politics or personal disagreements ought to get in the way of roads, public safety, or basic county services.",
+    es: "Con el alguacil, eso significa escuchar las necesidades operativas al mismo tiempo que se hacen las preguntas presupuestarias rigurosas. No creo que la política ni los desacuerdos personales deban interponerse en el camino de las carreteras, la seguridad pública o los servicios básicos del condado."
+  },
+  "qa.q8.p4": {
+    en: "We can all agree that we may not always agree with each other, but we should be respectful in disagreements.",
+    es: "Todos podemos coincidir en que no siempre estaremos de acuerdo entre nosotros, pero debemos ser respetuosos en las discrepancias."
+  },
+
+  // Question 9
+  "qa.q9.question": {
+    en: "Do you want to decrease property taxes?",
+    es: "¿Quiere reducir los impuestos sobre la propiedad?"
+  },
+  "qa.q9.p1": {
+    en: "Absolutely, I'd like to see people pay less in property taxes. But there's a difference between saying that and showing how to make it happen.",
+    es: "Absolutamente, me gustaría ver que la gente pague menos en impuestos a la propiedad. Pero hay una gran diferencia entre decir eso y mostrar cómo lograrlo."
+  },
+  "qa.q9.p2": {
+    en: "We need to control spending and grow the tax base in ways that don't leave existing property owners holding the bag.",
+    es: "Necesitamos controlar el gasto y hacer crecer la base tributaria de manera que no deje a los propietarios actuales cargando con toda la cuenta."
+  },
+  "qa.q9.p3": {
+    en: "When a major company wants a tax abatement, we ought to look at both sides of the ledger: what revenue the project brings in, what it costs the county, and what happens when the abatement ends.",
+    es: "Cuando una gran empresa quiere una exención fiscal, debemos revisar ambos lados del balance: qué ingresos genera el proyecto, cuánto le cuesta al condado y qué sucede cuando finaliza la exención."
+  },
+  "qa.q9.p4": {
+    en: "We also need to remember that a county can't simply charge a higher tax rate to a company because it's wealthy.",
+    es: "También debemos recordar que un condado no puede simplemente cobrar una tasa impositiva más alta a una empresa por ser adinerada."
+  },
+  "qa.q9.p5": {
+    en: "My focus would be a strong tax base, careful spending, and a lower tax burden wherever the numbers allow it.",
+    es: "Mi enfoque sería una base tributaria sólida, un gasto responsable y una carga fiscal menor siempre que los números lo permitan."
+  },
+  "qa.q9.p6": {
+    en: "We have to diversify our tax base with more high-value commercial projects. I feel if we can successfully get these types of projects, we could reduce our tax rates drastically in the next five years.",
+    es: "Tenemos que diversificar nuestra base impositiva con más proyectos comerciales de alto valor. Considero que si logramos atraer exitosamente este tipo de proyectos, podríamos reducir nuestras tasas impositivas drásticamente en los próximos cinco años."
+  },
+
+  // Q&A Footer CTA
+  "qa.cta.heading": {
+    en: "Have Another Question for David Glass?",
+    es: "¿Tiene Otra Pregunta para David Glass?"
+  },
+  "qa.cta.sub": {
+    en: "David believes in accessible, transparent county leadership. Reach out directly to discuss Precinct 4 issues, road questions, or county services.",
+    es: "David cree en un liderazgo de condado accesible y transparente. Comuníquese directamente para hablar sobre temas del Precinto 4, carreteras o servicios del condado."
+  },
+  "qa.cta.reachOut": {
+    en: "Reach Out to David",
+    es: "Comuníquese con David"
+  },
+  "qa.cta.callOffice": {
+    en: "Call (512) 581-7100",
+    es: "Llamar al (512) 581-7100"
+  }
 };
