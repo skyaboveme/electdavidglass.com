@@ -1,8 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
+import Endorsements from '../components/Endorsements.astro';
 ---
 
-<Base title="About David Glass" description="Learn about David Glass: A life of service in Bastrop County, his business experience, and his vision for Precinct 4.">
+<Base title="About David Glass" description="Learn about David Glass: A life of service in Bastrop County, his business experience, vision for Precinct 4, and official endorsements from Sheriff Maurice C. Cook, all four constables, and frontline leaders.">
   
   <!-- Page Header with Portrait -->
   <section class="page-header-gradient pt-28 pb-20 relative">
@@ -178,9 +179,15 @@ import Base from '../layouts/Base.astro';
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="section-divider my-16"></div>
+  <!-- Official Endorsements Section -->
+  <Endorsements />
 
+  <!-- Personal & Community Section -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Personal Section -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal">
         <div>
@@ -208,6 +215,25 @@ import Base from '../layouts/Base.astro';
           <p class="text-xl sm:text-2xl font-serif italic text-white/80 leading-relaxed mb-6 max-w-2xl mx-auto" data-i18n="about.quote">
             "I will continue to bring business sense, transparency, and hard work to the Commissioner's Court. Bastrop County is our home, and I intend to keep it a place we are all proud of."
           </p>
+        </div>
+      </div>
+
+      <!-- Quick Action Navigation / Explore Links -->
+      <div class="mt-16 pt-12 border-t border-warm-gray flex flex-col sm:flex-row sm:items-center justify-between gap-6 reveal">
+        <div>
+          <span class="text-xs uppercase tracking-widest font-sans font-bold text-slate block mb-1">Continue Reading</span>
+          <span class="text-lg font-serif font-bold text-navy">Explore David's Proven Record &amp; Vision</span>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="/results" class="px-5 py-2.5 bg-navy text-white text-xs font-sans font-bold uppercase tracking-wider rounded-lg hover:bg-navy-light transition shadow-sm">
+            View Proven Results →
+          </a>
+          <a href="/priorities" class="px-5 py-2.5 bg-cream border border-warm-gray text-navy text-xs font-sans font-bold uppercase tracking-wider rounded-lg hover:bg-gold hover:text-white hover:border-gold transition">
+            Core Priorities →
+          </a>
+          <a href="/qa" class="px-5 py-2.5 bg-cream border border-warm-gray text-navy text-xs font-sans font-bold uppercase tracking-wider rounded-lg hover:bg-gold hover:text-white hover:border-gold transition">
+            Constituent Q&amp;A →
+          </a>
         </div>
       </div>
 
